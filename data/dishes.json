@@ -1,0 +1,607 @@
+[
+  {
+    "id": "khachapuri-vake",
+    "name": "Acharuli Khachapuri",
+    "price": 18,
+    "tags": [
+      "cheesy",
+      "baked",
+      "vegetarian",
+      "georgian"
+    ],
+    "restaurant": {
+      "name": "Sakhachapure Vake",
+      "district": "Vake",
+      "lat": 41.7117,
+      "lon": 44.7639,
+      "phone": "+995555000001",
+      "address": "Vake, Chavchavadze Ave 34"
+    },
+    "open": {
+      "mon": [
+        10,
+        22
+      ],
+      "tue": [
+        10,
+        22
+      ],
+      "wed": [
+        10,
+        22
+      ],
+      "thu": [
+        10,
+        22
+      ],
+      "fri": [
+        10,
+        23
+      ],
+      "sat": [
+        10,
+        23
+      ],
+      "sun": [
+        10,
+        22
+      ]
+    },
+    "image": "/placeholder.jpg",
+    "description": "Boat-shaped khachapuri with egg and butter."
+  },
+  {
+    "id": "khinkali-saburtalo",
+    "name": "Khinkali (beef & pork)",
+    "price": 1.5,
+    "tags": [
+      "dumplings",
+      "soupy",
+      "georgian"
+    ],
+    "restaurant": {
+      "name": "Khinkali House Saburtalo",
+      "district": "Saburtalo",
+      "lat": 41.7266,
+      "lon": 44.7503,
+      "phone": "+995555000002",
+      "address": "Saburtalo, Pekini Ave 9"
+    },
+    "open": {
+      "mon": [
+        11,
+        23
+      ],
+      "tue": [
+        11,
+        23
+      ],
+      "wed": [
+        11,
+        23
+      ],
+      "thu": [
+        11,
+        23
+      ],
+      "fri": [
+        11,
+        24
+      ],
+      "sat": [
+        11,
+        24
+      ],
+      "sun": [
+        11,
+        23
+      ]
+    },
+    "image": "/placeholder.jpg",
+    "description": "Classic juicy dumplings; min order 5 pcs."
+  },
+  {
+    "id": "mtsvadi-vake",
+    "name": "Pork Mtsvadi",
+    "price": 22,
+    "tags": [
+      "grill",
+      "meat",
+      "georgian",
+      "gluten-free"
+    ],
+    "restaurant": {
+      "name": "Vake Grill",
+      "district": "Vake",
+      "lat": 41.7074,
+      "lon": 44.7778,
+      "phone": "+995555000003",
+      "address": "Vake, Abashidze St 22"
+    },
+    "open": {
+      "mon": [
+        12,
+        23
+      ],
+      "tue": [
+        12,
+        23
+      ],
+      "wed": [
+        12,
+        23
+      ],
+      "thu": [
+        12,
+        23
+      ],
+      "fri": [
+        12,
+        24
+      ],
+      "sat": [
+        12,
+        24
+      ],
+      "sun": [
+        12,
+        23
+      ]
+    },
+    "image": "/placeholder.jpg",
+    "description": "Charcoal grilled pork skewers with red onion."
+  },
+  {
+    "id": "lobiani-saburtalo",
+    "name": "Lobiani",
+    "price": 9,
+    "tags": [
+      "baked",
+      "beans",
+      "vegetarian",
+      "georgian"
+    ],
+    "restaurant": {
+      "name": "Bakeri 9",
+      "district": "Saburtalo",
+      "lat": 41.7279,
+      "lon": 44.7385,
+      "phone": "+995555000004",
+      "address": "Saburtalo, Nutsubidze 3"
+    },
+    "open": {
+      "mon": [
+        8,
+        20
+      ],
+      "tue": [
+        8,
+        20
+      ],
+      "wed": [
+        8,
+        20
+      ],
+      "thu": [
+        8,
+        20
+      ],
+      "fri": [
+        8,
+        20
+      ],
+      "sat": [
+        9,
+        18
+      ],
+      "sun": [
+        9,
+        18
+      ]
+    },
+    "image": "/placeholder.jpg",
+    "description": "Crispy flatbread filled with seasoned beans."
+  },
+  {
+    "id": "shawarma-vake",
+    "name": "Chicken Shawarma",
+    "price": 13,
+    "tags": [
+      "fast",
+      "wrap",
+      "chicken",
+      "halal"
+    ],
+    "restaurant": {
+      "name": "Vake Shawarma",
+      "district": "Vake",
+      "lat": 41.7089,
+      "lon": 44.7761,
+      "phone": "+995555000005",
+      "address": "Vake, Paliashvili 10"
+    },
+    "open": {
+      "mon": [
+        11,
+        2
+      ],
+      "tue": [
+        11,
+        2
+      ],
+      "wed": [
+        11,
+        2
+      ],
+      "thu": [
+        11,
+        2
+      ],
+      "fri": [
+        11,
+        3
+      ],
+      "sat": [
+        11,
+        3
+      ],
+      "sun": [
+        12,
+        2
+      ]
+    },
+    "image": "/placeholder.jpg",
+    "description": "Garlicky chicken wrap with pickles."
+  },
+  {
+    "id": "salad-saburtalo",
+    "name": "Caesar Salad",
+    "price": 16,
+    "tags": [
+      "salad",
+      "light",
+      "chicken"
+    ],
+    "restaurant": {
+      "name": "Leafy Greens",
+      "district": "Saburtalo",
+      "lat": 41.7299,
+      "lon": 44.7464,
+      "phone": "+995555000006",
+      "address": "Saburtalo, Kazbegi Ave 27"
+    },
+    "open": {
+      "mon": [
+        11,
+        22
+      ],
+      "tue": [
+        11,
+        22
+      ],
+      "wed": [
+        11,
+        22
+      ],
+      "thu": [
+        11,
+        22
+      ],
+      "fri": [
+        11,
+        22
+      ],
+      "sat": [
+        11,
+        22
+      ],
+      "sun": [
+        12,
+        20
+      ]
+    },
+    "image": "/placeholder.jpg",
+    "description": "Romaine, parmesan, croutons, grilled chicken."
+  },
+  {
+    "id": "vegan-bowl-vake",
+    "name": "Vegan Bowl",
+    "price": 19,
+    "tags": [
+      "vegan",
+      "healthy",
+      "bowl"
+    ],
+    "restaurant": {
+      "name": "Green Vake",
+      "district": "Vake",
+      "lat": 41.7107,
+      "lon": 44.7705,
+      "phone": "+995555000007",
+      "address": "Vake, Barnovi 8"
+    },
+    "open": {
+      "mon": [
+        10,
+        21
+      ],
+      "tue": [
+        10,
+        21
+      ],
+      "wed": [
+        10,
+        21
+      ],
+      "thu": [
+        10,
+        21
+      ],
+      "fri": [
+        10,
+        21
+      ],
+      "sat": [
+        10,
+        21
+      ],
+      "sun": [
+        11,
+        20
+      ]
+    },
+    "image": "/placeholder.jpg",
+    "description": "Quinoa, veggies, tahini dressing."
+  },
+  {
+    "id": "falafel-saburtalo",
+    "name": "Falafel Wrap",
+    "price": 12,
+    "tags": [
+      "fast",
+      "wrap",
+      "vegan",
+      "halal"
+    ],
+    "restaurant": {
+      "name": "Saburtalo Falafel",
+      "district": "Saburtalo",
+      "lat": 41.7322,
+      "lon": 44.7481,
+      "phone": "+995555000008",
+      "address": "Saburtalo, Vazha-Pshavela Ave 25"
+    },
+    "open": {
+      "mon": [
+        11,
+        23
+      ],
+      "tue": [
+        11,
+        23
+      ],
+      "wed": [
+        11,
+        23
+      ],
+      "thu": [
+        11,
+        23
+      ],
+      "fri": [
+        11,
+        23
+      ],
+      "sat": [
+        11,
+        23
+      ],
+      "sun": [
+        12,
+        22
+      ]
+    },
+    "image": "/placeholder.jpg",
+    "description": "Crispy falafel with hummus and tahini."
+  },
+  {
+    "id": "sushi-vake",
+    "name": "Salmon Roll",
+    "price": 24,
+    "tags": [
+      "sushi",
+      "fish",
+      "japanese"
+    ],
+    "restaurant": {
+      "name": "Sushi Vake",
+      "district": "Vake",
+      "lat": 41.7098,
+      "lon": 44.7655,
+      "phone": "+995555000009",
+      "address": "Vake, Abashidze 40"
+    },
+    "open": {
+      "mon": [
+        12,
+        22
+      ],
+      "tue": [
+        12,
+        22
+      ],
+      "wed": [
+        12,
+        22
+      ],
+      "thu": [
+        12,
+        22
+      ],
+      "fri": [
+        12,
+        23
+      ],
+      "sat": [
+        12,
+        23
+      ],
+      "sun": [
+        12,
+        21
+      ]
+    },
+    "image": "/placeholder.jpg",
+    "description": "8-piece salmon maki with wasabi."
+  },
+  {
+    "id": "pizza-saburtalo",
+    "name": "Margherita Pizza",
+    "price": 20,
+    "tags": [
+      "pizza",
+      "vegetarian",
+      "italian"
+    ],
+    "restaurant": {
+      "name": "Pizzeria 12",
+      "district": "Saburtalo",
+      "lat": 41.7272,
+      "lon": 44.7511,
+      "phone": "+995555000010",
+      "address": "Saburtalo, University St 12"
+    },
+    "open": {
+      "mon": [
+        11,
+        22
+      ],
+      "tue": [
+        11,
+        22
+      ],
+      "wed": [
+        11,
+        22
+      ],
+      "thu": [
+        11,
+        22
+      ],
+      "fri": [
+        11,
+        23
+      ],
+      "sat": [
+        11,
+        23
+      ],
+      "sun": [
+        12,
+        21
+      ]
+    },
+    "image": "/placeholder.jpg",
+    "description": "Thin crust, tomato, mozzarella, basil."
+  },
+  {
+    "id": "kebab-vake",
+    "name": "Beef Kebab Plate",
+    "price": 21,
+    "tags": [
+      "grill",
+      "beef",
+      "halal"
+    ],
+    "restaurant": {
+      "name": "Kebab Vake",
+      "district": "Vake",
+      "lat": 41.7062,
+      "lon": 44.7741,
+      "phone": "+995555000011",
+      "address": "Vake, Chavchavadze Ave 54"
+    },
+    "open": {
+      "mon": [
+        11,
+        23
+      ],
+      "tue": [
+        11,
+        23
+      ],
+      "wed": [
+        11,
+        23
+      ],
+      "thu": [
+        11,
+        23
+      ],
+      "fri": [
+        11,
+        24
+      ],
+      "sat": [
+        11,
+        24
+      ],
+      "sun": [
+        12,
+        22
+      ]
+    },
+    "image": "/placeholder.jpg",
+    "description": "Skewers, rice, grilled veggies."
+  },
+  {
+    "id": "soup-saburtalo",
+    "name": "Lentil Soup",
+    "price": 10,
+    "tags": [
+      "soup",
+      "vegan",
+      "healthy"
+    ],
+    "restaurant": {
+      "name": "Soup Lab",
+      "district": "Saburtalo",
+      "lat": 41.7333,
+      "lon": 44.7419,
+      "phone": "+995555000012",
+      "address": "Saburtalo, Bakhtrioni 18"
+    },
+    "open": {
+      "mon": [
+        10,
+        21
+      ],
+      "tue": [
+        10,
+        21
+      ],
+      "wed": [
+        10,
+        21
+      ],
+      "thu": [
+        10,
+        21
+      ],
+      "fri": [
+        10,
+        21
+      ],
+      "sat": [
+        10,
+        21
+      ],
+      "sun": [
+        11,
+        20
+      ]
+    },
+    "image": "/placeholder.jpg",
+    "description": "Comforting red lentil soup."
+  }
+]

@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand-1: #6C5CE7; /* playful purple */
+  --brand-2: #00CEC9; /* mint */
+  --brand-3: #FFA502; /* orange */
+}
+
+html, body {
+  height: 100%;
+  background: #ffffff;
+}
+a {
+  text-decoration: none;
+}
+.kahoot-btn {
+  @apply w-full text-center py-4 rounded-2xl text-lg font-bold shadow-soft active:scale-95 transition;
+}
+.kahoot-purple { background: var(--brand-1); color: white; }
+.kahoot-mint    { background: var(--brand-2); color: #0b0b0b;}
+.kahoot-orange  { background: var(--brand-3); color: #0b0b0b;}
+.kahoot-gray    { @apply bg-gray-100 text-gray-800; }
+.tag {
+  @apply px-3 py-2 rounded-full text-sm border border-gray-200 bg-white;
+}
+.tag.selected {
+  @apply bg-gray-900 text-white border-gray-900;
+}
+.card {
+  @apply rounded-2xl border border-gray-200 p-4 shadow-soft bg-white;
+}
+footer {
+  @apply text-xs text-gray-500;
+}
