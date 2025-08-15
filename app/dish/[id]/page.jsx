@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useLang} from "../../ui/LangProvider";
 
 export default function DishDetail({ params }) {
-  const { t, tt } = useI18n();
+  const { t, tt } = useLang();
   const dish = data.find((d) => d.id === params.id);
   if (!dish) return <div className="p-6">Not found.</div>;
 
