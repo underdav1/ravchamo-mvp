@@ -4,32 +4,36 @@ export const metadata = {
 };
 
 import "./globals.css";
+import ThemeProvider from "./ui/ThemeProvider";
 import LangProvider from "./ui/LangProvider";
 import LanguageToggle from "./ui/LanguageToggle";
+import ThemeToggle from "./ui/ThemeToggle";
 
 export default function RootLayout({ children }) {
   return (
     <html lang="ka">
-      <body className="min-h-screen text-gray-900">
-        <LangProvider>
-          <div className="max-w-md mx-auto px-4 py-6">
-            {/* Header with language switch */}
-            <header className="flex items-center justify-between mb-4">
-              <div className="font-semibold text-lg">Ravchamo</div>
-              <LanguageToggle />
-            </header>
+      <body className="min-h-screen bg-white text-gray-900 dark:bg-gray-950 dark:text-gray-100">
+        <ThemeProvider>
+          <LangProvider>
+            <div className="max-w-md mx-auto px-4 py-6">
+              <header className="flex items-center justify-between mb-4">
+                <div className="font-semibold text-lg">Ravchamo</div>
+                <div className="flex items-center gap-2">
+                  <LanguageToggle />
+                  <ThemeToggle />
+                </div>
+              </header>
 
-            {children}
+              {children}
 
-            <footer className="mt-8 text-sm text-gray-600">
-              © {new Date().getFullYear()} Ravchamo — MVP.
-              <br />
-              <span>
-                We use your location only in the browser to estimate distance.
-              </span>
-            </footer>
-          </div>
-        </LangProvider>
+              <footer className="mt-8 text-sm text-gray-600 dark:text-gray-400">
+                © {new Date().getFullYear()} Ravchamo — MVP.
+                <br />
+                <span>We use your location only in the browser to estimate distance.</span>
+              </footer>
+            </div>
+          </LangProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
