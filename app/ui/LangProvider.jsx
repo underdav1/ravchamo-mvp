@@ -3,53 +3,50 @@
 import { createContext, useContext, useEffect, useMemo, useState } from "react";
 import { en, ka } from "./langs";
 
-const LangContext = createContext(null);
+// 1) Language dictionaries map
+const DICTS = { en, ka };
 
-export default function LangProvider({ children }) {
-  const [lang, setLang] = useState("ka"); // default to Georgian
+// 2) Context + safe default
+const LangContext = createContext({
+  lang: "en",
+  setLang: () => {},
+  STR: en,
+});
 
-  // load saved language from localStorage (if any)
+// 3) Hook used by components (e.g., LanguageToggle)
+export function useLang() {
+  return useContext(LangContext);
+}
+
+// 4) Provider component
+export function LangProvider({ children }) {
+  const [lang, setLang] = useState("en");
+
+  // hydrate from localStorage
   useEffect(() => {
     try {
       const saved = localStorage.getItem("lang");
-      if (saved === "ka" || saved === "en") {
-        setLang(saved);
-      } else if (navigator.language?.toLowerCase().startsWith("ka")) {
-        setLang("ka");
-      }
+      if (saved === "en" || saved === "ka") setLang(saved);
     } catch {}
   }, []);
 
-  // persist on change
+  // persist + set <html lang="xx">
   useEffect(() => {
     try {
       localStorage.setItem("lang", lang);
     } catch {}
+    if (typeof document !== "undefined") {
+      document.documentElement.lang = lang;
+    }
   }, [lang]);
 
-  const dict = lang === "en" ? en : ka;
+  // memoize the dictionary for current lang
+  const STR = useMemo(() => DICTS[lang] ?? en, [lang]);
 
-  const value = useMemo(
-    () => ({
-      lang,
-      setLang,
-      // t("resultsTop") -> "საუკეთესო ვარიანტები" etc.
-      t: (key, fallback = "") =>
-        key
-          .split(".")
-          .reduce((acc, k) => (acc && acc[k] != null ? acc[k] : undefined), dict) ??
-        (fallback || key),
-      // translate tag keys like "khinkali", "bbq"
-      tt: (tagKey) => dict.tags?.[tagKey] ?? tagKey,
-    }),
-    [lang, dict]
-  );
+  const value = useMemo(() => ({ lang, setLang, STR }), [lang, STR]);
 
   return <LangContext.Provider value={value}>{children}</LangContext.Provider>;
 }
 
-export function useI18n() {
-  const ctx = useContext(LangContext);
-  if (!ctx) throw new Error("useI18n must be used inside <LangProvider />");
-  return ctx;
-}
+// (optional) default export for compatibility if something imports default
+export default LangProvider;
