@@ -29,8 +29,8 @@ export const en = {
   openInMaps: "Open in Maps",
   gel: "GEL",
   back: "Back to results",
-disclaimer: "Menu data may be inaccurate. Always check with the restaurant about allergens and availability.",
-
+  disclaimer:
+    "Menu data may be inaccurate. Always check with the restaurant about allergens and availability.",
   tags: {
     // cravings
     georgian: "Georgian",
@@ -78,22 +78,17 @@ export const ka = {
   fast: "სწრაფად",
   relaxed: "მშვიდად",
   openNow: "ახლა ღიაა",
-  findDishes: "მაჩვენე არჩევანი",
-  seeResults: "მაჩვენე შედეგები",
-  lucky: "იღბლიან რეჟიმში",
+  findDishes: "გააძრე კიშკა",
+  seeResults: "გააძრე კიშკა",
+  lucky: "დამირენდომე",
   resultsTop: "საუკეთესო ვარიანტები",
   noMatches: "შედეგი ვერ მოიძებნა. სცადე ნაკლები ფილტრი.",
   call: "დარეკვა",
   openInMaps: "გახსენი რუკაზე",
   gel: "₾",
-  openInMaps: "გახსენი რუკაზე",
-gel: "₾",
-
-back: "უკან დაბრუნება",
-disclaimer: "მენიუს მონაცემები შესაძლოა არ იყოს ზუსტი. ინფორმაცია ალერგენებსა და ხელმისაწვდომობაზე გადაამოწმეთ რესტორანთან.",
-
-tags: {
-
+  back: "უკან შედეგებზე",
+  disclaimer:
+    "მენიუს მონაცემები შესაძლოა არ იყოს ზუსტი. ინფორმაცია ალერგენებსა და ხელმისაწვდომობაზე გადაამოწმეთ უშუალოდ რესტორანთან.",
   tags: {
     // cravings
     georgian: "ქართული",
@@ -109,9 +104,9 @@ tags: {
     spicy: "ცხარე",
 
     // dietary/exclude
-    pork: "ღორის",
-    beef: "საქონლის",
-    chicken: "ქათმის",
+    pork: "ღორი",
+    beef: "საქონელი",
+    chicken: "ქათამი",
     fish: "თევზი",
     gluten: "გლუტენი",
     dairy: "რძის პროდუქტები",
