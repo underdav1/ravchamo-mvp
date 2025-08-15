@@ -20,6 +20,17 @@ export default function RootLayout({ children }) {
             </header>
 
             {children}
-          </div>
 
-          <div className="max-w-md mx-auto px-4 pb-
+            <footer className="mt-8 text-sm text-gray-600">
+              © {new Date().getFullYear()} Ravchamo — MVP.
+              <br />
+              <span>
+                We use your location only in the browser to estimate distance.
+              </span>
+            </footer>
+          </div>
+        </LangProvider>
+      </body>
+    </html>
+  );
+}
