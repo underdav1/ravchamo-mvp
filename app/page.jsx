@@ -1,13 +1,15 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { STR } from "./ui/strings";
 import BigButton from "../components/BigButton";
 import TagToggle from "../components/TagToggle";
 import { useRouter } from "next/navigation";
+import { useI18n } from "./ui/LangProvider";
 
 export default function Home() {
   const router = useRouter();
+  const { t, tt } = useI18n();
+
   const [loc, setLoc] = useState(null);
   const [locDenied, setLocDenied] = useState(false);
   const [price, setPrice] = useState("med");
@@ -20,33 +22,56 @@ export default function Home() {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         (pos) => {
-          setLoc({lat: pos.coords.latitude, lon: pos.coords.longitude});
+          setLoc({ lat: pos.coords.latitude, lon: pos.coords.longitude });
         },
         (err) => {
           console.log(err);
           setLocDenied(true);
           // fallback: Vake center
-          setLoc({lat: 41.710, lon: 44.770});
+          setLoc({ lat: 41.71, lon: 44.77 });
         },
         { enableHighAccuracy: true, timeout: 3000 }
       );
     } else {
       // fallback
-      setLoc({lat: 41.710, lon: 44.770});
+      setLoc({ lat: 41.71, lon: 44.77 });
     }
   }, []);
 
-  const cravingOptions = ["georgian","grill","wrap","sushi","pizza","salad","soup","vegan","healthy","cheesy","spicy"];
-  const excludeOptions = ["pork","beef","chicken","fish","gluten","dairy","halal","vegan","vegetarian"];
+  // keys we display (we translate their labels with tt())
+  const cravingOptions = [
+    "georgian",
+    "grill",
+    "wrap",
+    "sushi",
+    "pizza",
+    "salad",
+    "soup",
+    "vegan",
+    "healthy",
+    "cheesy",
+    "spicy",
+  ];
+  const excludeOptions = [
+    "pork",
+    "beef",
+    "chicken",
+    "fish",
+    "gluten",
+    "dairy",
+    "halal",
+    "vegan",
+    "vegetarian",
+  ];
 
-  function goResults(lucky=false) {
+  function goResults(lucky = false) {
     const query = new URLSearchParams({
       lat: loc?.lat ?? "",
       lon: loc?.lon ?? "",
       price,
       tags: tags.join(","),
       exclude: exclude.join(","),
-      time: time ?? ""
+      time: time ?? "",
     });
     if (lucky) query.set("lucky", "1");
     router.push(`/results?${query.toString()}`);
@@ -55,62 +80,119 @@ export default function Home() {
   return (
     <main>
       <div className="text-center mb-6">
-        <h1 className="text-3xl font-extrabold">🍽️ {STR.appName}</h1>
-        <p className="text-gray-600">{STR.tagline}</p>
+        <h1 className="text-3xl font-extrabold">🍽️ {t("appName")}</h1>
+        <p className="text-gray-600">{t("tagline")}</p>
       </div>
 
       <div className="card mb-4">
-        <div className="text-sm text-gray-700 mb-2">Location</div>
+        <div className="text-sm text-gray-700 mb-2">{t("location")}</div>
         <div className="flex gap-2 items-center">
-          <span className={`text-xs ${loc ? "text-green-700" : "text-gray-500"}`}>
-            {loc ? "Location ready" : "Getting location..."}
+          <span
+            className={`text-xs ${loc ? "text-green-700" : "text-gray-500"}`}
+          >
+            {loc ? t("loc.ready") : t("loc.getting")}
           </span>
-          {locDenied && <span className="text-xs text-orange-600">Permission denied — using Vake center.</span>}
+          {locDenied && (
+            <span className="text-xs text-orange-600">{t("loc.deniedVake")}</span>
+          )}
         </div>
       </div>
 
       <div className="card mb-4">
-        <div className="font-semibold mb-2">{STR.selectBudget}</div>
+        <div className="font-semibold mb-2">{t("budget")}</div>
         <div className="grid grid-cols-3 gap-2">
-          <BigButton className={`kahoot-gray ${price==="low"?"outline outline-2 outline-black":""}`} onClick={()=>setPrice("low")}>{STR.priceLow}</BigButton>
-          <BigButton className={`kahoot-gray ${price==="med"?"outline outline-2 outline-black":""}`} onClick={()=>setPrice("med")}>{STR.priceMed}</BigButton>
-          <BigButton className={`kahoot-gray ${price==="high"?"outline outline-2 outline-black":""}`} onClick={()=>setPrice("high")}>{STR.priceHigh}</BigButton>
+          <BigButton
+            className={`kahoot-gray ${
+              price === "low" ? "outline outline-2 outline-black" : ""
+            }`}
+            onClick={() => setPrice("low")}
+          >
+            {t("low")}
+          </BigButton>
+          <BigButton
+            className={`kahoot-gray ${
+              price === "med" ? "outline outline-2 outline-black" : ""
+            }`}
+            onClick={() => setPrice("med")}
+          >
+            {t("medium")}
+          </BigButton>
+          <BigButton
+            className={`kahoot-gray ${
+              price === "high" ? "outline outline-2 outline-black" : ""
+            }`}
+            onClick={() => setPrice("high")}
+          >
+            {t("high")}
+          </BigButton>
         </div>
       </div>
 
       <div className="card mb-4">
-        <div className="font-semibold mb-2">{STR.cravings}</div>
+        <div className="font-semibold mb-2">{t("cravings")}</div>
         <div className="flex flex-wrap gap-2">
-          {cravingOptions.map(opt => (
-            <TagToggle key={opt} label={opt} selected={tags.includes(opt)} onClick={()=>{
-              setTags(prev => prev.includes(opt) ? prev.filter(x=>x!==opt) : [...prev, opt]);
-            }}/>
+          {cravingOptions.map((opt) => (
+            <TagToggle
+              key={opt}
+              label={tt(opt)}
+              selected={tags.includes(opt)}
+              onClick={() => {
+                setTags((prev) =>
+                  prev.includes(opt) ? prev.filter((x) => x !== opt) : [...prev, opt]
+                );
+              }}
+            />
           ))}
         </div>
       </div>
 
       <div className="card mb-4">
-        <div className="font-semibold mb-2">{STR.dietary}</div>
+        <div className="font-semibold mb-2">{t("dietary")}</div>
         <div className="flex flex-wrap gap-2">
-          {excludeOptions.map(opt => (
-            <TagToggle key={opt} label={opt} selected={exclude.includes(opt)} onClick={()=>{
-              setExclude(prev => prev.includes(opt) ? prev.filter(x=>x!==opt) : [...prev, opt]);
-            }}/>
+          {excludeOptions.map((opt) => (
+            <TagToggle
+              key={opt}
+              label={tt(opt)}
+              selected={exclude.includes(opt)}
+              onClick={() => {
+                setExclude((prev) =>
+                  prev.includes(opt) ? prev.filter((x) => x !== opt) : [...prev, opt]
+                );
+              }}
+            />
           ))}
         </div>
       </div>
 
       <div className="card mb-6">
-        <div className="font-semibold mb-2">{STR.time}</div>
+        <div className="font-semibold mb-2">{t("time")}</div>
         <div className="grid grid-cols-2 gap-2">
-          <BigButton className={`kahoot-mint ${time==="fast"?"outline outline-2 outline-black":""}`} onClick={()=>setTime("fast")}>{STR.fast}</BigButton>
-          <BigButton className={`kahoot-orange ${time==="relaxed"?"outline outline-2 outline-black":""}`} onClick={()=>setTime("relaxed")}>{STR.relaxed}</BigButton>
+          <BigButton
+            className={`kahoot-mint ${
+              time === "fast" ? "outline outline-2 outline-black" : ""
+            }`}
+            onClick={() => setTime("fast")}
+          >
+            {t("fast")}
+          </BigButton>
+          <BigButton
+            className={`kahoot-orange ${
+              time === "relaxed" ? "outline outline-2 outline-black" : ""
+            }`}
+            onClick={() => setTime("relaxed")}
+          >
+            {t("relaxed")}
+          </BigButton>
         </div>
       </div>
 
       <div className="grid grid-cols-1 gap-3">
-        <BigButton className="kahoot-purple" onClick={()=>goResults(false)}>{STR.seeResults}</BigButton>
-        <BigButton className="kahoot-mint" onClick={()=>goResults(true)}>🎲 {STR.feelingLucky}</BigButton>
+        <BigButton className="kahoot-purple" onClick={() => goResults(false)}>
+          {t("seeResults")}
+        </BigButton>
+        <BigButton className="kahoot-mint" onClick={() => goResults(true)}>
+          🎲 {t("lucky")}
+        </BigButton>
       </div>
     </main>
   );
