@@ -28,6 +28,9 @@ export const en = {
   call: "Call",
   openInMaps: "Open in Maps",
   gel: "GEL",
+  back: "Back to results",
+disclaimer: "Menu data may be inaccurate. Always check with the restaurant about allergens and availability.",
+
   tags: {
     // cravings
     georgian: "Georgian",
@@ -83,6 +86,14 @@ export const ka = {
   call: "დარეკვა",
   openInMaps: "გახსენი რუკაზე",
   gel: "₾",
+  openInMaps: "გახსენი რუკაზე",
+gel: "₾",
+
+back: "უკან დაბრუნება",
+disclaimer: "მენიუს მონაცემები შესაძლოა არ იყოს ზუსტი. ინფორმაცია ალერგენებსა და ხელმისაწვდომობაზე გადაამოწმეთ რესტორანთან.",
+
+tags: {
+
   tags: {
     // cravings
     georgian: "ქართული",
