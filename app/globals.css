@@ -10,27 +10,45 @@
 
 html, body {
   height: 100%;
-  background: #ffffff;
 }
-a {
-  text-decoration: none;
-}
+
+/* Links */
+a { text-decoration: none; }
+
+/* Generic “kahoot” button base (neutral style, used in details page etc.) */
 .kahoot-btn {
-  @apply w-full text-center py-4 rounded-2xl text-lg font-bold shadow-soft active:scale-95 transition;
+  @apply w-full text-center py-4 rounded-2xl text-lg font-bold shadow-soft
+         active:scale-95 transition
+         bg-white text-gray-900 border border-gray-200
+         dark:bg-gray-900 dark:text-gray-100 dark:border-gray-800;
 }
-.kahoot-purple { background: var(--brand-1); color: white; }
-.kahoot-mint    { background: var(--brand-2); color: #0b0b0b;}
-.kahoot-orange  { background: var(--brand-3); color: #0b0b0b;}
-.kahoot-gray    { @apply bg-gray-100 text-gray-800; }
+
+/* Branded button variants */
+.kahoot-purple { background: var(--brand-1); color: #ffffff; }
+.kahoot-mint   { background: var(--brand-2); color: #0b0b0b; }
+.kahoot-orange { background: var(--brand-3); color: #0b0b0b; }
+/* Neutral gray option that adapts to theme */
+.kahoot-gray   { @apply bg-gray-100 text-gray-900 dark:bg-gray-800 dark:text-gray-100; }
+
+/* Tag chips */
 .tag {
-  @apply px-3 py-2 rounded-full text-sm border border-gray-200 bg-white;
+  @apply px-3 py-2 rounded-full text-sm
+         border border-gray-200 bg-white text-gray-800
+         dark:border-gray-800 dark:bg-gray-900 dark:text-gray-100;
 }
 .tag.selected {
-  @apply bg-gray-900 text-white border-gray-900;
+  @apply bg-gray-900 text-white border-gray-900
+         dark:bg-gray-100 dark:text-gray-900 dark:border-gray-100;
 }
+
+/* Card surface */
 .card {
-  @apply rounded-2xl border border-gray-200 p-4 shadow-soft bg-white;
+  @apply rounded-2xl border p-4 shadow-soft
+         bg-white border-gray-200
+         dark:bg-gray-900 dark:border-gray-800;
 }
+
+/* Footer text */
 footer {
-  @apply text-xs text-gray-500;
+  @apply text-xs text-gray-500 dark:text-gray-400;
 }
