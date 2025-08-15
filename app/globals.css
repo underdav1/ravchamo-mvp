@@ -2,53 +2,61 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Brand palette */
 :root {
   --brand-1: #6C5CE7; /* playful purple */
   --brand-2: #00CEC9; /* mint */
   --brand-3: #FFA502; /* orange */
 }
 
-html, body {
-  height: 100%;
-}
+/* Don’t hard-force white background here so dark mode can show */
+html, body { height: 100%; }
 
 /* Links */
 a { text-decoration: none; }
 
-/* Generic “kahoot” button base (neutral style, used in details page etc.) */
-.kahoot-btn {
-  @apply w-full text-center py-4 rounded-2xl text-lg font-bold shadow-soft
-         active:scale-95 transition
-         bg-white text-gray-900 border border-gray-200
-         dark:bg-gray-900 dark:text-gray-100 dark:border-gray-800;
-}
+/* ---------- Component styles with dark variants ---------- */
+@layer components {
+  /* Shared “kahoot” base button — smaller & tighter */
+  .kahoot-btn {
+    @apply w-full inline-flex items-center justify-center
+           rounded-xl px-4 py-3 text-base font-semibold
+           shadow-soft transition active:scale-95
+           border bg-white text-gray-900 border-gray-200
+           dark:bg-gray-900 dark:text-gray-100 dark:border-gray-800;
+  }
 
-/* Branded button variants */
-.kahoot-purple { background: var(--brand-1); color: #ffffff; }
-.kahoot-mint   { background: var(--brand-2); color: #0b0b0b; }
-.kahoot-orange { background: var(--brand-3); color: #0b0b0b; }
-/* Neutral gray option that adapts to theme */
-.kahoot-gray   { @apply bg-gray-100 text-gray-900 dark:bg-gray-800 dark:text-gray-100; }
+  /* Brand buttons */
+  .kahoot-purple { background: var(--brand-1); color: #fff; }
+  .kahoot-mint   { background: var(--brand-2); color: #0b0b0b; }
+  .kahoot-orange { background: var(--brand-3); color: #0b0b0b; }
 
-/* Tag chips */
-.tag {
-  @apply px-3 py-2 rounded-full text-sm
-         border border-gray-200 bg-white text-gray-800
-         dark:border-gray-800 dark:bg-gray-900 dark:text-gray-100;
-}
-.tag.selected {
-  @apply bg-gray-900 text-white border-gray-900
-         dark:bg-gray-100 dark:text-gray-900 dark:border-gray-100;
-}
+  /* Neutral button that adapts */
+  .kahoot-gray {
+    @apply bg-gray-100 text-gray-900
+           dark:bg-gray-800 dark:text-gray-100;
+  }
 
-/* Card surface */
-.card {
-  @apply rounded-2xl border p-4 shadow-soft
-         bg-white border-gray-200
-         dark:bg-gray-900 dark:border-gray-800;
-}
+  /* Tag chips */
+  .tag {
+    @apply px-3 py-1.5 rounded-full text-sm
+           border border-gray-200 bg-white text-gray-800
+           dark:border-gray-800 dark:bg-gray-900 dark:text-gray-100;
+  }
+  .tag.selected {
+    @apply bg-gray-900 text-white border-gray-900
+           dark:bg-gray-100 dark:text-gray-900 dark:border-gray-100;
+  }
 
-/* Footer text */
-footer {
-  @apply text-xs text-gray-500 dark:text-gray-400;
+  /* Card surface */
+  .card {
+    @apply rounded-2xl p-4 border shadow-soft
+           bg-white border-gray-200
+           dark:bg-gray-900 dark:border-gray-800;
+  }
+
+  /* Footer text */
+  footer {
+    @apply text-xs text-gray-500 dark:text-gray-400;
+  }
 }
