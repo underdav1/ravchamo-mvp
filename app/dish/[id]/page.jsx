@@ -2,7 +2,7 @@
 
 import data from "../../../data/dishes.json";
 import Link from "next/link";
-import { useI18n } from "../../ui/LangProvider";
+import { useLang} from "../../ui/LangProvider";
 
 export default function DishDetail({ params }) {
   const { t, tt } = useI18n();
