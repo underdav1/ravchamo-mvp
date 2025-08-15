@@ -4,11 +4,11 @@ import { useEffect, useState } from "react";
 import BigButton from "../components/BigButton";
 import TagToggle from "../components/TagToggle";
 import { useRouter } from "next/navigation";
-import { useI18n } from "./ui/LangProvider";
+import { useLang  } from "./ui/LangProvider";
 
 export default function Home() {
   const router = useRouter();
-  const { t, tt } = useI18n();
+  const { t, tt } = useLang ();
 
   const [loc, setLoc] = useState(null);
   const [locDenied, setLocDenied] = useState(false);
