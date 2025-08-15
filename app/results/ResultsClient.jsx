@@ -5,10 +5,10 @@ import { useSearchParams } from "next/navigation";
 import data from "../../data/dishes.json";
 import DishCard from "../../components/DishCard";
 import { recommend } from "../../lib/recommend";
-import { useI18n } from "../ui/LangProvider";
+import { useLang } from "../ui/LangProvider";
 
 export default function ResultsClient() {
-  const { t } = useI18n();
+  const { t } = useLang();
   const params = useSearchParams();
   const [items, setItems] = useState([]);
 
