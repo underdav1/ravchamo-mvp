@@ -1,10 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import { useI18n } from "../app/ui/LangProvider";
+import { useLang } from "../app/ui/LangProvider";
 
 export default function DishCard({ dish }) {
-  const { t, tt } = useI18n();
+  const { t, tt } = useLang();
 
   return (
     <Link href={`/dish/${dish.id}`} className="block card mb-4">
