@@ -3,26 +3,22 @@
 import { createContext, useContext, useEffect, useMemo, useState } from "react";
 import { en, ka } from "./langs";
 
-// 1) Language dictionaries map
 const DICTS = { en, ka };
 
-// 2) Context + safe default
 const LangContext = createContext({
   lang: "en",
   setLang: () => {},
   STR: en,
 });
 
-// 3) Hook used by components (e.g., LanguageToggle)
 export function useLang() {
   return useContext(LangContext);
 }
 
-// 4) Provider component
 export function LangProvider({ children }) {
   const [lang, setLang] = useState("en");
 
-  // hydrate from localStorage
+  // load from localStorage on mount
   useEffect(() => {
     try {
       const saved = localStorage.getItem("lang");
@@ -30,7 +26,7 @@ export function LangProvider({ children }) {
     } catch {}
   }, []);
 
-  // persist + set <html lang="xx">
+  // persist + set <html lang="...">
   useEffect(() => {
     try {
       localStorage.setItem("lang", lang);
@@ -40,13 +36,11 @@ export function LangProvider({ children }) {
     }
   }, [lang]);
 
-  // memoize the dictionary for current lang
   const STR = useMemo(() => DICTS[lang] ?? en, [lang]);
-
   const value = useMemo(() => ({ lang, setLang, STR }), [lang, STR]);
 
   return <LangContext.Provider value={value}>{children}</LangContext.Provider>;
 }
 
-// (optional) default export for compatibility if something imports default
+// keep default export too, so your current import still works
 export default LangProvider;
