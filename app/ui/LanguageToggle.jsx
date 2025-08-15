@@ -5,15 +5,19 @@ import { useI18n } from "./LangProvider";
 export default function LanguageToggle() {
   const { lang, setLang } = useI18n();
 
+  // show the OTHER language as the action
+  const next = lang === "en" ? "ka" : "en";
+  const label = lang === "en" ? "🇬🇪 KA • Georgian" : "🇺🇸 EN • English";
+
   return (
     <button
-      aria-label="Change language"
-      onClick={() => setLang(lang === "ka" ? "en" : "ka")}
-      className="px-3 py-1 rounded-md border text-sm"
-      style={{ opacity: 0.9 }}
-      title={lang === "ka" ? "Switch to English" : "გადართე ქართულზე"}
+      type="button"
+      onClick={() => setLang(next)}
+      aria-label="Switch language"
+      title="Switch language"
+      className="px-3 py-1 text-sm rounded-md border bg-white hover:bg-gray-50"
     >
-      {lang === "ka" ? "KA • ქართული" : "EN • English"}
+      {label}
     </button>
   );
 }
