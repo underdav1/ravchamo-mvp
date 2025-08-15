@@ -1,12 +1,14 @@
-'use client';
+"use client";
 
 import { useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import data from "../../data/dishes.json";
 import DishCard from "../../components/DishCard";
 import { recommend } from "../../lib/recommend";
+import { useI18n } from "../ui/LangProvider";
 
 export default function ResultsClient() {
+  const { t } = useI18n();
   const params = useSearchParams();
   const [items, setItems] = useState([]);
 
@@ -34,8 +36,10 @@ export default function ResultsClient() {
 
   return (
     <main>
-      <h1 className="text-xl font-bold mb-3">Top picks</h1>
-      {items.length === 0 && <div className="text-gray-600">No matches yet. Try fewer filters.</div>}
+      <h1 className="text-xl font-bold mb-3">{t("resultsTop")}</h1>
+      {items.length === 0 && (
+        <div className="text-gray-600">{t("noMatches")}</div>
+      )}
       {items.map(d => (<DishCard key={d.id} dish={d} />))}
     </main>
   );
