@@ -1,61 +1,93 @@
 "use client";
 
-import data from "../../../data/dishes.json";
 import Link from "next/link";
-import { useLang} from "../../ui/LangProvider";
+import { useParams } from "next/navigation";
+import data from "../../../data/dishes.json";
+import { useI18n } from "../../ui/LangProvider";
 
-export default function DishDetail({ params }) {
-  const { t, tt } = useLang();
-  const dish = data.find((d) => d.id === params.id);
-  if (!dish) return <div className="p-6">Not found.</div>;
+function slugify(s) {
+  return String(s || "")
+    .trim()
+    .toLowerCase()
+    .replace(/[^\p{L}\p{N}]+/gu, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
+export default function DishPage() {
+  const t = useI18n();
+  const { id } = useParams(); // matches [id] in the folder name
+
+  // Try to resolve the dish by multiple keys so /dish/shawarma-vake works:
+  const dish =
+    (Array.isArray(data) && data.find((d) => String(d.id) === String(id))) ||
+    (Array.isArray(data) && data.find((d) => String(d.slug) === String(id))) ||
+    (Array.isArray(data) && data.find((d) => slugify(d.name) === String(id))) ||
+    null;
+
+  if (!dish) {
+    return (
+      <main className="max-w-md mx-auto px-4 py-6">
+        <div className="card">
+          <h1 className="text-xl font-bold mb-2">{t("notFound") || "Not found"}</h1>
+          <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
+            {t("dishNotFound") || "We couldn't find this dish."}
+          </p>
+          <Link href="/" className="kahoot-btn kahoot-purple inline-block">
+            {t("goHome") || "Go home"}
+          </Link>
+        </div>
+      </main>
+    );
+  }
+
+  const districtToken = dish?.restaurant?.district;
+  const districtLabel =
+    districtToken ? t(`districts.${districtToken}`) ?? districtToken : "";
+
+  const distText =
+    typeof dish?.dist === "number" ? `${dish.dist.toFixed(1)} km` : null;
 
   return (
-    <main>
-      <Link href="/results" className="text-sm text-blue-700">
-        ← {t("back")}
-      </Link>
+    <main className="max-w-md mx-auto px-4 py-6 space-y-4">
+      <img
+        src={dish.image}
+        alt={dish.name || "Dish photo"}
+        className="w-full h-48 object-cover rounded-2xl border"
+      />
 
-      <div className="mt-3 card">
-        <img
-          src={dish.image}
-          alt={dish.name}
-          className="w-full h-56 object-cover rounded-xl border mb-3"
-        />
-        <h1 className="text-2xl font-bold mb-1">{dish.name}</h1>
-        <div className="text-sm text-gray-600 mb-2">
-          {dish.restaurant.name} • {dish.restaurant.district}
-        </div>
-        <div className="text-lg font-semibold mb-2">
-          {t("gel")}{dish.price}
-        </div>
+      <div className="card">
+        <h1 className="text-2xl font-bold">{dish.name}</h1>
+        <p className="text-sm text-gray-600 dark:text-gray-400">
+          {dish.restaurant?.name}
+          {districtLabel ? ` • ${districtLabel}` : ""}
+        </p>
+        <p className="mt-2 text-sm">
+          ₾{dish.price}
+          {distText ? ` • ${distText} ${t("away") || "away"}` : ""}
+        </p>
 
-        <div className="flex flex-wrap gap-2 mb-3">
-          {dish.tags.map((tag) => (
+        <div className="mt-2 flex flex-wrap gap-2">
+          {(dish.tags || []).map((tag) => (
             <span key={tag} className="tag">
-              {tt(tag)}
+              {t(`tags.${tag}`) ?? tag}
             </span>
           ))}
         </div>
 
-        <p className="text-sm mb-3">{dish.description}</p>
+        {dish.description && (
+          <p className="mt-3 text-sm text-gray-700 dark:text-gray-300">
+            {dish.description}
+          </p>
+        )}
 
-        <div className="grid grid-cols-2 gap-2">
-          <a href={`tel:${dish.restaurant.phone}`} className="kahoot-btn kahoot-mint text-center">
-            {t("call")}
-          </a>
-          <a
-            target="_blank"
-            rel="noreferrer"
-            href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(dish.restaurant.address)}`}
-            className="kahoot-btn kahoot-purple text-center"
-          >
-            {t("openInMaps")}
-          </a>
+        <div className="mt-4 flex gap-2">
+          <Link href="/results" className="kahoot-btn kahoot-gray">
+            {t("backToResults") || "Back to results"}
+          </Link>
+          <Link href="/" className="kahoot-btn kahoot-mint">
+            {t("goHome") || "Home"}
+          </Link>
         </div>
-      </div>
-
-      <div className="text-xs text-gray-500 mt-3">
-        {t("disclaimer")}
       </div>
     </main>
   );
