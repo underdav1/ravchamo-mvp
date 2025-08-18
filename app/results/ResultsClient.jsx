@@ -5,10 +5,8 @@ import { useSearchParams } from "next/navigation";
 import data from "../../data/dishes.json";
 import DishCard from "../../components/DishCard";
 import { recommend } from "../../lib/recommend";
-import { useLang } from "../ui/LangProvider";
 
 export default function ResultsClient() {
-  const { t } = useLang();
   const params = useSearchParams();
   const [items, setItems] = useState([]);
 
@@ -18,14 +16,19 @@ export default function ResultsClient() {
     const price = params.get("price") || "med";
     const tags = (params.get("tags") || "").split(",").filter(Boolean);
     const exclude = (params.get("exclude") || "").split(",").filter(Boolean);
-    const time = params.get("time") || null;
-    return { loc: (lat && lon) ? { lat, lon } : null, price, tags, exclude, time };
+
+    return {
+      loc: lat && lon ? { lat, lon } : null,
+      price,
+      tags,
+      exclude
+    };
   }, [params]);
 
   useEffect(() => {
     let d = [...data];
     if (user.exclude?.length) {
-      d = d.filter(x => !user.exclude.some(e => x.tags.includes(e)));
+      d = d.filter((x) => !user.exclude.some((e) => x.tags.includes(e)));
     }
     if (params.get("lucky") === "1") {
       d.sort((a, b) => a.price - b.price);
@@ -36,11 +39,15 @@ export default function ResultsClient() {
 
   return (
     <main>
-      <h1 className="text-xl font-bold mb-3">{t("resultsTop")}</h1>
+      <h1 className="text-xl font-bold mb-3">Top picks</h1>
       {items.length === 0 && (
-        <div className="text-gray-600">{t("noMatches")}</div>
+        <div className="text-gray-600 dark:text-gray-400">
+          No matches yet. Try fewer filters.
+        </div>
       )}
-      {items.map(d => (<DishCard key={d.id} dish={d} />))}
+      {items.map((d) => (
+        <DishCard key={d.id} dish={d} />
+      ))}
     </main>
   );
 }
