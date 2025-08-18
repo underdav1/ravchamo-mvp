@@ -1,14 +1,14 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 import BigButton from "../components/BigButton";
 import TagToggle from "../components/TagToggle";
-import { useRouter } from "next/navigation";
-import { useLang  } from "./ui/LangProvider";
+import { useLang } from "./ui/LangProvider";
 
 export default function Home() {
   const router = useRouter();
-  const { t, tt } = useLang ();
+  const { STR } = useLang();
 
   const [loc, setLoc] = useState(null);
   const [locDenied, setLocDenied] = useState(false);
@@ -24,8 +24,7 @@ export default function Home() {
         (pos) => {
           setLoc({ lat: pos.coords.latitude, lon: pos.coords.longitude });
         },
-        (err) => {
-          console.log(err);
+        () => {
           setLocDenied(true);
           // fallback: Vake center
           setLoc({ lat: 41.71, lon: 44.77 });
@@ -38,7 +37,7 @@ export default function Home() {
     }
   }, []);
 
-  // keys we display (we translate their labels with tt())
+  // keys we render as chips (we translate their labels via STR.tags[key] ?? key)
   const cravingOptions = [
     "georgian",
     "grill",
@@ -80,26 +79,30 @@ export default function Home() {
   return (
     <main>
       <div className="text-center mb-6">
-        <h1 className="text-3xl font-extrabold">🍽️ {t("appName")}</h1>
-        <p className="text-gray-600">{t("tagline")}</p>
+        <h1 className="text-3xl font-extrabold">🍽️ {STR.appName}</h1>
+        <p className="text-gray-600 dark:text-gray-300">{STR.tagline}</p>
       </div>
 
       <div className="card mb-4">
-        <div className="text-sm text-gray-700 mb-2">{t("location")}</div>
+        <div className="text-sm text-gray-700 dark:text-gray-300 mb-2">
+          {STR.location}
+        </div>
         <div className="flex gap-2 items-center">
           <span
-            className={`text-xs ${loc ? "text-green-700" : "text-gray-500"}`}
+            className={`text-xs ${
+              loc ? "text-green-700" : "text-gray-500 dark:text-gray-400"
+            }`}
           >
-            {loc ? t("loc.ready") : t("loc.getting")}
+            {loc ? STR.loc.ready : STR.loc.getting}
           </span>
           {locDenied && (
-            <span className="text-xs text-orange-600">{t("loc.deniedVake")}</span>
+            <span className="text-xs text-orange-600">{STR.loc.deniedVake}</span>
           )}
         </div>
       </div>
 
       <div className="card mb-4">
-        <div className="font-semibold mb-2">{t("budget")}</div>
+        <div className="font-semibold mb-2">{STR.budget}</div>
         <div className="grid grid-cols-3 gap-2">
           <BigButton
             className={`kahoot-gray ${
@@ -107,7 +110,7 @@ export default function Home() {
             }`}
             onClick={() => setPrice("low")}
           >
-            {t("low")}
+            {STR.low}
           </BigButton>
           <BigButton
             className={`kahoot-gray ${
@@ -115,7 +118,7 @@ export default function Home() {
             }`}
             onClick={() => setPrice("med")}
           >
-            {t("medium")}
+            {STR.medium}
           </BigButton>
           <BigButton
             className={`kahoot-gray ${
@@ -123,22 +126,24 @@ export default function Home() {
             }`}
             onClick={() => setPrice("high")}
           >
-            {t("high")}
+            {STR.high}
           </BigButton>
         </div>
       </div>
 
       <div className="card mb-4">
-        <div className="font-semibold mb-2">{t("cravings")}</div>
+        <div className="font-semibold mb-2">{STR.cravings}</div>
         <div className="flex flex-wrap gap-2">
           {cravingOptions.map((opt) => (
             <TagToggle
               key={opt}
-              label={tt(opt)}
+              label={STR.tags?.[opt] ?? opt}
               selected={tags.includes(opt)}
               onClick={() => {
                 setTags((prev) =>
-                  prev.includes(opt) ? prev.filter((x) => x !== opt) : [...prev, opt]
+                  prev.includes(opt)
+                    ? prev.filter((x) => x !== opt)
+                    : [...prev, opt]
                 );
               }}
             />
@@ -147,16 +152,18 @@ export default function Home() {
       </div>
 
       <div className="card mb-4">
-        <div className="font-semibold mb-2">{t("dietary")}</div>
+        <div className="font-semibold mb-2">{STR.dietary}</div>
         <div className="flex flex-wrap gap-2">
           {excludeOptions.map((opt) => (
             <TagToggle
               key={opt}
-              label={tt(opt)}
+              label={STR.tags?.[opt] ?? opt}
               selected={exclude.includes(opt)}
               onClick={() => {
                 setExclude((prev) =>
-                  prev.includes(opt) ? prev.filter((x) => x !== opt) : [...prev, opt]
+                  prev.includes(opt)
+                    ? prev.filter((x) => x !== opt)
+                    : [...prev, opt]
                 );
               }}
             />
@@ -165,7 +172,7 @@ export default function Home() {
       </div>
 
       <div className="card mb-6">
-        <div className="font-semibold mb-2">{t("time")}</div>
+        <div className="font-semibold mb-2">{STR.time}</div>
         <div className="grid grid-cols-2 gap-2">
           <BigButton
             className={`kahoot-mint ${
@@ -173,7 +180,7 @@ export default function Home() {
             }`}
             onClick={() => setTime("fast")}
           >
-            {t("fast")}
+            {STR.fast}
           </BigButton>
           <BigButton
             className={`kahoot-orange ${
@@ -181,17 +188,17 @@ export default function Home() {
             }`}
             onClick={() => setTime("relaxed")}
           >
-            {t("relaxed")}
+            {STR.relaxed}
           </BigButton>
         </div>
       </div>
 
       <div className="grid grid-cols-1 gap-3">
         <BigButton className="kahoot-purple" onClick={() => goResults(false)}>
-          {t("seeResults")}
+          {STR.seeResults}
         </BigButton>
         <BigButton className="kahoot-mint" onClick={() => goResults(true)}>
-          🎲 {t("lucky")}
+          🎲 {STR.lucky}
         </BigButton>
       </div>
     </main>
