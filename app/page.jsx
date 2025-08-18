@@ -4,10 +4,10 @@ import { useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import BigButton from "../components/BigButton";
 import TagToggle from "../components/TagToggle";
-import { useI18n } from "./ui/LangProvider"; // <- NEW
+import { useI18n } from "./ui/LangProvider";
 
 export default function Home() {
-  const t = useI18n(); // <- translation function
+  const t = useI18n();
   const router = useRouter();
 
   const [loc, setLoc] = useState(null);
@@ -15,15 +15,12 @@ export default function Home() {
   const [price, setPrice] = useState("med");
   const [tags, setTags] = useState([]);
   const [exclude, setExclude] = useState([]);
-  const [time, setTime] = useState(null);
 
   // ask for location (with Vake fallback)
   useEffect(() => {
     if (typeof navigator !== "undefined" && navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
-        (pos) => {
-          setLoc({ lat: pos.coords.latitude, lon: pos.coords.longitude });
-        },
+        (pos) => setLoc({ lat: pos.coords.latitude, lon: pos.coords.longitude }),
         () => {
           setLocDenied(true);
           setLoc({ lat: 41.71, lon: 44.77 });
@@ -53,7 +50,6 @@ export default function Home() {
       price,
       tags: tags.join(","),
       exclude: exclude.join(","),
-      time: time ?? ""
     });
     if (lucky) query.set("lucky", "1");
     router.push(`/results?${query.toString()}`);
@@ -72,9 +68,7 @@ export default function Home() {
           <span className={`text-xs ${loc ? "text-green-700" : "text-gray-500"}`}>
             {loc ? t("loc.ready") : t("loc.getting")}
           </span>
-          {locDenied && (
-            <span className="text-xs text-orange-600">{t("loc.deniedVake")}</span>
-          )}
+          {locDenied && <span className="text-xs text-orange-600">{t("loc.deniedVake")}</span>}
         </div>
       </div>
 
@@ -110,9 +104,9 @@ export default function Home() {
               key={opt}
               label={labelFor(opt)}
               selected={tags.includes(opt)}
-              onClick={() => {
-                setTags((prev) => (prev.includes(opt) ? prev.filter((x) => x !== opt) : [...prev, opt]));
-              }}
+              onClick={() =>
+                setTags((prev) => (prev.includes(opt) ? prev.filter((x) => x !== opt) : [...prev, opt]))
+              }
             />
           ))}
         </div>
@@ -126,29 +120,11 @@ export default function Home() {
               key={opt}
               label={labelFor(opt)}
               selected={exclude.includes(opt)}
-              onClick={() => {
-                setExclude((prev) => (prev.includes(opt) ? prev.filter((x) => x !== opt) : [...prev, opt]));
-              }}
+              onClick={() =>
+                setExclude((prev) => (prev.includes(opt) ? prev.filter((x) => x !== opt) : [...prev, opt]))
+              }
             />
           ))}
-        </div>
-      </div>
-
-      <div className="card mb-6">
-        <div className="font-semibold mb-2">{t("time")}</div>
-        <div className="grid grid-cols-2 gap-2">
-          <BigButton
-            className={`kahoot-mint ${time === "fast" ? "outline outline-2 outline-black dark:outline-white" : ""}`}
-            onClick={() => setTime("fast")}
-          >
-            {t("fast")}
-          </BigButton>
-          <BigButton
-            className={`kahoot-orange ${time === "relaxed" ? "outline outline-2 outline-black dark:outline-white" : ""}`}
-            onClick={() => setTime("relaxed")}
-          >
-            {t("relaxed")}
-          </BigButton>
         </div>
       </div>
 
