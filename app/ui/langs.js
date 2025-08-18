@@ -59,7 +59,7 @@ export const en = {
 
 export const ka = {
   appName: "რა ვჭამო?",
-  tagline: "რას ვჭამო?",
+  tagline: "თუ არ იცი რა ჭამო",
   location: "ადგილმდებარეობა",
   loc: {
     ready: "ლოკაცია მზად არის",
@@ -68,11 +68,11 @@ export const ka = {
   },
   setLocation: "ჩემი ლოკაცია...",
   budget: "აირჩიე ბიუჯეტი",
-  low: "დაბალი",
-  medium: "საშუალო",
-  high: "მაღალი",
+  low: "20₾-მდე",
+  medium: "40₾-მდე",
+  high: "ძვირიანი",
   cravings: "რა გაგისწორდება (არასავალდებულო)",
-  dietary: "დიეტური შეზღუდვები (გამორიცხვა)",
+  dietary: "რა არ გაგისწორდება (ალერგია თუ გაქვს)",
   exclude: "რა არ გაგისწორდება (გამორიცხვა)",
   time: "დრო",
   fast: "სწრაფად",
@@ -92,13 +92,13 @@ export const ka = {
   tags: {
     // cravings
     georgian: "ქართული",
-    grill: "გრილი",
-    wrap: "როლი/რეხვრეპი",
+    grill: "შემწვარ/შეხრაკული",
+    wrap: "ვრეპი",
     sushi: "სუში",
     pizza: "პიცა",
     salad: "სალათი",
     soup: "სუპი",
-    vegan: "ვეგანი",
+    vegan: "ვეგანური",
     healthy: "ჯანსაღი",
     cheesy: "ყველიანი",
     spicy: "ცხარე",
