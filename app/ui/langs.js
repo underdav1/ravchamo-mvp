@@ -46,6 +46,25 @@ export const en = {
     cheesy: "Cheesy",
     spicy: "Spicy",
 
+    // districts
+    district: "Districts",
+    districts: {
+    vake: "Vake",
+    vera: "Vera",
+    saburtalo: "Saburtalo",
+    mtatsminda: "Mtatsminda",
+    sololaki: "Sololaki",
+    old_town: "Old Town",
+    chugureti: "Chugureti / Marjanishvili",
+    avlabari: "Avlabari",
+    isani: "Isani",
+    didube: "Didube",
+    gldani: "Gldani",
+    samgori: "Samgori",
+    nadzaladevi: "Nadzaladevi"
+    }
+
+    
     // dietary/exclude
     pork: "Pork",
     beef: "Beef",
@@ -104,6 +123,24 @@ export const ka = {
     healthy: "ჯანსაღი",
     cheesy: "ყველიანი",
     spicy: "ცხარე",
+
+    // districts
+    district: "რაიონები",
+    districts: {
+    vake: "ვაკე",
+    vera: "ვერა",
+    saburtalo: "საბურთალო",
+    mtatsminda: "მთაწმინდა",
+    sololaki: "სოლოლაკი",
+    old_town: "ძველი თბილისი",
+    chugureti: "ჩუღურეთი / მარჯანიშვილი",
+    avlabari: "ავლაბარი",
+    isani: "ისანი",
+    didube: "დიდუბე",
+    gldani: "გლდანი",
+    samgori: "სამგორი",
+    nadzaladevi: "ნაძალადევი"
+    }
 
     // dietary/exclude
     pork: "ღორი",
