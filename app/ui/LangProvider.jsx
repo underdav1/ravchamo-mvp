@@ -3,22 +3,18 @@
 import { createContext, useContext, useEffect, useMemo, useState } from "react";
 import { en, ka } from "./langs";
 
-const DICTS = { en, ka };
-
+// Provide a safe default so SSR doesn't explode if used above the provider
 const LangContext = createContext({
   lang: "en",
   setLang: () => {},
+  toggleLang: () => {},
   STR: en,
 });
 
-export function useLang() {
-  return useContext(LangContext);
-}
-
-export function LangProvider({ children }) {
+function LangProvider({ children }) {
   const [lang, setLang] = useState("en");
 
-  // load from localStorage on mount
+  // hydrate from localStorage
   useEffect(() => {
     try {
       const saved = localStorage.getItem("lang");
@@ -26,21 +22,33 @@ export function LangProvider({ children }) {
     } catch {}
   }, []);
 
-  // persist + set <html lang="...">
+  // persist to localStorage
   useEffect(() => {
     try {
       localStorage.setItem("lang", lang);
     } catch {}
-    if (typeof document !== "undefined") {
-      document.documentElement.lang = lang;
-    }
   }, [lang]);
 
-  const STR = useMemo(() => DICTS[lang] ?? en, [lang]);
-  const value = useMemo(() => ({ lang, setLang, STR }), [lang, STR]);
+  const STR = useMemo(() => (lang === "ka" ? ka : en), [lang]);
+
+  const value = useMemo(
+    () => ({
+      lang,
+      setLang,
+      toggleLang: () => setLang((p) => (p === "en" ? "ka" : "en")),
+      STR,
+    }),
+    [lang, STR]
+  );
 
   return <LangContext.Provider value={value}>{children}</LangContext.Provider>;
 }
 
-// keep default export too, so your current import still works
+// Named hook export (this is what you must import)
+export function useLang() {
+  const ctx = useContext(LangContext);
+  if (!ctx) throw new Error("useLang must be used within <LangProvider>");
+  return ctx;
+}
+
 export default LangProvider;
