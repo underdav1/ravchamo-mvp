@@ -62,7 +62,7 @@ export const en = {
     gldani: "Gldani",
     samgori: "Samgori",
     nadzaladevi: "Nadzaladevi"
-    }
+    },
 
     
     // dietary/exclude
@@ -140,7 +140,7 @@ export const ka = {
     gldani: "გლდანი",
     samgori: "სამგორი",
     nadzaladevi: "ნაძალადევი"
-    }
+    },
 
     // dietary/exclude
     pork: "ღორი",
