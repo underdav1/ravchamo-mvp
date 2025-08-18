@@ -92,7 +92,7 @@ export const ka = {
   tags: {
     // cravings
     georgian: "ქართული",
-    grill: "შემწვარ/შეხრაკული",
+    grill: "შემწვარ/მოხრაკული",
     wrap: "ვრეპი",
     sushi: "სუში",
     pizza: "პიცა",
