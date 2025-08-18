@@ -3,52 +3,50 @@
 import { createContext, useContext, useEffect, useMemo, useState } from "react";
 import { en, ka } from "./langs";
 
-// Provide a safe default so SSR doesn't explode if used above the provider
-const LangContext = createContext({
+const LangCtx = createContext({
   lang: "en",
   setLang: () => {},
-  toggleLang: () => {},
-  STR: en,
+  t: (k) => k,
 });
 
-function LangProvider({ children }) {
+export function useLang() {
+  return useContext(LangCtx); // { lang, setLang, t }
+}
+
+// IMPORTANT: this returns a FUNCTION you can call: const t = useI18n(); t("appName")
+export function useI18n() {
+  return useContext(LangCtx).t;
+}
+
+export default function LangProvider({ children }) {
   const [lang, setLang] = useState("en");
 
-  // hydrate from localStorage
+  // load saved lang
   useEffect(() => {
-    try {
-      const saved = localStorage.getItem("lang");
-      if (saved === "en" || saved === "ka") setLang(saved);
-    } catch {}
+    if (typeof window === "undefined") return;
+    const saved = localStorage.getItem("lang");
+    if (saved === "ka" || saved === "en") setLang(saved);
   }, []);
 
-  // persist to localStorage
+  // persist lang
   useEffect(() => {
-    try {
-      localStorage.setItem("lang", lang);
-    } catch {}
+    if (typeof window === "undefined") return;
+    localStorage.setItem("lang", lang);
   }, [lang]);
 
-  const STR = useMemo(() => (lang === "ka" ? ka : en), [lang]);
+  const dict = lang === "ka" ? ka : en;
 
-  const value = useMemo(
-    () => ({
-      lang,
-      setLang,
-      toggleLang: () => setLang((p) => (p === "en" ? "ka" : "en")),
-      STR,
-    }),
-    [lang, STR]
+  // t("a.b.c") path lookup
+  const t = useMemo(
+    () => (key) =>
+      key.split(".").reduce((acc, part) => {
+        if (acc && acc[part] !== undefined && acc[part] !== null) return acc[part];
+        return key; // fallback to key if missing (prevents crashes)
+      }, dict),
+    [dict]
   );
 
-  return <LangContext.Provider value={value}>{children}</LangContext.Provider>;
-}
+  const value = useMemo(() => ({ lang, setLang, t }), [lang, t]);
 
-// Named hook export (this is what you must import)
-export function useLang() {
-  const ctx = useContext(LangContext);
-  if (!ctx) throw new Error("useLang must be used within <LangProvider>");
-  return ctx;
+  return <LangCtx.Provider value={value}>{children}</LangCtx.Provider>;
 }
-
-export default LangProvider;
