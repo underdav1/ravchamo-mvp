@@ -1,33 +1,33 @@
 "use client";
+
 import { useLang } from "./LangProvider";
 
 export default function LanguageToggle() {
   const { lang, setLang } = useLang();
 
-  const base =
-    "px-2.5 py-1 text-xs font-medium leading-none transition-colors";
-  const on =
-    "bg-black text-white dark:bg-white dark:text-black";
-  const off =
-    "bg-transparent text-gray-700 dark:text-gray-200";
+  const btnBase =
+    "px-2.5 py-1.5 text-sm rounded-lg border transition " +
+    "bg-white border-gray-200 text-gray-800 " +
+    "dark:bg-gray-800 dark:border-gray-700 dark:text-gray-100";
+
+  const active =
+    "bg-gray-900 text-white dark:bg-gray-100 dark:text-gray-900 border-gray-900";
 
   return (
-    <div className="inline-flex shrink-0 overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700">
+    <div className="inline-flex gap-1">
       <button
         type="button"
         onClick={() => setLang("en")}
-        className={`${base} ${lang === "en" ? on : off}`}
-        title="Switch to English"
-        aria-label="Switch to English"
+        className={`${btnBase} ${lang === "en" ? active : ""}`}
+        aria-pressed={lang === "en"}
       >
         🇺🇸 EN
       </button>
       <button
         type="button"
         onClick={() => setLang("ka")}
-        className={`${base} ${lang === "ka" ? on : off}`}
-        title="გადადით ქართულზე"
-        aria-label="გადადით ქართულზე"
+        className={`${btnBase} ${lang === "ka" ? active : ""}`}
+        aria-pressed={lang === "ka"}
       >
         🇬🇪 KA
       </button>
