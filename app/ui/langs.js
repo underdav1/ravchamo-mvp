@@ -23,6 +23,7 @@ export const en = {
   findDishes: "Show options",
   seeResults: "Show results",
   lucky: "I'm feeling lucky",
+  feelingLucky: "I’m feeling lucky", // alias
   resultsTop: "Top picks",
   noMatches: "No matches yet. Try fewer filters.",
   call: "Call",
@@ -81,6 +82,7 @@ export const ka = {
   findDishes: "გააძრე კიშკა",
   seeResults: "გააძრე კიშკა",
   lucky: "დამირენდომე",
+  feelingLucky: "იღბალს ვცდი",       // alias
   resultsTop: "საუკეთესო ვარიანტები",
   noMatches: "შედეგი ვერ მოიძებნა. სცადე ნაკლები ფილტრი.",
   call: "დარეკვა",
