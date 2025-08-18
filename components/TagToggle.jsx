@@ -7,7 +7,7 @@ export default function TagToggle({ label, selected, onClick, className = "" }) 
       aria-pressed={!!selected}
       onClick={onClick}
       className={[
-        "tag",               // your base chip styles from globals.css
+        "tag",
         selected ? "selected" : "",
         className,
       ].join(" ").trim()}
