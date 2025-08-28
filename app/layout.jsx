@@ -4,17 +4,15 @@ export const metadata = {
 };
 
 import "./globals.css";
-import { Analytics } from '@vercel/analytics/react'  
+import { Analytics } from "@vercel/analytics/react";
 import ThemeProvider from "./ui/ThemeProvider";
 import LangProvider from "./ui/LangProvider";
 import LanguageToggle from "./ui/LanguageToggle";
 import ThemeToggle from "./ui/ThemeToggle";
 
-
-
 export default function RootLayout({ children }) {
   return (
-    <html lang="ka">
+    <html lang="ka" suppressHydrationWarning>
       <body className="min-h-screen bg-white text-gray-900 dark:bg-gray-950 dark:text-gray-100">
         <ThemeProvider>
           <LangProvider>
@@ -37,7 +35,9 @@ export default function RootLayout({ children }) {
             </div>
           </LangProvider>
         </ThemeProvider>
-        <Analytics />    
+
+        {/* Vercel Analytics — keep this just before </body> */}
+        <Analytics />
       </body>
     </html>
   );
