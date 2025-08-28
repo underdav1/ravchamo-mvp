@@ -30,6 +30,8 @@ export const en = {
   openInMaps: "Open in Maps",
   gel: "GEL",
   back: "Back to results",
+  backToResults: "Back to results",
+  goHome: "Go Home",
   disclaimer:
     "Menu data may be inaccurate. Always check with the restaurant about allergens and availability.",
   tags: {
@@ -45,6 +47,7 @@ export const en = {
     healthy: "Healthy",
     cheesy: "Cheesy",
     spicy: "Spicy",
+    
 
     // districts
     district: "Districts",
@@ -108,6 +111,8 @@ export const ka = {
   openInMaps: "გახსენი რუკაზე",
   gel: "₾",
   back: "უკან შედეგებზე",
+  backToResults: "უკან შედეგებზე",
+  goHome: "მთავარზე",
   disclaimer:
     "მენიუს მონაცემები შესაძლოა არ იყოს ზუსტი. ინფორმაცია ალერგენებსა და ხელმისაწვდომობაზე გადაამოწმეთ უშუალოდ რესტორანთან.",
   tags: {
