@@ -4,13 +4,13 @@ export const metadata = {
 };
 
 import "./globals.css";
+import { Analytics } from '@vercel/analytics/react'  
 import ThemeProvider from "./ui/ThemeProvider";
 import LangProvider from "./ui/LangProvider";
 import LanguageToggle from "./ui/LanguageToggle";
 import ThemeToggle from "./ui/ThemeToggle";
 
-// NEW: import Analytics
-import { Analytics } from "@vercel/analytics/react";
+
 
 export default function RootLayout({ children }) {
   return (
@@ -37,6 +37,7 @@ export default function RootLayout({ children }) {
             </div>
           </LangProvider>
         </ThemeProvider>
+        <Analytics />    
       </body>
     </html>
   );
