@@ -34,6 +34,25 @@ export const en = {
   goHome: "Go Home",
   disclaimer:
     "Menu data may be inaccurate. Always check with the restaurant about allergens and availability.",
+
+  // ✅ districts SHOULD BE TOP-LEVEL (not inside tags)
+  districts: {
+    vake: "Vake",
+    vera: "Vera",
+    saburtalo: "Saburtalo",
+    mtatsminda: "Mtatsminda",
+    sololaki: "Sololaki",
+    old_town: "Old Town",
+    chugureti: "Chugureti / Marjanishvili",
+    avlabari: "Avlabari",
+    isani: "Isani",
+    didube: "Didube",
+    gldani: "Gldani",
+    samgori: "Samgori",
+    nadzaladevi: "Nadzaladevi",
+  },
+
+  // Tags (cravings + dietary)
   tags: {
     // cravings
     georgian: "Georgian",
@@ -49,26 +68,9 @@ export const en = {
     spicy: "Spicy",
     light: "Light",
 
-
-    // districts
+    // keep this if some UI prints a section title via t('tags.district')
     district: "Districts",
-    districts: {
-    vake: "Vake",
-    vera: "Vera",
-    saburtalo: "Saburtalo",
-    mtatsminda: "Mtatsminda",
-    sololaki: "Sololaki",
-    old_town: "Old Town",
-    chugureti: "Chugureti / Marjanishvili",
-    avlabari: "Avlabari",
-    isani: "Isani",
-    didube: "Didube",
-    gldani: "Gldani",
-    samgori: "Samgori",
-    nadzaladevi: "Nadzaladevi"
-    },
 
-    
     // dietary/exclude
     pork: "Pork",
     beef: "Beef",
@@ -105,7 +107,7 @@ export const ka = {
   findDishes: "გააძრე კიშკა",
   seeResults: "გააძრე კიშკა",
   lucky: "დამირენდომე",
-  feelingLucky: "იღბალს ვცდი",       // alias
+  feelingLucky: "იღბალს ვცდი", // alias
   resultsTop: "საუკეთესო ვარიანტები",
   noMatches: "შედეგი ვერ მოიძებნა. სცადე ნაკლები ფილტრი.",
   call: "დარეკვა",
@@ -116,6 +118,24 @@ export const ka = {
   goHome: "მთავარზე",
   disclaimer:
     "მენიუს მონაცემები შესაძლოა არ იყოს ზუსტი. ინფორმაცია ალერგენებსა და ხელმისაწვდომობაზე გადაამოწმეთ უშუალოდ რესტორანთან.",
+
+  // ✅ districts top-level
+  districts: {
+    vake: "ვაკე",
+    vera: "ვერა",
+    saburtalo: "საბურთალო",
+    mtatsminda: "მთაწმინდა",
+    sololaki: "სოლოლაკი",
+    old_town: "ძველი თბილისი",
+    chugureti: "ჩუღურეთი / მარჯანიშვილი",
+    avlabari: "ავლაბარი",
+    isani: "ისანი",
+    didube: "დიდუბე",
+    gldani: "გლდანი",
+    samgori: "სამგორი",
+    nadzaladevi: "ნაძალადევი",
+  },
+
   tags: {
     // cravings
     georgian: "ქართული",
@@ -131,23 +151,8 @@ export const ka = {
     spicy: "ცხარე",
     light: "მსუბუქი",
 
-    // districts
+    // keep as section label if used
     district: "რაიონები",
-    districts: {
-    vake: "ვაკე",
-    vera: "ვერა",
-    saburtalo: "საბურთალო",
-    mtatsminda: "მთაწმინდა",
-    sololaki: "სოლოლაკი",
-    old_town: "ძველი თბილისი",
-    chugureti: "ჩუღურეთი / მარჯანიშვილი",
-    avlabari: "ავლაბარი",
-    isani: "ისანი",
-    didube: "დიდუბე",
-    gldani: "გლდანი",
-    samgori: "სამგორი",
-    nadzaladevi: "ნაძალადევი"
-    },
 
     // dietary/exclude
     pork: "ღორი",
