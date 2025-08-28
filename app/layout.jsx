@@ -9,6 +9,9 @@ import LangProvider from "./ui/LangProvider";
 import LanguageToggle from "./ui/LanguageToggle";
 import ThemeToggle from "./ui/ThemeToggle";
 
+// NEW: import Analytics
+import { Analytics } from "@vercel/analytics/react";
+
 export default function RootLayout({ children }) {
   return (
     <html lang="ka">
