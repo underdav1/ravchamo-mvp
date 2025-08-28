@@ -6,7 +6,7 @@ export const en = {
   loc: {
     ready: "Location ready",
     getting: "Getting location...",
-    deniedVake: "Permission denied — using Vake center.",
+    deniedVake: "Permission denied — using Vake center."
   },
   setLocation: "Set my location...",
   budget: "Select a budget",
@@ -14,21 +14,6 @@ export const en = {
   medium: "Medium",
   high: "High",
   cravings: "Pick cravings (optional)",
-  // add near other root strings
-moodTitle: "What's your vibe?",
-moodHint: "Pick one – this helps tailor your picks.",
-moods: {
-  adventurous: "Adventurous",
-  comfort: "Comfort food",
-  protein: "Protein hit",
-  cheesy: "Cheesy",
-  spicy: "Spicy thrill",
-  healthy: "Clean & green",
-  quick: "Quick bite",
-  cozy: "Cozy & warm",
-  refreshing: "Light & fresh",
-  social: "Shareable",
-  sweet: "Sweet tooth",
   dietary: "Dietary preferences (exclude)",
   exclude: "I don't want (exclude)",
   time: "Time",
@@ -38,7 +23,7 @@ moods: {
   findDishes: "Show options",
   seeResults: "Show results",
   lucky: "I'm feeling lucky",
-  feelingLucky: "I’m feeling lucky", // alias
+  feelingLucky: "I’m feeling lucky",
   resultsTop: "Top picks",
   noMatches: "No matches yet. Try fewer filters.",
   call: "Call",
@@ -50,7 +35,24 @@ moods: {
   disclaimer:
     "Menu data may be inaccurate. Always check with the restaurant about allergens and availability.",
 
-  // ✅ districts SHOULD BE TOP-LEVEL (not inside tags)
+  // Mood layer
+  moodTitle: "What's your vibe?",
+  moodHint: "Pick one – this helps tailor your picks.",
+  moods: {
+    adventurous: "Adventurous",
+    comfort: "Comfort food",
+    protein: "Protein hit",
+    cheesy: "Cheesy",
+    spicy: "Spicy thrill",
+    healthy: "Clean & green",
+    quick: "Quick bite",
+    cozy: "Cozy & warm",
+    refreshing: "Light & fresh",
+    social: "Shareable",
+    sweet: "Sweet tooth"
+  },
+
+  // Districts (top-level, not inside tags)
   districts: {
     vake: "Vake",
     vera: "Vera",
@@ -64,7 +66,7 @@ moods: {
     didube: "Didube",
     gldani: "Gldani",
     samgori: "Samgori",
-    nadzaladevi: "Nadzaladevi",
+    nadzaladevi: "Nadzaladevi"
   },
 
   // Tags (cravings + dietary)
@@ -83,7 +85,7 @@ moods: {
     spicy: "Spicy",
     light: "Light",
 
-    // keep this if some UI prints a section title via t('tags.district')
+    // optional section title if you use it somewhere
     district: "Districts",
 
     // dietary/exclude
@@ -94,8 +96,8 @@ moods: {
     gluten: "Gluten",
     dairy: "Dairy",
     halal: "Halal",
-    vegetarian: "Vegetarian",
-  },
+    vegetarian: "Vegetarian"
+  }
 };
 
 export const ka = {
@@ -105,7 +107,7 @@ export const ka = {
   loc: {
     ready: "ლოკაცია მზად არის",
     getting: "ლოკაცია იტვირთება...",
-    deniedVake: "უფლება არ არის — ვაკის ცენტრს ვიყენებთ.",
+    deniedVake: "უფლება არ არის — ვაკის ცენტრს ვიყენებთ."
   },
   setLocation: "ჩემი ლოკაცია...",
   budget: "აირჩიე ბიუჯეტი",
@@ -113,21 +115,6 @@ export const ka = {
   medium: "40₾-მდე",
   high: "ძვირიანი",
   cravings: "რა გაგისწორდება (არასავალდებულო)",
-  // add near other root strings
-moodTitle: "რის განწყობაზე ხარ?",
-moodHint: "აირჩიე ერთი — ასე უკეთ მოერგება შედეგები.",
-moods: {
-  adventurous: "საინტერესო/უცნაური",
-  comfort: "კომფორტული",
-  protein: "ცილაზე ვარ",
-  cheesy: "ყველიანი",
-  spicy: "ცხარე",
-  healthy: "ჯანსაღი",
-  quick: "სწრაფად",
-  cozy: "თბილი/სათუთი",
-  refreshing: "მსუბუქი/ცივი",
-  social: "სანაწილო/საზიარო",
-  sweet: "ტკბილზე ვარ",
   dietary: "რა არ გაგისწორდება (ალერგია თუ გაქვს)",
   exclude: "რა არ გაგისწორდება (გამორიცხვა)",
   time: "დრო",
@@ -137,7 +124,7 @@ moods: {
   findDishes: "გააძრე კიშკა",
   seeResults: "გააძრე კიშკა",
   lucky: "დამირენდომე",
-  feelingLucky: "იღბალს ვცდი", // alias
+  feelingLucky: "იღბალს ვცდი",
   resultsTop: "საუკეთესო ვარიანტები",
   noMatches: "შედეგი ვერ მოიძებნა. სცადე ნაკლები ფილტრი.",
   call: "დარეკვა",
@@ -149,7 +136,24 @@ moods: {
   disclaimer:
     "მენიუს მონაცემები შესაძლოა არ იყოს ზუსტი. ინფორმაცია ალერგენებსა და ხელმისაწვდომობაზე გადაამოწმეთ უშუალოდ რესტორანთან.",
 
-  // ✅ districts top-level
+  // Mood layer
+  moodTitle: "რის განწყობაზე ხარ?",
+  moodHint: "აირჩიე ერთი — ასე უკეთ მოერგება შედეგები.",
+  moods: {
+    adventurous: "საინტერესო/უცნაური",
+    comfort: "კომფორტული",
+    protein: "ცილაზე ვარ",
+    cheesy: "ყველიანი",
+    spicy: "ცხარე",
+    healthy: "ჯანსაღი",
+    quick: "სწრაფად",
+    cozy: "თბილი/სათუთი",
+    refreshing: "მსუბუქი/ცივი",
+    social: "სანაწილო/საზიარო",
+    sweet: "ტკბილზე ვარ"
+  },
+
+  // Districts (top-level)
   districts: {
     vake: "ვაკე",
     vera: "ვერა",
@@ -163,7 +167,7 @@ moods: {
     didube: "დიდუბე",
     gldani: "გლდანი",
     samgori: "სამგორი",
-    nadzaladevi: "ნაძალადევი",
+    nadzaladevi: "ნაძალადევი"
   },
 
   tags: {
@@ -181,7 +185,7 @@ moods: {
     spicy: "ცხარე",
     light: "მსუბუქი",
 
-    // keep as section label if used
+    // optional section title if you use it somewhere
     district: "რაიონები",
 
     // dietary/exclude
@@ -192,6 +196,6 @@ moods: {
     gluten: "გლუტენი",
     dairy: "რძის პროდუქტები",
     halal: "ჰალალი",
-    vegetarian: "ვეგეტარიანული",
-  },
+    vegetarian: "ვეგეტარიანული"
+  }
 };
