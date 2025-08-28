@@ -47,7 +47,8 @@ export const en = {
     healthy: "Healthy",
     cheesy: "Cheesy",
     spicy: "Spicy",
-    
+    light: "Light",
+
 
     // districts
     district: "Districts",
@@ -128,6 +129,7 @@ export const ka = {
     healthy: "ჯანსაღი",
     cheesy: "ყველიანი",
     spicy: "ცხარე",
+    light: "მსუბუქი",
 
     // districts
     district: "რაიონები",
