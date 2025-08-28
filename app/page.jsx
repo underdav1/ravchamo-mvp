@@ -16,6 +16,9 @@ export default function Home() {
   const [tags, setTags] = useState([]);
   const [exclude, setExclude] = useState([]);
 
+  // NEW: single-select mood
+  const [mood, setMood] = useState("");
+
   // ask for location (with Vake fallback)
   useEffect(() => {
     if (typeof navigator !== "undefined" && navigator.geolocation) {
@@ -43,6 +46,25 @@ export default function Home() {
   );
   const labelFor = (token) => t(`tags.${token}`) ?? token;
 
+  // NEW: mood options + labels
+  const moodOptions = useMemo(
+    () => [
+      "adventurous",
+      "comfort",
+      "protein",
+      "cheesy",
+      "spicy",
+      "healthy",
+      "quick",
+      "cozy",
+      "refreshing",
+      "social",
+      "sweet",
+    ],
+    []
+  );
+  const moodLabel = (token) => t(`moods.${token}`) ?? token;
+
   function goResults(lucky = false) {
     const query = new URLSearchParams({
       lat: loc?.lat ?? "",
@@ -50,6 +72,8 @@ export default function Home() {
       price,
       tags: tags.join(","),
       exclude: exclude.join(","),
+      // NEW: include mood in querystring
+      mood: mood || "",
     });
     if (lucky) query.set("lucky", "1");
     router.push(`/results?${query.toString()}`);
@@ -110,6 +134,22 @@ export default function Home() {
             />
           ))}
         </div>
+      </div>
+
+      {/* NEW: Mood card */}
+      <div className="card mb-4">
+        <div className="font-semibold mb-2">{t("moodTitle")}</div>
+        <div className="flex flex-wrap gap-2">
+          {moodOptions.map((opt) => (
+            <TagToggle
+              key={opt}
+              label={moodLabel(opt)}
+              selected={mood === opt}
+              onClick={() => setMood((prev) => (prev === opt ? "" : opt))}
+            />
+          ))}
+        </div>
+        <div className="text-xs text-gray-500 dark:text-gray-400 mt-2">{t("moodHint")}</div>
       </div>
 
       <div className="card mb-4">
