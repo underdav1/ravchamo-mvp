@@ -12,9 +12,9 @@
     "restaurant": {
       "name": "P'arizhank'a",
       "address": "PR42+FF Tbilisi, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71226,
-      "lon": 44.82501
+      "district": "tbilisi",
+      "lat": 41.70619,
+      "lon": 44.80119
     }
   },
   {
@@ -31,8 +31,8 @@
       "name": "Izbushka Bazari Orbeliani",
       "address": "Vekua street 3 a, 0108 Tbilisi, თბილისი",
       "district": "old_town",
-      "lat": 41.71138,
-      "lon": 44.82759
+      "lat": 41.69748,
+      "lon": 44.80404
     }
   },
   {
@@ -48,9 +48,9 @@
     "restaurant": {
       "name": "Kievuri",
       "address": "PQ72+F29 Tbilisi, თბილისი",
-      "district": "old_town",
-      "lat": 41.71279,
-      "lon": 44.82816
+      "district": "tbilisi",
+      "lat": 41.71366,
+      "lon": 44.75011
     }
   },
   {
@@ -67,8 +67,8 @@
       "name": "Shemoikhede Marjanishvilze",
       "address": "5 Kote Marjanishvili St, Tbilisi",
       "district": "old_town",
-      "lat": 41.71151,
-      "lon": 44.82496
+      "lat": 41.70796,
+      "lon": 44.79428
     }
   },
   {
@@ -84,9 +84,9 @@
     "restaurant": {
       "name": "Ezoshi",
       "address": "1/2 Mekanizatsia Turn, თბილისი",
-      "district": "old_town",
-      "lat": 41.71587,
-      "lon": 44.82778
+      "district": "saburtalo",
+      "lat": 41.79617,
+      "lon": 44.76887
     }
   },
   {
@@ -103,8 +103,8 @@
       "name": "Veraze",
       "address": "31 Vasil Barnov St, Tbilisi",
       "district": "old_town",
-      "lat": 41.71515,
-      "lon": 44.82298
+      "lat": 41.70364,
+      "lon": 44.78556
     }
   },
   {
@@ -120,9 +120,9 @@
     "restaurant": {
       "name": "Breadbar",
       "address": "2b Kipshidze street, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71747,
-      "lon": 44.83192
+      "district": "vake",
+      "lat": 41.71261,
+      "lon": 44.75616
     }
   },
   {
@@ -139,8 +139,8 @@
       "name": "Gobi Bazari Orbeliani",
       "address": "3a Vekua Street, თბილისი",
       "district": "old_town",
-      "lat": 41.71308,
-      "lon": 44.83112
+      "lat": 41.69748,
+      "lon": 44.80404
     }
   },
   {
@@ -156,9 +156,9 @@
     "restaurant": {
       "name": "Rtveli",
       "address": "118 Archil Mishveladze St, თბილისი",
-      "district": "old_town",
-      "lat": 41.71581,
-      "lon": 44.82595
+      "district": "vake",
+      "lat": 41.70979,
+      "lon": 44.75392
     }
   },
   {
@@ -174,9 +174,9 @@
     "restaurant": {
       "name": "Food and Market",
       "address": "Vazha-Pshavela Ave 70, თბილისი",
-      "district": "old_town",
-      "lat": 41.71684,
-      "lon": 44.82905
+      "district": "saburtalo",
+      "lat": 41.72401,
+      "lon": 44.73603
     }
   },
   {
@@ -193,8 +193,8 @@
       "name": "Bread House",
       "address": "7 Vakhtang Gorgasali St, Tbilisi",
       "district": "old_town",
-      "lat": 41.71182,
-      "lon": 44.82543
+      "lat": 41.68857,
+      "lon": 44.81263
     }
   },
   {
@@ -211,8 +211,8 @@
       "name": "Honoré",
       "address": "constitution street 4, Tbilisi",
       "district": "old_town",
-      "lat": 41.7111,
-      "lon": 44.82364
+      "lat": 41.71675,
+      "lon": 44.79744
     }
   },
   {
@@ -229,8 +229,8 @@
       "name": "Khinkali Factory Atoneli",
       "address": "2 Pkhovi St, თბილისი",
       "district": "old_town",
-      "lat": 41.71725,
-      "lon": 44.82821
+      "lat": 41.69847,
+      "lon": 44.80282
     }
   },
   {
@@ -246,9 +246,9 @@
     "restaurant": {
       "name": "Hacker-Pschorr",
       "address": "Sulkhan Tsintsadze St 12, თბილისი",
-      "district": "old_town",
-      "lat": 41.71223,
-      "lon": 44.82425
+      "district": "saburtalo",
+      "lat": 41.72188,
+      "lon": 44.76982
     }
   },
   {
@@ -264,9 +264,9 @@
     "restaurant": {
       "name": "Pasanauri Dolidze",
       "address": "2 Viktor Dolidze St, Tbilisi",
-      "district": "old_town",
-      "lat": 41.7121,
-      "lon": 44.82326
+      "district": "vake",
+      "lat": 41.71634,
+      "lon": 44.76834
     }
   },
   {
@@ -282,9 +282,9 @@
     "restaurant": {
       "name": "Ezoshi",
       "address": "1/2 Mekanizatsia Turn, თბილისი",
-      "district": "old_town",
-      "lat": 41.71587,
-      "lon": 44.82778
+      "district": "saburtalo",
+      "lat": 41.79617,
+      "lon": 44.76887
     }
   },
   {
@@ -300,9 +300,9 @@
     "restaurant": {
       "name": "Chveni Sakhli",
       "address": "Bzitagora St, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71565,
-      "lon": 44.82703
+      "district": "samgori",
+      "lat": 41.69171,
+      "lon": 44.87574
     }
   },
   {
@@ -318,9 +318,9 @@
     "restaurant": {
       "name": "Odesa by Inna Bebo ",
       "address": "22 Amaghleba St, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71888,
-      "lon": 44.82844
+      "district": "sololaki",
+      "lat": 41.68949,
+      "lon": 44.79338
     }
   },
   {
@@ -336,9 +336,9 @@
     "restaurant": {
       "name": "Veliaminovi",
       "address": "Shalva Dadiani St 8, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71166,
-      "lon": 44.8219
+      "district": "sololaki",
+      "lat": 41.69241,
+      "lon": 44.80228
     }
   },
   {
@@ -355,8 +355,8 @@
       "name": "Gobi Bazari Orbeliani",
       "address": "3a Vekua Street, თბილისი",
       "district": "old_town",
-      "lat": 41.71308,
-      "lon": 44.83112
+      "lat": 41.69748,
+      "lon": 44.80404
     }
   },
   {
@@ -373,8 +373,8 @@
       "name": "Istanbul Döner Halal Shaurma Marjanishvili",
       "address": "DaviT Aghmashenebeli Ave N104, Tbilisi",
       "district": "old_town",
-      "lat": 41.71574,
-      "lon": 44.8323
+      "lat": 41.71186,
+      "lon": 44.79561
     }
   },
   {
@@ -390,9 +390,9 @@
     "restaurant": {
       "name": "Atsma Cooked By Shemomechama",
       "address": "shemomechama saburtalo, თბილისი",
-      "district": "old_town",
-      "lat": 41.71449,
-      "lon": 44.82548
+      "district": "saburtalo",
+      "lat": 41.72656,
+      "lon": 44.76008
     }
   },
   {
@@ -409,8 +409,8 @@
       "name": "Shatre",
       "address": "38 Shota Rustaveli avenue , თბილისი",
       "district": "old_town",
-      "lat": 41.7132,
-      "lon": 44.82152
+      "lat": 41.7017,
+      "lon": 44.79389
     }
   },
   {
@@ -427,8 +427,8 @@
       "name": "Tiflisi Vorontsovze",
       "address": "Zaarbruken Square 2/7, Tbilisi",
       "district": "old_town",
-      "lat": 41.71141,
-      "lon": 44.83094
+      "lat": 41.70284,
+      "lon": 44.80397
     }
   },
   {
@@ -445,8 +445,8 @@
       "name": "Salobie Shardenze",
       "address": "7 Bambis Rigi St, Tbilisi",
       "district": "old_town",
-      "lat": 41.71571,
-      "lon": 44.83065
+      "lat": 41.6909,
+      "lon": 44.80824
     }
   },
   {
@@ -462,9 +462,9 @@
     "restaurant": {
       "name": "Teremok Isani",
       "address": "Ketevan Dedofali Ave 57a, თბილისი",
-      "district": "old_town",
-      "lat": 41.71882,
-      "lon": 44.82261
+      "district": "isani",
+      "lat": 41.68697,
+      "lon": 44.83024
     }
   },
   {
@@ -481,8 +481,8 @@
       "name": "Fomo Momo",
       "address": "1 Shota Nishnianidze Street, თბილისი",
       "district": "old_town",
-      "lat": 41.71217,
-      "lon": 44.83164
+      "lat": 41.69565,
+      "lon": 44.80318
     }
   },
   {
@@ -499,8 +499,8 @@
       "name": "Bread House",
       "address": "7 Vakhtang Gorgasali St, Tbilisi",
       "district": "old_town",
-      "lat": 41.71182,
-      "lon": 44.82543
+      "lat": 41.68857,
+      "lon": 44.81263
     }
   },
   {
@@ -516,9 +516,9 @@
     "restaurant": {
       "name": "Pizza Di Roma Kavtaradze City Mall",
       "address": "1 Petre Kavtaradze St, თბილისი",
-      "district": "old_town",
-      "lat": 41.71499,
-      "lon": 44.83263
+      "district": "saburtalo",
+      "lat": 41.72454,
+      "lon": 44.73885
     }
   },
   {
@@ -535,8 +535,8 @@
       "name": "Café Zemeli",
       "address": "24 Solomon Zaldastanishvili St, Tbilisi",
       "district": "old_town",
-      "lat": 41.71154,
-      "lon": 44.8243
+      "lat": 41.70098,
+      "lon": 44.78942
     }
   },
   {
@@ -552,9 +552,9 @@
     "restaurant": {
       "name": "Bacanos",
       "address": "13 Bakhtrioni Street, თბილისი",
-      "district": "old_town",
-      "lat": 41.71753,
-      "lon": 44.82501
+      "district": "saburtalo",
+      "lat": 41.72076,
+      "lon": 44.76759
     }
   },
   {
@@ -570,9 +570,9 @@
     "restaurant": {
       "name": "Weihenstephan Restaurant",
       "address": "27 Alexander Kazbegi Ave, თბილისი",
-      "district": "old_town",
-      "lat": 41.71486,
-      "lon": 44.82454
+      "district": "saburtalo",
+      "lat": 41.72551,
+      "lon": 44.75435
     }
   },
   {
@@ -588,9 +588,9 @@
     "restaurant": {
       "name": "Mutcha-Mutcha Retro Dolidze",
       "address": "4 Viktor Dolidze St, Tbilisi, თბილისი",
-      "district": "old_town",
-      "lat": 41.71414,
-      "lon": 44.82981
+      "district": "vake",
+      "lat": 41.71707,
+      "lon": 44.77358
     }
   },
   {
@@ -606,9 +606,9 @@
     "restaurant": {
       "name": "Machakhela Samikitno Varketili",
       "address": "13, Javakheti Street, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71358,
-      "lon": 44.8227
+      "district": "nadzaladevi",
+      "lat": 41.82635,
+      "lon": 44.81462
     }
   },
   {
@@ -624,9 +624,9 @@
     "restaurant": {
       "name": "Bonny Bistro",
       "address": "Paliashvili 82, თბილისი",
-      "district": "old_town",
-      "lat": 41.71352,
-      "lon": 44.82618
+      "district": "vake",
+      "lat": 41.70917,
+      "lon": 44.75908
     }
   },
   {
@@ -642,9 +642,9 @@
     "restaurant": {
       "name": "Qura Deli",
       "address": "14 Irakli Abashidze Str, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71653,
-      "lon": 44.82176
+      "district": "vake",
+      "lat": 41.70716,
+      "lon": 44.7713
     }
   },
   {
@@ -660,9 +660,9 @@
     "restaurant": {
       "name": "Tchama Sma",
       "address": "4 Bazaleti Str, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71502,
-      "lon": 44.82284
+      "district": "vake",
+      "lat": 41.7084,
+      "lon": 44.77315
     }
   },
   {
@@ -679,8 +679,8 @@
       "name": "Supra",
       "address": "Aghmashenebeli ave. 130, თბილისი",
       "district": "old_town",
-      "lat": 41.71443,
-      "lon": 44.83108
+      "lat": 41.71303,
+      "lon": 44.79459
     }
   },
   {
@@ -696,9 +696,9 @@
     "restaurant": {
       "name": "Mutcha-Mutcha Retro Dolidze",
       "address": "4 Viktor Dolidze St, Tbilisi, თბილისი",
-      "district": "old_town",
-      "lat": 41.71414,
-      "lon": 44.82981
+      "district": "vake",
+      "lat": 41.71707,
+      "lon": 44.77358
     }
   },
   {
@@ -714,9 +714,9 @@
     "restaurant": {
       "name": "Veliaminovi",
       "address": "Shalva Dadiani St 8, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71166,
-      "lon": 44.8219
+      "district": "sololaki",
+      "lat": 41.69241,
+      "lon": 44.80228
     }
   },
   {
@@ -733,8 +733,8 @@
       "name": "Georgian Taste",
       "address": "62 David Agmashenebeli Ave, თბილისი",
       "district": "old_town",
-      "lat": 41.71195,
-      "lon": 44.82232
+      "lat": 41.70704,
+      "lon": 44.79895
     }
   },
   {
@@ -750,9 +750,9 @@
     "restaurant": {
       "name": "მიმინო",
       "address": "Pekini St 2, თბილისი",
-      "district": "old_town",
-      "lat": 41.71794,
-      "lon": 44.82477
+      "district": "vake",
+      "lat": 41.71069,
+      "lon": 44.73416
     }
   },
   {
@@ -768,9 +768,9 @@
     "restaurant": {
       "name": "Pelagoni Saburtalo",
       "address": "Kalistrate Kutateladze Street 8, თბილისი",
-      "district": "old_town",
-      "lat": 41.71163,
-      "lon": 44.82623
+      "district": "saburtalo",
+      "lat": 41.7222,
+      "lon": 44.74331
     }
   },
   {
@@ -787,8 +787,8 @@
       "name": "Pasanauri Griboedovi",
       "address": "37 Griboedobvi str, Tbilisi",
       "district": "old_town",
-      "lat": 41.71358,
-      "lon": 44.82722
+      "lat": 41.70439,
+      "lon": 44.80221
     }
   },
   {
@@ -805,8 +805,8 @@
       "name": "Maspindzelo Express",
       "address": "20 Giorgi Akhvlediani St, თბილისი",
       "district": "old_town",
-      "lat": 41.71631,
-      "lon": 44.82962
+      "lat": 41.70658,
+      "lon": 44.78892
     }
   },
   {
@@ -822,9 +822,9 @@
     "restaurant": {
       "name": "Sormoni",
       "address": "57 Alexander Kazbegi Ave, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71731,
-      "lon": 44.82868
+      "district": "saburtalo",
+      "lat": 41.72385,
+      "lon": 44.7394
     }
   },
   {
@@ -840,9 +840,9 @@
     "restaurant": {
       "name": "B&B",
       "address": "Z. Paliashvili 55  , Tbilisi",
-      "district": "old_town",
-      "lat": 41.71546,
-      "lon": 44.82759
+      "district": "vake",
+      "lat": 41.70947,
+      "lon": 44.76084
     }
   },
   {
@@ -858,9 +858,9 @@
     "restaurant": {
       "name": "Hacker-Pschorr",
       "address": "Sulkhan Tsintsadze St 12, თბილისი",
-      "district": "old_town",
-      "lat": 41.71223,
-      "lon": 44.82425
+      "district": "saburtalo",
+      "lat": 41.72188,
+      "lon": 44.76982
     }
   },
   {
@@ -876,9 +876,9 @@
     "restaurant": {
       "name": "მიმინო",
       "address": "Pekini St 2, თბილისი",
-      "district": "old_town",
-      "lat": 41.71794,
-      "lon": 44.82477
+      "district": "vake",
+      "lat": 41.71069,
+      "lon": 44.73416
     }
   },
   {
@@ -894,9 +894,9 @@
     "restaurant": {
       "name": "Cheesefarm",
       "address": "7 Freedom Square, Tbilisi, თბილისი",
-      "district": "old_town",
-      "lat": 41.71882,
-      "lon": 44.82868
+      "district": "sololaki",
+      "lat": 41.69297,
+      "lon": 44.80193
     }
   },
   {
@@ -912,9 +912,9 @@
     "restaurant": {
       "name": "Silvio D'Italia",
       "address": "Rustaveli Ave 2/4, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71361,
-      "lon": 44.82505
+      "district": "sololaki",
+      "lat": 41.69421,
+      "lon": 44.80013
     }
   },
   {
@@ -931,8 +931,8 @@
       "name": "Wrap Master",
       "address": "16 Erekle Tatishvili St, Tbilisi",
       "district": "old_town",
-      "lat": 41.71452,
-      "lon": 44.83206
+      "lat": 41.70597,
+      "lon": 44.78413
     }
   },
   {
@@ -948,9 +948,9 @@
     "restaurant": {
       "name": "Pad Thai",
       "address": "1/6,Ivane Machabeli St, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71395,
-      "lon": 44.83075
+      "district": "sololaki",
+      "lat": 41.69191,
+      "lon": 44.80028
     }
   },
   {
@@ -966,9 +966,9 @@
     "restaurant": {
       "name": "Hacker-Pschorr",
       "address": "Sulkhan Tsintsadze St 12, თბილისი",
-      "district": "old_town",
-      "lat": 41.71223,
-      "lon": 44.82425
+      "district": "saburtalo",
+      "lat": 41.72188,
+      "lon": 44.76982
     }
   },
   {
@@ -985,8 +985,8 @@
       "name": "Bubble Waffle Factory",
       "address": "20 Anton Purtseladze St, Tbilisi 0105, Tbilisi",
       "district": "old_town",
-      "lat": 41.71223,
-      "lon": 44.82938
+      "lat": 41.69784,
+      "lon": 44.80274
     }
   },
   {
@@ -1002,9 +1002,9 @@
     "restaurant": {
       "name": "Fork",
       "address": "30 Alexander Kazbegi Avenue, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71279,
-      "lon": 44.83051
+      "district": "saburtalo",
+      "lat": 41.72374,
+      "lon": 44.74331
     }
   },
   {
@@ -1020,9 +1020,9 @@
     "restaurant": {
       "name": "Subway Vake",
       "address": "Chavchavadze Ave 37, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71471,
-      "lon": 44.82609
+      "district": "vake",
+      "lat": 41.71183,
+      "lon": 44.75835
     }
   },
   {
@@ -1038,9 +1038,9 @@
     "restaurant": {
       "name": "Wendy's City Mall",
       "address": "Kavtaradze St 1, თბილისი",
-      "district": "old_town",
-      "lat": 41.71468,
-      "lon": 44.82444
+      "district": "saburtalo",
+      "lat": 41.72454,
+      "lon": 44.73885
     }
   },
   {
@@ -1056,9 +1056,9 @@
     "restaurant": {
       "name": "Berytus",
       "address": "16 Ilia Chavchavadze Avenue, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71552,
-      "lon": 44.82759
+      "district": "vake",
+      "lat": 41.70898,
+      "lon": 44.77537
     }
   },
   {
@@ -1075,8 +1075,8 @@
       "name": "Taj Mahal Indian Restaurant (since 2010)",
       "address": "5a Dzmebi Zdanevichebi St, Tbilisi",
       "district": "old_town",
-      "lat": 41.71794,
-      "lon": 44.82966
+      "lat": 41.68952,
+      "lon": 44.80854
     }
   },
   {
@@ -1092,9 +1092,9 @@
     "restaurant": {
       "name": "Receptor Pekini",
       "address": "5 Pekini st, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71386,
-      "lon": 44.8315
+      "district": "saburtalo",
+      "lat": 41.72117,
+      "lon": 44.77561
     }
   },
   {
@@ -1110,9 +1110,9 @@
     "restaurant": {
       "name": "Brunch by Gastronome Lisi",
       "address": "Nekerchkhali St. 2, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71308,
-      "lon": 44.83126
+      "district": "saburtalo",
+      "lat": 41.74014,
+      "lon": 44.75305
     }
   },
   {
@@ -1128,9 +1128,9 @@
     "restaurant": {
       "name": "Teremok Isani",
       "address": "Ketevan Dedofali Ave 57a, თბილისი",
-      "district": "old_town",
-      "lat": 41.71882,
-      "lon": 44.82261
+      "district": "isani",
+      "lat": 41.68697,
+      "lon": 44.83024
     }
   },
   {
@@ -1147,8 +1147,8 @@
       "name": "Pipes Burger",
       "address": "8 Egnate Ninoshvili St, თბილისი",
       "district": "old_town",
-      "lat": 41.71301,
-      "lon": 44.82378
+      "lat": 41.70967,
+      "lon": 44.80249
     }
   },
   {
@@ -1164,9 +1164,9 @@
     "restaurant": {
       "name": "Mainz Shawarma",
       "address": "Tsereteli avenue  n 2 a, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71772,
-      "lon": 44.82242
+      "district": "chugureti",
+      "lat": 41.73403,
+      "lon": 44.78382
     }
   },
   {
@@ -1182,9 +1182,9 @@
     "restaurant": {
       "name": "Campus",
       "address": "Vakhtang Chabukiani st. 2, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71612,
-      "lon": 44.83263
+      "district": "saburtalo",
+      "lat": 41.72348,
+      "lon": 44.77622
     }
   },
   {
@@ -1201,8 +1201,8 @@
       "name": "ანკარა სთაილ",
       "address": "116 Davit Agmashenebeli ave, თბილისი",
       "district": "old_town",
-      "lat": 41.7159,
-      "lon": 44.82712
+      "lat": 41.71144,
+      "lon": 44.79543
     }
   },
   {
@@ -1218,9 +1218,9 @@
     "restaurant": {
       "name": "Pita Lab",
       "address": "19/21 Pavle Aslanidi st, თბილისი",
-      "district": "old_town",
-      "lat": 41.71869,
-      "lon": 44.8331
+      "district": "vake",
+      "lat": 41.71873,
+      "lon": 44.78133
     }
   },
   {
@@ -1236,9 +1236,9 @@
     "restaurant": {
       "name": "Burger King Galleria Tbilisi",
       "address": "3/4 Rustaveli st, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71697,
-      "lon": 44.83079
+      "district": "outer",
+      "lat": 41.69574,
+      "lon": 44.69977
     }
   },
   {
@@ -1254,9 +1254,9 @@
     "restaurant": {
       "name": "Plover.ge",
       "address": "6 Simon Kandelaki St , Tbilisi",
-      "district": "old_town",
-      "lat": 41.71668,
-      "lon": 44.83235
+      "district": "saburtalo",
+      "lat": 41.73034,
+      "lon": 44.76614
     }
   },
   {
@@ -1272,9 +1272,9 @@
     "restaurant": {
       "name": "Bangkok",
       "address": "3 Tandzia St, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71301,
-      "lon": 44.82204
+      "district": "saburtalo",
+      "lat": 41.72382,
+      "lon": 44.75939
     }
   },
   {
@@ -1290,9 +1290,9 @@
     "restaurant": {
       "name": "Craft Food Saburtalo",
       "address": "Zhiuli Shartava 4b, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71113,
-      "lon": 44.82317
+      "district": "saburtalo",
+      "lat": 41.72492,
+      "lon": 44.77539
     }
   },
   {
@@ -1309,8 +1309,8 @@
       "name": "1001 Nights",
       "address": "კოტე აფხაზის 9, თბილისი",
       "district": "old_town",
-      "lat": 41.71198,
-      "lon": 44.82797
+      "lat": 41.71896,
+      "lon": 44.78645
     }
   },
   {
@@ -1326,9 +1326,9 @@
     "restaurant": {
       "name": "Coffee Lab",
       "address": "27 Kazbegi ave, თბილისი",
-      "district": "old_town",
-      "lat": 41.71157,
-      "lon": 44.82115
+      "district": "saburtalo",
+      "lat": 41.72551,
+      "lon": 44.75435
     }
   },
   {
@@ -1344,9 +1344,9 @@
     "restaurant": {
       "name": "Shaurmafia Saburtalo",
       "address": "166 Otar Chiladze St,, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71615,
-      "lon": 44.82868
+      "district": "saburtalo",
+      "lat": 41.72863,
+      "lon": 44.75946
     }
   },
   {
@@ -1362,9 +1362,9 @@
     "restaurant": {
       "name": "Wrap Master Saburtalo",
       "address": "16 Vazha Pshavela Ave, თბილისი",
-      "district": "old_town",
-      "lat": 41.71301,
-      "lon": 44.82308
+      "district": "saburtalo",
+      "lat": 41.72643,
+      "lon": 44.76084
     }
   },
   {
@@ -1381,8 +1381,8 @@
       "name": "Wrap Master",
       "address": "16 Erekle Tatishvili St, Tbilisi",
       "district": "old_town",
-      "lat": 41.71452,
-      "lon": 44.83206
+      "lat": 41.70597,
+      "lon": 44.78413
     }
   },
   {
@@ -1399,8 +1399,8 @@
       "name": "SKA Leselidze",
       "address": "kote APkhazi street 55, თბილისი",
       "district": "old_town",
-      "lat": 41.71314,
-      "lon": 44.82919
+      "lat": 41.68998,
+      "lon": 44.80833
     }
   },
   {
@@ -1417,8 +1417,8 @@
       "name": "Kitch Bistro",
       "address": "3 Revaz Tabukashvili Street, Tbilisi",
       "district": "old_town",
-      "lat": 41.71138,
-      "lon": 44.82821
+      "lat": 41.69811,
+      "lon": 44.80177
     }
   },
   {
@@ -1434,9 +1434,9 @@
     "restaurant": {
       "name": "PAUL Abashidze",
       "address": "26 Irakli Abashidze Street, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71421,
-      "lon": 44.82839
+      "district": "vake",
+      "lat": 41.70746,
+      "lon": 44.76751
     }
   },
   {
@@ -1452,9 +1452,9 @@
     "restaurant": {
       "name": "Pasticceria",
       "address": "77 ფალიაშვილის ქუჩა, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71261,
-      "lon": 44.82181
+      "district": "vake",
+      "lat": 41.7099,
+      "lon": 44.75615
     }
   },
   {
@@ -1470,9 +1470,9 @@
     "restaurant": {
       "name": "Wrap Up",
       "address": "26 Tamarashvili street., თბილისი",
-      "district": "old_town",
-      "lat": 41.71342,
-      "lon": 44.83164
+      "district": "saburtalo",
+      "lat": 41.72358,
+      "lon": 44.74568
     }
   },
   {
@@ -1486,11 +1486,11 @@
     "mood2": "On a diet give me something low in calories",
     "rating": 9,
     "restaurant": {
-      "name": "Subway Vazha Pshavela (Near Medical University)",
+      "name": "Subway Vazha Pshavela (Near Medical University)",
       "address": "Vazha-Pshavela Ave 27 g, Tbilisi",
       "district": "old_town",
-      "lat": 41.71355,
-      "lon": 44.82538
+      "lat": 41.72726,
+      "lon": 44.75928
     }
   },
   {
@@ -1506,9 +1506,9 @@
     "restaurant": {
       "name": "Fragola",
       "address": "Kazbegi ave. 2, თბილისი",
-      "district": "old_town",
-      "lat": 41.71803,
-      "lon": 44.82599
+      "district": "saburtalo",
+      "lat": 41.72612,
+      "lon": 44.76733
     }
   },
   {
@@ -1524,9 +1524,9 @@
     "restaurant": {
       "name": "FOODBOX Saburtalo",
       "address": "19/21 Pavle Aslanidi st, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71637,
-      "lon": 44.82505
+      "district": "vake",
+      "lat": 41.71873,
+      "lon": 44.78133
     }
   },
   {
@@ -1542,9 +1542,9 @@
     "restaurant": {
       "name": "Siang-Gan Pekini",
       "address": "პეკინის 41, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71543,
-      "lon": 44.82279
+      "district": "didi_digomi",
+      "lat": 41.6938,
+      "lon": 44.80152
     }
   },
   {
@@ -1560,9 +1560,9 @@
     "restaurant": {
       "name": "PAUL Paliashvili",
       "address": "85/87 Zakaria Paliashvili Street, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71267,
-      "lon": 44.83028
+      "district": "vake",
+      "lat": 41.71023,
+      "lon": 44.75417
     }
   },
   {
@@ -1579,8 +1579,8 @@
       "name": "Cotsho",
       "address": "Arnold Chikobava 43 , თბილისი",
       "district": "old_town",
-      "lat": 41.71314,
-      "lon": 44.82995
+      "lat": 41.70802,
+      "lon": 44.80507
     }
   },
   {
@@ -1597,8 +1597,8 @@
       "name": "Subway Marjanishvili",
       "address": "86 Davit Aghmashenebeli Ave, T&apos;bilisi, თბილისი",
       "district": "old_town",
-      "lat": 41.71869,
-      "lon": 44.82943
+      "lat": 41.70912,
+      "lon": 44.79723
     }
   },
   {
@@ -1614,9 +1614,9 @@
     "restaurant": {
       "name": "Fuoco Forno",
       "address": "10 Ilia Chavchavadze Avenue, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71508,
-      "lon": 44.82439
+      "district": "vake",
+      "lat": 41.70899,
+      "lon": 44.77735
     }
   },
   {
@@ -1632,9 +1632,9 @@
     "restaurant": {
       "name": "Bonny Bistro",
       "address": "Paliashvili 82, თბილისი",
-      "district": "old_town",
-      "lat": 41.71352,
-      "lon": 44.82618
+      "district": "vake",
+      "lat": 41.70917,
+      "lon": 44.75908
     }
   },
   {
@@ -1650,9 +1650,9 @@
     "restaurant": {
       "name": "Wendy's Dolidze",
       "address": "2 Viktor Dolidze St, თბილისი",
-      "district": "old_town",
-      "lat": 41.71232,
-      "lon": 44.82896
+      "district": "vake",
+      "lat": 41.71634,
+      "lon": 44.76834
     }
   },
   {
@@ -1668,9 +1668,9 @@
     "restaurant": {
       "name": "4 Brother's Restaurant",
       "address": "2 Chabukiani Street, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71828,
-      "lon": 44.8227
+      "district": "saburtalo",
+      "lat": 41.72348,
+      "lon": 44.77622
     }
   },
   {
@@ -1686,9 +1686,9 @@
     "restaurant": {
       "name": "The Station Lebanese",
       "address": "Ipolite Khvichias St , N 7, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71681,
-      "lon": 44.82256
+      "district": "saburtalo",
+      "lat": 41.72187,
+      "lon": 44.77606
     }
   },
   {
@@ -1704,9 +1704,9 @@
     "restaurant": {
       "name": "Brunch by Gastronome Abashidze",
       "address": "65/67 Abashidze Street, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71364,
-      "lon": 44.82741
+      "district": "vake",
+      "lat": 41.7088,
+      "lon": 44.75672
     }
   },
   {
@@ -1723,8 +1723,8 @@
       "name": "Sakhli Veraze",
       "address": "Kostava St 25, Tbilisi",
       "district": "old_town",
-      "lat": 41.71606,
-      "lon": 44.82185
+      "lat": 41.7065,
+      "lon": 44.78751
     }
   },
   {
@@ -1740,9 +1740,9 @@
     "restaurant": {
       "name": "Tasty Town",
       "address": "1 Merab Aleksidze st., თბილისი",
-      "district": "old_town",
-      "lat": 41.71377,
-      "lon": 44.82797
+      "district": "vake",
+      "lat": 41.71709,
+      "lon": 44.78128
     }
   },
   {
@@ -1759,8 +1759,8 @@
       "name": "Burger Brothers Bazari Orbeliani",
       "address": "3 V. Vekua St, Tbilisi",
       "district": "old_town",
-      "lat": 41.71665,
-      "lon": 44.82214
+      "lat": 41.69748,
+      "lon": 44.80404
     }
   },
   {
@@ -1776,9 +1776,9 @@
     "restaurant": {
       "name": "FORKS’nCHEFS",
       "address": "PPMH+4VH Tbilisi, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71672,
-      "lon": 44.82835
+      "district": "tbilisi",
+      "lat": 41.73281,
+      "lon": 44.72973
     }
   },
   {
@@ -1794,9 +1794,9 @@
     "restaurant": {
       "name": "The Museum",
       "address": "7, Rustaveli Avenue, თბილისი",
-      "district": "old_town",
-      "lat": 41.71245,
-      "lon": 44.82731
+      "district": "mtatsminda",
+      "lat": 41.69726,
+      "lon": 44.79962
     }
   },
   {
@@ -1812,9 +1812,9 @@
     "restaurant": {
       "name": "Indus Aroma Restaurant",
       "address": "6 Giorgi Mercheuli Str, Tbilisi",
-      "district": "old_town",
-      "lat": 41.7153,
-      "lon": 44.82232
+      "district": "avlabari",
+      "lat": 41.68566,
+      "lon": 44.81539
     }
   },
   {
@@ -1830,9 +1830,9 @@
     "restaurant": {
       "name": "Anso",
       "address": "6 Rapiel Eristavi St, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71138,
-      "lon": 44.83004
+      "district": "vake",
+      "lat": 41.70854,
+      "lon": 44.77509
     }
   },
   {
@@ -1849,8 +1849,8 @@
       "name": "CVC Chinese Restaurant",
       "address": "Egnate Ninoshvili St 2, Tbilisi",
       "district": "old_town",
-      "lat": 41.71298,
-      "lon": 44.8315
+      "lat": 41.70906,
+      "lon": 44.80325
     }
   },
   {
@@ -1866,9 +1866,9 @@
     "restaurant": {
       "name": "San Seven Bistro",
       "address": "27 Tsurtsumia St, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71198,
-      "lon": 44.83103
+      "district": "avlabari",
+      "lat": 41.69196,
+      "lon": 44.82156
     }
   },
   {
@@ -1885,8 +1885,8 @@
       "name": "Chops Asian",
       "address": "14 Korneli Kekelidze St, T&apos;bilisi, Tbilisi",
       "district": "old_town",
-      "lat": 41.71844,
-      "lon": 44.82981
+      "lat": 41.7066,
+      "lon": 44.77797
     }
   },
   {
@@ -1903,8 +1903,8 @@
       "name": "Sushi Hut",
       "address": "25 Iakob Gogebashvili St, თბილისი",
       "district": "old_town",
-      "lat": 41.71568,
-      "lon": 44.82251
+      "lat": 41.70286,
+      "lon": 44.78362
     }
   },
   {
@@ -1920,9 +1920,9 @@
     "restaurant": {
       "name": "Chopsticks",
       "address": "11 Ilo Mosashvili St, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71292,
-      "lon": 44.82439
+      "district": "vake",
+      "lat": 41.71069,
+      "lon": 44.75512
     }
   },
   {
@@ -1938,9 +1938,9 @@
     "restaurant": {
       "name": "ნამასტე ინდია თბილისი",
       "address": "Nadzaladevi, Giorgi saakadze st. 156 javi street, first floor, N2 Giorgi Saakadze 156, Tbilisi , თბილისი",
-      "district": "old_town",
-      "lat": 41.71759,
-      "lon": 44.82646
+      "district": "nadzaladevi",
+      "lat": 41.74183,
+      "lon": 44.79501
     }
   },
   {
@@ -1957,8 +1957,8 @@
       "name": "Picasso",
       "address": "4 miminoshvili street, თბილისი",
       "district": "old_town",
-      "lat": 41.71129,
-      "lon": 44.8227
+      "lat": 41.70653,
+      "lon": 44.7886
     }
   },
   {
@@ -1975,8 +1975,8 @@
       "name": "Sushi Rolls",
       "address": "9 Ivane Tarkhnishvili St, Tbilisi 0108  , თბილისი",
       "district": "old_town",
-      "lat": 41.71546,
-      "lon": 44.82976
+      "lat": 41.70707,
+      "lon": 44.78345
     }
   },
   {
@@ -1992,9 +1992,9 @@
     "restaurant": {
       "name": "Japanese Poke Bowl",
       "address": "24 Irakli Abashidze Street, თბილისი",
-      "district": "old_town",
-      "lat": 41.71474,
-      "lon": 44.82185
+      "district": "vake",
+      "lat": 41.70721,
+      "lon": 44.76782
     }
   },
   {
@@ -2010,9 +2010,9 @@
     "restaurant": {
       "name": "Oishi Sushi Saburtalo",
       "address": "37 Alexander Kazbegi Ave, თბილისი",
-      "district": "old_town",
-      "lat": 41.71198,
-      "lon": 44.82802
+      "district": "saburtalo",
+      "lat": 41.7246,
+      "lon": 44.74787
     }
   },
   {
@@ -2029,8 +2029,8 @@
       "name": "Tebalisi",
       "address": "21 Ivane Tarkhnishvili St, თბილისი",
       "district": "old_town",
-      "lat": 41.71298,
-      "lon": 44.83117
+      "lat": 41.70586,
+      "lon": 44.78272
     }
   },
   {
@@ -2046,9 +2046,9 @@
     "restaurant": {
       "name": "Bangkok Isani",
       "address": "47 Atskuri St, Tbilisi",
-      "district": "old_town",
-      "lat": 41.7181,
-      "lon": 44.82778
+      "district": "isani",
+      "lat": 41.6882,
+      "lon": 44.84045
     }
   },
   {
@@ -2064,9 +2064,9 @@
     "restaurant": {
       "name": "Anso",
       "address": "6 Rapiel Eristavi St, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71138,
-      "lon": 44.83004
+      "district": "vake",
+      "lat": 41.70854,
+      "lon": 44.77509
     }
   },
   {
@@ -2083,8 +2083,8 @@
       "name": "Wish For a Dish",
       "address": "47 Davit Aghmashenbeli Ave, Tbilisi",
       "district": "old_town",
-      "lat": 41.71242,
-      "lon": 44.82576
+      "lat": 41.70483,
+      "lon": 44.80148
     }
   },
   {
@@ -2100,9 +2100,9 @@
     "restaurant": {
       "name": "Nanami Isani",
       "address": "47 Atskuri St, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71251,
-      "lon": 44.82995
+      "district": "isani",
+      "lat": 41.6882,
+      "lon": 44.84045
     }
   },
   {
@@ -2119,8 +2119,8 @@
       "name": "Dimsumin Saburtalo",
       "address": "Bakery 9/g, თბილისი",
       "district": "old_town",
-      "lat": 41.71866,
-      "lon": 44.82157
+      "lat": 41.70986,
+      "lon": 44.80412
     }
   },
   {
@@ -2137,8 +2137,8 @@
       "name": "Suzie Wong",
       "address": "1 Vasil Petriashvili Street, Tbilisi",
       "district": "old_town",
-      "lat": 41.71838,
-      "lon": 44.82675
+      "lat": 41.70856,
+      "lon": 44.78075
     }
   },
   {
@@ -2154,9 +2154,9 @@
     "restaurant": {
       "name": "FORKS’nCHEFS",
       "address": "PPMH+4VH Tbilisi, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71672,
-      "lon": 44.82835
+      "district": "tbilisi",
+      "lat": 41.73281,
+      "lon": 44.72973
     }
   },
   {
@@ -2172,9 +2172,9 @@
     "restaurant": {
       "name": "ნამასტე ინდია თბილისი",
       "address": "Nadzaladevi, Giorgi saakadze st. 156 javi street, first floor, N2 Giorgi Saakadze 156, Tbilisi , თბილისი",
-      "district": "old_town",
-      "lat": 41.71759,
-      "lon": 44.82646
+      "district": "nadzaladevi",
+      "lat": 41.74183,
+      "lon": 44.79501
     }
   },
   {
@@ -2191,8 +2191,8 @@
       "name": "Maharajah Indian Halal Restaurant",
       "address": "22 Ovanes Tumaniani Street, Sherdani, Tbilisi., თბილისი",
       "district": "old_town",
-      "lat": 41.71355,
-      "lon": 44.82298
+      "lat": 41.68994,
+      "lon": 44.80855
     }
   },
   {
@@ -2208,9 +2208,9 @@
     "restaurant": {
       "name": "Kado",
       "address": "Napareuli St, N3a, თბილისი",
-      "district": "old_town",
-      "lat": 41.71734,
-      "lon": 44.83169
+      "district": "vake",
+      "lat": 41.70828,
+      "lon": 44.7769
     }
   },
   {
@@ -2226,9 +2226,9 @@
     "restaurant": {
       "name": "Siang-Gan Pekini",
       "address": "პეკინის 41, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71543,
-      "lon": 44.82279
+      "district": "didi_digomi",
+      "lat": 41.6938,
+      "lon": 44.80152
     }
   },
   {
@@ -2244,9 +2244,9 @@
     "restaurant": {
       "name": "Nanami Isani",
       "address": "47 Atskuri St, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71251,
-      "lon": 44.82995
+      "district": "isani",
+      "lat": 41.6882,
+      "lon": 44.84045
     }
   },
   {
@@ -2263,8 +2263,8 @@
       "name": "Woki Box Chugureti",
       "address": "22 Arnold Chikobava St, თბილისი",
       "district": "old_town",
-      "lat": 41.71687,
-      "lon": 44.82534
+      "lat": 41.70745,
+      "lon": 44.80475
     }
   },
   {
@@ -2280,9 +2280,9 @@
     "restaurant": {
       "name": "Maki-N-Sushi Vazisubani",
       "address": "Niko Muskhelishvili st 26, თბილისი",
-      "district": "old_town",
-      "lat": 41.71358,
-      "lon": 44.83131
+      "district": "samgori",
+      "lat": 41.69896,
+      "lon": 44.85185
     }
   },
   {
@@ -2298,9 +2298,9 @@
     "restaurant": {
       "name": "Bangkok Galleria",
       "address": "2/4 Shota Rustaveli Ave, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71668,
-      "lon": 44.82374
+      "district": "sololaki",
+      "lat": 41.69437,
+      "lon": 44.79984
     }
   },
   {
@@ -2316,9 +2316,9 @@
     "restaurant": {
       "name": "iSushi",
       "address": "3a Napareuli Street, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71697,
-      "lon": 44.8283
+      "district": "vake",
+      "lat": 41.70878,
+      "lon": 44.77679
     }
   },
   {
@@ -2334,9 +2334,9 @@
     "restaurant": {
       "name": "Jackie Chan Isani",
       "address": "26 Tsinandali Street, Tbilisi, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71392,
-      "lon": 44.82835
+      "district": "isani",
+      "lat": 41.69061,
+      "lon": 44.82746
     }
   },
   {
@@ -2352,9 +2352,9 @@
     "restaurant": {
       "name": "Sushi Family",
       "address": "27 Shandor Petepi St, თბილისი",
-      "district": "old_town",
-      "lat": 41.71352,
-      "lon": 44.82246
+      "district": "samgori",
+      "lat": 41.69896,
+      "lon": 44.85599
     }
   },
   {
@@ -2370,9 +2370,9 @@
     "restaurant": {
       "name": "Mochi",
       "address": "65 Zakaria Paliashvili Street, თბილისი",
-      "district": "old_town",
-      "lat": 41.71364,
-      "lon": 44.82976
+      "district": "vake",
+      "lat": 41.70989,
+      "lon": 44.7576
     }
   },
   {
@@ -2388,9 +2388,9 @@
     "restaurant": {
       "name": "Wasabi Abashidze",
       "address": "60 Irakli Abashidze Street, თბილისი",
-      "district": "old_town",
-      "lat": 41.71229,
-      "lon": 44.82341
+      "district": "vake",
+      "lat": 41.70823,
+      "lon": 44.75869
     }
   },
   {
@@ -2406,9 +2406,9 @@
     "restaurant": {
       "name": "Jackie Chan Sushi",
       "address": "18 Bakhtrioni Str, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71239,
-      "lon": 44.82336
+      "district": "saburtalo",
+      "lat": 41.72048,
+      "lon": 44.76835
     }
   },
   {
@@ -2425,8 +2425,8 @@
       "name": "Picasso",
       "address": "4 miminoshvili street, თბილისი",
       "district": "old_town",
-      "lat": 41.71129,
-      "lon": 44.8227
+      "lat": 41.70653,
+      "lon": 44.7886
     }
   },
   {
@@ -2442,9 +2442,9 @@
     "restaurant": {
       "name": "Sunrise Food Arshba",
       "address": "Iona Meunargia 69, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71788,
-      "lon": 44.82731
+      "district": "chugureti",
+      "lat": 41.72163,
+      "lon": 44.80605
     }
   },
   {
@@ -2460,9 +2460,9 @@
     "restaurant": {
       "name": "Seoul Saburtalo",
       "address": "7, Budapeshti St, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71395,
-      "lon": 44.82378
+      "district": "saburtalo",
+      "lat": 41.72955,
+      "lon": 44.76149
     }
   },
   {
@@ -2479,8 +2479,8 @@
       "name": "Ukve Marjanishvili",
       "address": "83 Davit Aghmashenebeli Ave, Tbilisi",
       "district": "old_town",
-      "lat": 41.71778,
-      "lon": 44.83042
+      "lat": 41.70911,
+      "lon": 44.79802
     }
   },
   {
@@ -2496,9 +2496,9 @@
     "restaurant": {
       "name": "Sushi Smile",
       "address": "Vasil Koptsievi St 43, თბილისი",
-      "district": "old_town",
-      "lat": 41.71759,
-      "lon": 44.82454
+      "district": "samgori",
+      "lat": 41.69102,
+      "lon": 44.85284
     }
   },
   {
@@ -2514,9 +2514,9 @@
     "restaurant": {
       "name": "Siraj Asian restaurant",
       "address": "7 Vazha Phavela Avenue, თბილისი",
-      "district": "old_town",
-      "lat": 41.71345,
-      "lon": 44.83056
+      "district": "saburtalo",
+      "lat": 41.72787,
+      "lon": 44.76557
     }
   },
   {
@@ -2532,9 +2532,9 @@
     "restaurant": {
       "name": "FORKS’nCHEFS",
       "address": "PPMH+4VH Tbilisi, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71672,
-      "lon": 44.82835
+      "district": "tbilisi",
+      "lat": 41.73281,
+      "lon": 44.72973
     }
   },
   {
@@ -2551,8 +2551,8 @@
       "name": "Picasso Meidanze",
       "address": "Gorgasali street 1, Tbilisi",
       "district": "old_town",
-      "lat": 41.71832,
-      "lon": 44.83183
+      "lat": 41.68978,
+      "lon": 44.80954
     }
   },
   {
@@ -2568,9 +2568,9 @@
     "restaurant": {
       "name": "Ajisai",
       "address": "6 Shalva Nutsubidze Street, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71311,
-      "lon": 44.83216
+      "district": "saburtalo",
+      "lat": 41.72987,
+      "lon": 44.75743
     }
   },
   {
@@ -2587,8 +2587,8 @@
       "name": "Thai Curry",
       "address": "37 Alexander Griboedov St, თბილისი",
       "district": "old_town",
-      "lat": 41.7137,
-      "lon": 44.82712
+      "lat": 41.70226,
+      "lon": 44.79234
     }
   },
   {
@@ -2604,9 +2604,9 @@
     "restaurant": {
       "name": "Kado",
       "address": "Napareuli St, N3a, თბილისი",
-      "district": "old_town",
-      "lat": 41.71734,
-      "lon": 44.83169
+      "district": "vake",
+      "lat": 41.70828,
+      "lon": 44.7769
     }
   },
   {
@@ -2622,9 +2622,9 @@
     "restaurant": {
       "name": "Bangkok Galleria",
       "address": "2/4 Shota Rustaveli Ave, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71668,
-      "lon": 44.82374
+      "district": "sololaki",
+      "lat": 41.69437,
+      "lon": 44.79984
     }
   },
   {
@@ -2641,8 +2641,8 @@
       "name": "Thai Curry",
       "address": "37 Alexander Griboedov St, თბილისი",
       "district": "old_town",
-      "lat": 41.7137,
-      "lon": 44.82712
+      "lat": 41.70226,
+      "lon": 44.79234
     }
   },
   {
@@ -2658,9 +2658,9 @@
     "restaurant": {
       "name": "Thai in Town",
       "address": "17 Kote Afkhazi St, Tbilisi",
-      "district": "old_town",
-      "lat": 41.7165,
-      "lon": 44.82129
+      "district": "sololaki",
+      "lat": 41.69299,
+      "lon": 44.80394
     }
   },
   {
@@ -2676,9 +2676,9 @@
     "restaurant": {
       "name": "Oishi Sushi Saburtalo",
       "address": "37 Alexander Kazbegi Ave, თბილისი",
-      "district": "old_town",
-      "lat": 41.71198,
-      "lon": 44.82802
+      "district": "saburtalo",
+      "lat": 41.7246,
+      "lon": 44.74787
     }
   },
   {
@@ -2695,8 +2695,8 @@
       "name": "Al Madina",
       "address": "1 Gia Tetelashvili Street, Tbilisi",
       "district": "old_town",
-      "lat": 41.71521,
-      "lon": 44.83272
+      "lat": 41.71083,
+      "lon": 44.79521
     }
   },
   {
@@ -2712,9 +2712,9 @@
     "restaurant": {
       "name": "SKA Salad Bar Chavchavadze",
       "address": "Ilia Chavchavadze Avenue 37, თბილისი",
-      "district": "old_town",
-      "lat": 41.71317,
-      "lon": 44.83009
+      "district": "vake",
+      "lat": 41.71183,
+      "lon": 44.75835
     }
   },
   {
@@ -2730,9 +2730,9 @@
     "restaurant": {
       "name": "Chicos",
       "address": "11a Ilia Chavchavadze Avenue, თბილისი",
-      "district": "old_town",
-      "lat": 41.71377,
-      "lon": 44.82835
+      "district": "vake",
+      "lat": 41.70946,
+      "lon": 44.77368
     }
   },
   {
@@ -2748,9 +2748,9 @@
     "restaurant": {
       "name": "Chiho",
       "address": "Pekini Ave 25, თბილისი",
-      "district": "old_town",
-      "lat": 41.71207,
-      "lon": 44.82294
+      "district": "saburtalo",
+      "lat": 41.72454,
+      "lon": 44.77169
     }
   },
   {
@@ -2766,9 +2766,9 @@
     "restaurant": {
       "name": "სკ სამზარეულო ინდური რესტორანი",
       "address": "8/1 Ioseb grishashvili Str, თბილისი",
-      "district": "old_town",
-      "lat": 41.71305,
-      "lon": 44.82416
+      "district": "nadzaladevi",
+      "lat": 41.82205,
+      "lon": 44.79776
     }
   },
   {
@@ -2785,8 +2785,8 @@
       "name": "Shawarma Xpress",
       "address": "n86 Davit Aghmashenebeli Ave, T&apos;bilisi, Tbilisi",
       "district": "old_town",
-      "lat": 41.71499,
-      "lon": 44.8275
+      "lat": 41.70904,
+      "lon": 44.79719
     }
   },
   {
@@ -2802,9 +2802,9 @@
     "restaurant": {
       "name": "Chiti",
       "address": "Ekvtime Takaishvili St , Tbilisi",
-      "district": "old_town",
-      "lat": 41.71637,
-      "lon": 44.82472
+      "district": "tbilisi",
+      "lat": 41.70824,
+      "lon": 44.77765
     }
   },
   {
@@ -2821,8 +2821,8 @@
       "name": "Tiffany Express",
       "address": "Brose Street turn, Right side of Riv. Mtkvari, Tbilisi",
       "district": "old_town",
-      "lat": 41.71173,
-      "lon": 44.83117
+      "lat": 41.70194,
+      "lon": 44.79895
     }
   },
   {
@@ -2838,9 +2838,9 @@
     "restaurant": {
       "name": "Liv By Alfredo",
       "address": "ეს არის ვირტუალური რესტორანი, თბილისი",
-      "district": "old_town",
-      "lat": 41.7169,
-      "lon": 44.8291
+      "district": "isani",
+      "lat": 41.69108,
+      "lon": 44.84202
     }
   },
   {
@@ -2856,9 +2856,9 @@
     "restaurant": {
       "name": "Andre",
       "address": "Kazbegi Ave 8a, თბილისი",
-      "district": "old_town",
-      "lat": 41.71615,
-      "lon": 44.82854
+      "district": "saburtalo",
+      "lat": 41.72593,
+      "lon": 44.76518
     }
   },
   {
@@ -2874,9 +2874,9 @@
     "restaurant": {
       "name": "Borsh",
       "address": "Napareuli 3 Street, თბილისი",
-      "district": "old_town",
-      "lat": 41.71129,
-      "lon": 44.83286
+      "district": "vake",
+      "lat": 41.70894,
+      "lon": 44.7768
     }
   },
   {
@@ -2892,9 +2892,9 @@
     "restaurant": {
       "name": "Brunch by Gastronome Lisi",
       "address": "Nekerchkhali St. 2, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71308,
-      "lon": 44.83126
+      "district": "saburtalo",
+      "lat": 41.74014,
+      "lon": 44.75305
     }
   },
   {
@@ -2910,9 +2910,9 @@
     "restaurant": {
       "name": "Kado",
       "address": "Napareuli St, N3a, თბილისი",
-      "district": "old_town",
-      "lat": 41.71734,
-      "lon": 44.83169
+      "district": "vake",
+      "lat": 41.70828,
+      "lon": 44.7769
     }
   },
   {
@@ -2928,9 +2928,9 @@
     "restaurant": {
       "name": "Fragola",
       "address": "Kazbegi ave. 2, თბილისი",
-      "district": "old_town",
-      "lat": 41.71803,
-      "lon": 44.82599
+      "district": "saburtalo",
+      "lat": 41.72612,
+      "lon": 44.76733
     }
   },
   {
@@ -2946,9 +2946,9 @@
     "restaurant": {
       "name": "Pause",
       "address": "Tbilisi town, Nino Ramishvili, II dead end, N2, თბილისი",
-      "district": "old_town",
-      "lat": 41.7116,
-      "lon": 44.82538
+      "district": "vake",
+      "lat": 41.71103,
+      "lon": 44.76847
     }
   },
   {
@@ -2964,9 +2964,9 @@
     "restaurant": {
       "name": "Pizza Di Roma Avlabari",
       "address": "2 Ketevan Tsamebuli Ave, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71345,
-      "lon": 44.83084
+      "district": "avlabari",
+      "lat": 41.69275,
+      "lon": 44.81562
     }
   },
   {
@@ -2982,9 +2982,9 @@
     "restaurant": {
       "name": "Fit Project",
       "address": "ეს არის ვირტუალური რესტორანი, თბილისი",
-      "district": "old_town",
-      "lat": 41.71232,
-      "lon": 44.83169
+      "district": "isani",
+      "lat": 41.69108,
+      "lon": 44.84202
     }
   },
   {
@@ -3001,8 +3001,8 @@
       "name": "Iasamani",
       "address": "33 1 Lado Asatiani St, თბილისი",
       "district": "old_town",
-      "lat": 41.71276,
-      "lon": 44.82614
+      "lat": 41.69019,
+      "lon": 44.80518
     }
   },
   {
@@ -3018,9 +3018,9 @@
     "restaurant": {
       "name": "Tasty",
       "address": "37 Meliton And Andria Balanchivadze St, თბილისი",
-      "district": "old_town",
-      "lat": 41.71869,
-      "lon": 44.82505
+      "district": "vake",
+      "lat": 41.71627,
+      "lon": 44.77252
     }
   },
   {
@@ -3037,8 +3037,8 @@
       "name": "Mozzo Mozzo",
       "address": "Tamar Chovelidze St 10, Tbilisi",
       "district": "old_town",
-      "lat": 41.7153,
-      "lon": 44.83112
+      "lat": 41.70479,
+      "lon": 44.78664
     }
   },
   {
@@ -3055,8 +3055,8 @@
       "name": "SKA  Marjanishvili",
       "address": "8, Kote Marjanishvili Street, Tbilisi",
       "district": "old_town",
-      "lat": 41.71612,
-      "lon": 44.82341
+      "lat": 41.70885,
+      "lon": 44.79456
     }
   },
   {
@@ -3072,9 +3072,9 @@
     "restaurant": {
       "name": "Rtveli",
       "address": "118 Archil Mishveladze St, თბილისი",
-      "district": "old_town",
-      "lat": 41.71581,
-      "lon": 44.82595
+      "district": "vake",
+      "lat": 41.70979,
+      "lon": 44.75392
     }
   },
   {
@@ -3090,9 +3090,9 @@
     "restaurant": {
       "name": "Brunch by Gastronome City Mall",
       "address": "1 Petre Kavtaradze St, თბილისი",
-      "district": "old_town",
-      "lat": 41.71606,
-      "lon": 44.82425
+      "district": "saburtalo",
+      "lat": 41.72454,
+      "lon": 44.73885
     }
   },
   {
@@ -3108,9 +3108,9 @@
     "restaurant": {
       "name": "PAUL Tabidze",
       "address": "3/5 Galaktion Tabidze Street, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71603,
-      "lon": 44.83301
+      "district": "sololaki",
+      "lat": 41.69228,
+      "lon": 44.801
     }
   },
   {
@@ -3127,8 +3127,8 @@
       "name": "Myata Signature",
       "address": "1 Pkhovi St, თბილისი",
       "district": "old_town",
-      "lat": 41.7137,
-      "lon": 44.82232
+      "lat": 41.69816,
+      "lon": 44.80243
     }
   },
   {
@@ -3144,9 +3144,9 @@
     "restaurant": {
       "name": "Burger Bar Saburtalo ",
       "address": "15 Alexander Kazbegi Ave, თბილისი",
-      "district": "old_town",
-      "lat": 41.71301,
-      "lon": 44.82275
+      "district": "saburtalo",
+      "lat": 41.72633,
+      "lon": 44.76264
     }
   },
   {
@@ -3162,9 +3162,9 @@
     "restaurant": {
       "name": "Brunch by Gastronome City Mall",
       "address": "1 Petre Kavtaradze St, თბილისი",
-      "district": "old_town",
-      "lat": 41.71606,
-      "lon": 44.82425
+      "district": "saburtalo",
+      "lat": 41.72454,
+      "lon": 44.73885
     }
   },
   {
@@ -3180,9 +3180,9 @@
     "restaurant": {
       "name": "Le Gato Kazbegi",
       "address": "24 Kazbegi, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71374,
-      "lon": 44.82519
+      "district": "saburtalo",
+      "lat": 41.72391,
+      "lon": 44.74709
     }
   },
   {
@@ -3198,9 +3198,9 @@
     "restaurant": {
       "name": "Bangkok Isani",
       "address": "47 Atskuri St, Tbilisi",
-      "district": "old_town",
-      "lat": 41.7181,
-      "lon": 44.82778
+      "district": "isani",
+      "lat": 41.6882,
+      "lon": 44.84045
     }
   },
   {
@@ -3217,8 +3217,8 @@
       "name": "Cafe Leila",
       "address": "18 Ioane Shavteli St, თბილისი",
       "district": "old_town",
-      "lat": 41.71668,
-      "lon": 44.82543
+      "lat": 41.69548,
+      "lon": 44.80644
     }
   },
   {
@@ -3234,9 +3234,9 @@
     "restaurant": {
       "name": "SKA Salad Bar Mrgvali Baghi",
       "address": "13, Paliashvili Street, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71129,
-      "lon": 44.8331
+      "district": "vake",
+      "lat": 41.70837,
+      "lon": 44.77502
     }
   },
   {
@@ -3252,9 +3252,9 @@
     "restaurant": {
       "name": "Pizza Di Roma Kavtaradze City Mall",
       "address": "1 Petre Kavtaradze St, თბილისი",
-      "district": "old_town",
-      "lat": 41.71499,
-      "lon": 44.83263
+      "district": "saburtalo",
+      "lat": 41.72454,
+      "lon": 44.73885
     }
   },
   {
@@ -3270,9 +3270,9 @@
     "restaurant": {
       "name": "Hacker-Pschorr",
       "address": "Sulkhan Tsintsadze St 12, თბილისი",
-      "district": "old_town",
-      "lat": 41.71223,
-      "lon": 44.82425
+      "district": "saburtalo",
+      "lat": 41.72188,
+      "lon": 44.76982
     }
   },
   {
@@ -3288,9 +3288,9 @@
     "restaurant": {
       "name": "Baho",
       "address": "41 Kazbegi Ave , თბილისი",
-      "district": "old_town",
-      "lat": 41.71471,
-      "lon": 44.82529
+      "district": "saburtalo",
+      "lat": 41.72466,
+      "lon": 44.74574
     }
   },
   {
@@ -3307,8 +3307,8 @@
       "name": "ეგოისტ ჩუღურეთი",
       "address": "22 Arnold Chikobava Street, თბილისი",
       "district": "old_town",
-      "lat": 41.71803,
-      "lon": 44.82938
+      "lat": 41.70745,
+      "lon": 44.80475
     }
   },
   {
@@ -3324,9 +3324,9 @@
     "restaurant": {
       "name": "Fitmeal",
       "address": "13 Gazapkhuli St, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71395,
-      "lon": 44.82519
+      "district": "saburtalo",
+      "lat": 41.73159,
+      "lon": 44.74126
     }
   },
   {
@@ -3342,9 +3342,9 @@
     "restaurant": {
       "name": "Kievuri",
       "address": "PQ72+F29 Tbilisi, თბილისი",
-      "district": "old_town",
-      "lat": 41.71279,
-      "lon": 44.82816
+      "district": "tbilisi",
+      "lat": 41.71366,
+      "lon": 44.75011
     }
   },
   {
@@ -3360,9 +3360,9 @@
     "restaurant": {
       "name": "Sushi Icons",
       "address": "7 Simon Kandelaki St, T&apos;bilisi, Tbilisi",
-      "district": "old_town",
-      "lat": 41.7127,
-      "lon": 44.82722
+      "district": "saburtalo",
+      "lat": 41.73135,
+      "lon": 44.76707
     }
   },
   {
@@ -3379,8 +3379,8 @@
       "name": "Champ's Cafe",
       "address": "Tbilisi, Agmashenebeli 150, თბილისი",
       "district": "old_town",
-      "lat": 41.71615,
-      "lon": 44.83089
+      "lat": 41.71764,
+      "lon": 44.79112
     }
   },
   {
@@ -3397,8 +3397,8 @@
       "name": "Food Good Bazari Orbeliani",
       "address": "bazar orbeliani, Tbilisi",
       "district": "old_town",
-      "lat": 41.71737,
-      "lon": 44.82317
+      "lat": 41.69781,
+      "lon": 44.80417
     }
   },
   {
@@ -3414,9 +3414,9 @@
     "restaurant": {
       "name": "Healthy Bowl",
       "address": "24 Irakli Abashidze Street, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71352,
-      "lon": 44.82877
+      "district": "vake",
+      "lat": 41.70721,
+      "lon": 44.76782
     }
   },
   {
@@ -3433,8 +3433,8 @@
       "name": "Maharajah Indian Halal Restaurant",
       "address": "22 Ovanes Tumaniani Street, Sherdani, Tbilisi., თბილისი",
       "district": "old_town",
-      "lat": 41.71355,
-      "lon": 44.82298
+      "lat": 41.68994,
+      "lon": 44.80855
     }
   },
   {
@@ -3450,9 +3450,9 @@
     "restaurant": {
       "name": "De Gusti Saburtalo",
       "address": "8 Alexander Kazbegi Ave, თბილისი",
-      "district": "old_town",
-      "lat": 41.7137,
-      "lon": 44.82599
+      "district": "saburtalo",
+      "lat": 41.72597,
+      "lon": 44.76565
     }
   },
   {
@@ -3469,8 +3469,8 @@
       "name": "Pizza&Pasta Melikishvili",
       "address": "Melikishvili 9, თბილისი",
       "district": "old_town",
-      "lat": 41.71803,
-      "lon": 44.82505
+      "lat": 41.70797,
+      "lon": 44.78356
     }
   },
   {
@@ -3486,9 +3486,9 @@
     "restaurant": {
       "name": "August Chavchavadze",
       "address": "Chavchavadze Ave 16, თბილისი",
-      "district": "old_town",
-      "lat": 41.71719,
-      "lon": 44.82472
+      "district": "vake",
+      "lat": 41.70898,
+      "lon": 44.77537
     }
   },
   {
@@ -3505,8 +3505,8 @@
       "name": "Sarke",
       "address": "Sioni st. 13, თბილისი",
       "district": "old_town",
-      "lat": 41.7186,
-      "lon": 44.83023
+      "lat": 41.6909,
+      "lon": 44.80739
     }
   },
   {
@@ -3522,9 +3522,9 @@
     "restaurant": {
       "name": "Brunch by Gastronome Dighomi",
       "address": "27 akaki beliashvili street, Tbilisi",
-      "district": "old_town",
-      "lat": 41.7149,
-      "lon": 44.82995
+      "district": "didube",
+      "lat": 41.76043,
+      "lon": 44.78049
     }
   },
   {
@@ -3541,8 +3541,8 @@
       "name": "Khinkali House Rustaveli",
       "address": "37, Shota Rustaveli Avenue, თბილისი",
       "district": "old_town",
-      "lat": 41.71581,
-      "lon": 44.82783
+      "lat": 41.70356,
+      "lon": 44.79132
     }
   },
   {
@@ -3559,8 +3559,8 @@
       "name": "SKA  Bazari Orbeliani",
       "address": "3 Vekua Street, თბილისი",
       "district": "old_town",
-      "lat": 41.71537,
-      "lon": 44.83225
+      "lat": 41.69748,
+      "lon": 44.80404
     }
   },
   {
@@ -3577,8 +3577,8 @@
       "name": "Cloud 9 Lounge & Bar",
       "address": "16 Davit Aghmashenebeli Ave, თბილისი",
       "district": "old_town",
-      "lat": 41.7133,
-      "lon": 44.82858
+      "lat": 41.70349,
+      "lon": 44.80295
     }
   },
   {
@@ -3595,8 +3595,8 @@
       "name": "SKA  Marjanishvili",
       "address": "8, Kote Marjanishvili Street, Tbilisi",
       "district": "old_town",
-      "lat": 41.71612,
-      "lon": 44.82341
+      "lat": 41.70885,
+      "lon": 44.79456
     }
   },
   {
@@ -3612,9 +3612,9 @@
     "restaurant": {
       "name": "Sensation",
       "address": "9 Navtlughi, თბილისი",
-      "district": "old_town",
-      "lat": 41.71715,
-      "lon": 44.82369
+      "district": "isani",
+      "lat": 41.68506,
+      "lon": 44.83996
     }
   },
   {
@@ -3630,9 +3630,9 @@
     "restaurant": {
       "name": "Bite Me",
       "address": "2 Ramaz Chkhikvadze St, თბილისი",
-      "district": "old_town",
-      "lat": 41.71891,
-      "lon": 44.82783
+      "district": "saburtalo",
+      "lat": 41.72826,
+      "lon": 44.73232
     }
   },
   {
@@ -3649,8 +3649,8 @@
       "name": "City Chicken",
       "address": "73 M. Kostava str, თბილისი",
       "district": "old_town",
-      "lat": 41.71314,
-      "lon": 44.82839
+      "lat": 41.70583,
+      "lon": 44.78808
     }
   },
   {
@@ -3666,9 +3666,9 @@
     "restaurant": {
       "name": "საბვეი მარჯვენა სანაპირო (ვისოლი)",
       "address": "President Heydar Aliyev Embankment, T&apos;bilisi, თბილისი",
-      "district": "old_town",
-      "lat": 41.71443,
-      "lon": 44.82778
+      "district": "tbilisi",
+      "lat": 41.72646,
+      "lon": 44.78028
     }
   },
   {
@@ -3684,9 +3684,9 @@
     "restaurant": {
       "name": "Wendy's Varketili",
       "address": "14A Javakheti St, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71374,
-      "lon": 44.82524
+      "district": "samgori",
+      "lat": 41.68491,
+      "lon": 44.87023
     }
   },
   {
@@ -3702,9 +3702,9 @@
     "restaurant": {
       "name": "Mainz Shawarma",
       "address": "Tsereteli avenue  n 2 a, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71772,
-      "lon": 44.82242
+      "district": "chugureti",
+      "lat": 41.73403,
+      "lon": 44.78382
     }
   },
   {
@@ -3721,8 +3721,8 @@
       "name": "Subway Marjanishvili",
       "address": "86 Davit Aghmashenebeli Ave, T&apos;bilisi, თბილისი",
       "district": "old_town",
-      "lat": 41.71869,
-      "lon": 44.82943
+      "lat": 41.70912,
+      "lon": 44.79723
     }
   },
   {
@@ -3738,9 +3738,9 @@
     "restaurant": {
       "name": "Craft Food Saburtalo",
       "address": "Zhiuli Shartava 4b, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71113,
-      "lon": 44.82317
+      "district": "saburtalo",
+      "lat": 41.72492,
+      "lon": 44.77539
     }
   },
   {
@@ -3756,9 +3756,9 @@
     "restaurant": {
       "name": "Meaty Burger",
       "address": "ჯორჯ ბუშის ქუჩა 7, თბილისი",
-      "district": "old_town",
-      "lat": 41.717,
-      "lon": 44.83268
+      "district": "isani",
+      "lat": 41.69112,
+      "lon": 44.83661
     }
   },
   {
@@ -3774,9 +3774,9 @@
     "restaurant": {
       "name": "Wendy's Pizza Varketili",
       "address": "14A Javakheti St, თბილისი",
-      "district": "old_town",
-      "lat": 41.71577,
-      "lon": 44.82999
+      "district": "samgori",
+      "lat": 41.68491,
+      "lon": 44.87023
     }
   },
   {
@@ -3792,9 +3792,9 @@
     "restaurant": {
       "name": "Hot Dog By Big Sam’s Gallerea Tbilisi",
       "address": "2/4 Shota Rustaveli Ave, თბილისი",
-      "district": "old_town",
-      "lat": 41.71348,
-      "lon": 44.82529
+      "district": "sololaki",
+      "lat": 41.69437,
+      "lon": 44.79984
     }
   },
   {
@@ -3810,9 +3810,9 @@
     "restaurant": {
       "name": "BurgerBoss",
       "address": "11b Bakhtrioni St, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71715,
-      "lon": 44.82538
+      "district": "saburtalo",
+      "lat": 41.72088,
+      "lon": 44.76916
     }
   },
   {
@@ -3829,8 +3829,8 @@
       "name": "SKA  Marjanishvili",
       "address": "8, Kote Marjanishvili Street, Tbilisi",
       "district": "old_town",
-      "lat": 41.71612,
-      "lon": 44.82341
+      "lat": 41.70885,
+      "lon": 44.79456
     }
   },
   {
@@ -3847,8 +3847,8 @@
       "name": "Stop Shawarma",
       "address": "16 Kote Marjanishvili str, Tbilisi",
       "district": "old_town",
-      "lat": 41.7122,
-      "lon": 44.82209
+      "lat": 41.7092,
+      "lon": 44.79603
     }
   },
   {
@@ -3864,9 +3864,9 @@
     "restaurant": {
       "name": "Bite Me",
       "address": "2 Ramaz Chkhikvadze St, თბილისი",
-      "district": "old_town",
-      "lat": 41.71891,
-      "lon": 44.82783
+      "district": "saburtalo",
+      "lat": 41.72826,
+      "lon": 44.73232
     }
   },
   {
@@ -3882,9 +3882,9 @@
     "restaurant": {
       "name": "Shemomechama Saburtalo",
       "address": "16 Vazha-Pshavela ave, თბილისი",
-      "district": "old_town",
-      "lat": 41.71816,
-      "lon": 44.8235
+      "district": "saburtalo",
+      "lat": 41.72643,
+      "lon": 44.76084
     }
   },
   {
@@ -3901,8 +3901,8 @@
       "name": "Tacodor Bazari Orbeliani",
       "address": "3a Vekua Street, თბილისი",
       "district": "old_town",
-      "lat": 41.71593,
-      "lon": 44.8227
+      "lat": 41.69748,
+      "lon": 44.80404
     }
   },
   {
@@ -3919,8 +3919,8 @@
       "name": "Aut Vera",
       "address": "32 Mikheil Zandukeli StT&apos;bilisi 0106, Tbilisi",
       "district": "old_town",
-      "lat": 41.71835,
-      "lon": 44.82519
+      "lat": 41.7039,
+      "lon": 44.78488
     }
   },
   {
@@ -3936,9 +3936,9 @@
     "restaurant": {
       "name": "სმეში",
       "address": "1, Ilo Mosashvili, თბილისი",
-      "district": "old_town",
-      "lat": 41.71791,
-      "lon": 44.82844
+      "district": "vake",
+      "lat": 41.71036,
+      "lon": 44.75848
     }
   },
   {
@@ -3954,9 +3954,9 @@
     "restaurant": {
       "name": "საბვეი მარჯვენა სანაპირო (ვისოლი)",
       "address": "President Heydar Aliyev Embankment, T&apos;bilisi, თბილისი",
-      "district": "old_town",
-      "lat": 41.71443,
-      "lon": 44.82778
+      "district": "tbilisi",
+      "lat": 41.72646,
+      "lon": 44.78028
     }
   },
   {
@@ -3973,8 +3973,8 @@
       "name": "Lolita",
       "address": "Tamar Chovelidze st. 7, თბილისი",
       "district": "old_town",
-      "lat": 41.71781,
-      "lon": 44.82623
+      "lat": 41.70569,
+      "lon": 44.78686
     }
   },
   {
@@ -3990,9 +3990,9 @@
     "restaurant": {
       "name": "Berytus",
       "address": "16 Ilia Chavchavadze Avenue, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71552,
-      "lon": 44.82759
+      "district": "vake",
+      "lat": 41.70898,
+      "lon": 44.77537
     }
   },
   {
@@ -4009,8 +4009,8 @@
       "name": "Shaurma Point",
       "address": "113a Dimitri Uznadze St, Tbilisi",
       "district": "old_town",
-      "lat": 41.71756,
-      "lon": 44.83126
+      "lat": 41.71323,
+      "lon": 44.792
     }
   },
   {
@@ -4026,9 +4026,9 @@
     "restaurant": {
       "name": "Subway Bakradze",
       "address": "Akaki Bakradze 40, Tbilisi",
-      "district": "old_town",
-      "lat": 41.7175,
-      "lon": 44.82326
+      "district": "didi_digomi",
+      "lat": 41.6938,
+      "lon": 44.80152
     }
   },
   {
@@ -4045,8 +4045,8 @@
       "name": "Bubble Waffle Factory",
       "address": "20 Anton Purtseladze St, Tbilisi 0105, Tbilisi",
       "district": "old_town",
-      "lat": 41.71223,
-      "lon": 44.82938
+      "lat": 41.69784,
+      "lon": 44.80274
     }
   },
   {
@@ -4063,8 +4063,8 @@
       "name": "Mugsy's Burger Vera",
       "address": "8/2 Melikishvili Street, თბილისი",
       "district": "old_town",
-      "lat": 41.71392,
-      "lon": 44.82623
+      "lat": 41.70703,
+      "lon": 44.78509
     }
   },
   {
@@ -4080,9 +4080,9 @@
     "restaurant": {
       "name": "Wendy's Sierra",
       "address": "35 Marshal Gelovani Ave, თბილისი",
-      "district": "old_town",
-      "lat": 41.71402,
-      "lon": 44.82854
+      "district": "saburtalo",
+      "lat": 41.75436,
+      "lon": 44.76977
     }
   },
   {
@@ -4098,9 +4098,9 @@
     "restaurant": {
       "name": "Ok Shawarma Nakverchkhalze Saburtalo",
       "address": "Iona Vakeli St 27, Tbilisi",
-      "district": "vake",
-      "lat": 41.70839,
-      "lon": 44.76818
+      "district": "saburtalo",
+      "lat": 41.72866,
+      "lon": 44.75922
     }
   },
   {
@@ -4116,9 +4116,9 @@
     "restaurant": {
       "name": "Hot Dog By Big Sam’s Gallerea Tbilisi",
       "address": "2/4 Shota Rustaveli Ave, თბილისი",
-      "district": "old_town",
-      "lat": 41.71348,
-      "lon": 44.82529
+      "district": "sololaki",
+      "lat": 41.69437,
+      "lon": 44.79984
     }
   },
   {
@@ -4134,9 +4134,9 @@
     "restaurant": {
       "name": "Combo",
       "address": "MRQR+2MP, ვ. ჩაჩავას ქუჩა, , თბილისი",
-      "district": "old_town",
-      "lat": 41.71788,
-      "lon": 44.82797
+      "district": "isani",
+      "lat": 41.68773,
+      "lon": 44.84148
     }
   },
   {
@@ -4152,9 +4152,9 @@
     "restaurant": {
       "name": "Combo",
       "address": "MRQR+2MP, ვ. ჩაჩავას ქუჩა, , თბილისი",
-      "district": "old_town",
-      "lat": 41.71788,
-      "lon": 44.82797
+      "district": "isani",
+      "lat": 41.68773,
+      "lon": 44.84148
     }
   },
   {
@@ -4171,8 +4171,8 @@
       "name": "Tacodor Bazari Orbeliani",
       "address": "3a Vekua Street, თბილისი",
       "district": "old_town",
-      "lat": 41.71593,
-      "lon": 44.8227
+      "lat": 41.69748,
+      "lon": 44.80404
     }
   },
   {
@@ -4188,9 +4188,9 @@
     "restaurant": {
       "name": "Pizza Di Roma Kavtaradze City Mall",
       "address": "1 Petre Kavtaradze St, თბილისი",
-      "district": "old_town",
-      "lat": 41.71499,
-      "lon": 44.83263
+      "district": "saburtalo",
+      "lat": 41.72454,
+      "lon": 44.73885
     }
   },
   {
@@ -4204,11 +4204,11 @@
     "mood2": "I need protein",
     "rating": 9,
     "restaurant": {
-      "name": "Subway Vazha Pshavela (Near Medical University)",
+      "name": "Subway Vazha Pshavela (Near Medical University)",
       "address": "Vazha-Pshavela Ave 27 g, Tbilisi",
       "district": "old_town",
-      "lat": 41.71355,
-      "lon": 44.82538
+      "lat": 41.72726,
+      "lon": 44.75928
     }
   },
   {
@@ -4224,9 +4224,9 @@
     "restaurant": {
       "name": "McDonald's Saburtalo",
       "address": "69 Merab Kostava st., Tbilisi",
-      "district": "old_town",
-      "lat": 41.71524,
-      "lon": 44.82543
+      "district": "vake",
+      "lat": 41.71593,
+      "lon": 44.77927
     }
   },
   {
@@ -4242,9 +4242,9 @@
     "restaurant": {
       "name": "Gldanis Shaurma I Dzveli Gemo Saakadze",
       "address": "3, Chabukiani Street, თბილისი",
-      "district": "old_town",
-      "lat": 41.71308,
-      "lon": 44.82872
+      "district": "saburtalo",
+      "lat": 41.72398,
+      "lon": 44.77558
     }
   },
   {
@@ -4261,8 +4261,8 @@
       "name": "DUO",
       "address": "2 Ivane Tarkhnishvili St, T&apos;bilisi, თბილისი",
       "district": "old_town",
-      "lat": 41.71543,
-      "lon": 44.8275
+      "lat": 41.70695,
+      "lon": 44.78374
     }
   },
   {
@@ -4279,8 +4279,8 @@
       "name": "Stop Shawarma",
       "address": "16 Kote Marjanishvili str, Tbilisi",
       "district": "old_town",
-      "lat": 41.7122,
-      "lon": 44.82209
+      "lat": 41.7092,
+      "lon": 44.79603
     }
   },
   {
@@ -4297,8 +4297,8 @@
       "name": "Gochit's Burger Marjanishvili",
       "address": "189 David Agmashenebeli Ave, თბილისი",
       "district": "old_town",
-      "lat": 41.71443,
-      "lon": 44.82661
+      "lat": 41.7203,
+      "lon": 44.78989
     }
   },
   {
@@ -4314,9 +4314,9 @@
     "restaurant": {
       "name": "Café Gusto",
       "address": "6 Lado Kavsadze Street, თბილისი",
-      "district": "old_town",
-      "lat": 41.7132,
-      "lon": 44.82595
+      "district": "vake",
+      "lat": 41.70937,
+      "lon": 44.76182
     }
   },
   {
@@ -4332,9 +4332,9 @@
     "restaurant": {
       "name": "KFC Chavchavadze",
       "address": "30 Ilia Chavchavadze Avenue, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71154,
-      "lon": 44.82995
+      "district": "vake",
+      "lat": 41.70886,
+      "lon": 44.77167
     }
   },
   {
@@ -4350,9 +4350,9 @@
     "restaurant": {
       "name": "Wendy's Freedom Square",
       "address": "1-3 Aleksandr Pushkin Street, თბილისი",
-      "district": "old_town",
-      "lat": 41.7137,
-      "lon": 44.82976
+      "district": "sololaki",
+      "lat": 41.69327,
+      "lon": 44.80225
     }
   },
   {
@@ -4369,8 +4369,8 @@
       "name": "SKA Leselidze",
       "address": "kote APkhazi street 55, თბილისი",
       "district": "old_town",
-      "lat": 41.71314,
-      "lon": 44.82919
+      "lat": 41.68998,
+      "lon": 44.80833
     }
   },
   {
@@ -4386,9 +4386,9 @@
     "restaurant": {
       "name": "De Gusti Saburtalo",
       "address": "8 Alexander Kazbegi Ave, თბილისი",
-      "district": "old_town",
-      "lat": 41.7137,
-      "lon": 44.82599
+      "district": "saburtalo",
+      "lat": 41.72597,
+      "lon": 44.76565
     }
   },
   {
@@ -4405,8 +4405,8 @@
       "name": "Sameo",
       "address": "1 Vashlovani St, თბილისი",
       "district": "old_town",
-      "lat": 41.71364,
-      "lon": 44.82938
+      "lat": 41.70608,
+      "lon": 44.78852
     }
   },
   {
@@ -4422,9 +4422,9 @@
     "restaurant": {
       "name": "Perogico",
       "address": "Tengiz Abuladze St 34, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71389,
-      "lon": 44.82562
+      "district": "vake",
+      "lat": 41.71191,
+      "lon": 44.75991
     }
   },
   {
@@ -4441,8 +4441,8 @@
       "name": "Lolita",
       "address": "Tamar Chovelidze st. 7, თბილისი",
       "district": "old_town",
-      "lat": 41.71781,
-      "lon": 44.82623
+      "lat": 41.70569,
+      "lon": 44.78686
     }
   },
   {
@@ -4458,9 +4458,9 @@
     "restaurant": {
       "name": "Chacha Time ",
       "address": "5 Geronti Kikodze St, თბილისი",
-      "district": "old_town",
-      "lat": 41.71207,
-      "lon": 44.82322
+      "district": "sololaki",
+      "lat": 41.6913,
+      "lon": 44.7984
     }
   },
   {
@@ -4477,8 +4477,8 @@
       "name": "Aut Vera",
       "address": "32 Mikheil Zandukeli StT&apos;bilisi 0106, Tbilisi",
       "district": "old_town",
-      "lat": 41.71835,
-      "lon": 44.82519
+      "lat": 41.7039,
+      "lon": 44.78488
     }
   },
   {
@@ -4495,8 +4495,8 @@
       "name": "SKA  Marjanishvili",
       "address": "8, Kote Marjanishvili Street, Tbilisi",
       "district": "old_town",
-      "lat": 41.71612,
-      "lon": 44.82341
+      "lat": 41.70885,
+      "lon": 44.79456
     }
   },
   {
@@ -4513,8 +4513,8 @@
       "name": "Tredelo",
       "address": "67 Mikheili Tsinamdzghvrishvili St, თბილისი",
       "district": "old_town",
-      "lat": 41.71847,
-      "lon": 44.83098
+      "lat": 41.71022,
+      "lon": 44.80044
     }
   },
   {
@@ -4530,9 +4530,9 @@
     "restaurant": {
       "name": "Teremok Isani",
       "address": "Ketevan Dedofali Ave 57a, თბილისი",
-      "district": "old_town",
-      "lat": 41.71882,
-      "lon": 44.82261
+      "district": "isani",
+      "lat": 41.68697,
+      "lon": 44.83024
     }
   },
   {
@@ -4548,9 +4548,9 @@
     "restaurant": {
       "name": "Cinnamon",
       "address": "PP6W+JXH Tbilisi, თბილისი",
-      "district": "old_town",
-      "lat": 41.71897,
-      "lon": 44.82468
+      "district": "tbilisi",
+      "lat": 41.71156,
+      "lon": 44.74748
     }
   },
   {
@@ -4567,8 +4567,8 @@
       "name": "Kitch Bistro",
       "address": "3 Revaz Tabukashvili Street, Tbilisi",
       "district": "old_town",
-      "lat": 41.71138,
-      "lon": 44.82821
+      "lat": 41.69811,
+      "lon": 44.80177
     }
   },
   {
@@ -4584,9 +4584,9 @@
     "restaurant": {
       "name": "Pinky Pan",
       "address": "42 Abashidze St , თბილისი",
-      "district": "old_town",
-      "lat": 41.71646,
-      "lon": 44.83268
+      "district": "vake",
+      "lat": 41.70772,
+      "lon": 44.76339
     }
   },
   {
@@ -4602,9 +4602,9 @@
     "restaurant": {
       "name": "Culinary #7",
       "address": "16 Rapiel Eristavi  Street, თბილისი",
-      "district": "old_town",
-      "lat": 41.71549,
-      "lon": 44.82317
+      "district": "vake",
+      "lat": 41.70867,
+      "lon": 44.77525
     }
   },
   {
@@ -4620,9 +4620,9 @@
     "restaurant": {
       "name": "Duchef",
       "address": "1 Taras Shevchenko St, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71267,
-      "lon": 44.82628
+      "district": "mtatsminda",
+      "lat": 41.69793,
+      "lon": 44.79661
     }
   },
   {
@@ -4639,8 +4639,8 @@
       "name": "Chais Sakhli Veris Bagshi",
       "address": "M. Kostava st. 37, თბილისი",
       "district": "old_town",
-      "lat": 41.71248,
-      "lon": 44.82157
+      "lat": 41.7075,
+      "lon": 44.78782
     }
   },
   {
@@ -4656,9 +4656,9 @@
     "restaurant": {
       "name": "Wendy's Dolidze",
       "address": "2 Viktor Dolidze St, თბილისი",
-      "district": "old_town",
-      "lat": 41.71232,
-      "lon": 44.82896
+      "district": "vake",
+      "lat": 41.71634,
+      "lon": 44.76834
     }
   },
   {
@@ -4674,9 +4674,9 @@
     "restaurant": {
       "name": "Sable Bagebi",
       "address": "31 Tskneti Hwy, Tbilisi",
-      "district": "old_town",
-      "lat": 41.7137,
-      "lon": 44.8235
+      "district": "vake",
+      "lat": 41.71042,
+      "lon": 44.73086
     }
   },
   {
@@ -4692,9 +4692,9 @@
     "restaurant": {
       "name": "Lui Coffee",
       "address": "23-23a Ilia Chavchavadze Avenue, Tbilisi",
-      "district": "old_town",
-      "lat": 41.7181,
-      "lon": 44.83254
+      "district": "vake",
+      "lat": 41.71001,
+      "lon": 44.76821
     }
   },
   {
@@ -4710,9 +4710,9 @@
     "restaurant": {
       "name": "Shemomechama Saburtalo",
       "address": "16 Vazha-Pshavela ave, თბილისი",
-      "district": "old_town",
-      "lat": 41.71816,
-      "lon": 44.8235
+      "district": "saburtalo",
+      "lat": 41.72643,
+      "lon": 44.76084
     }
   },
   {
@@ -4728,9 +4728,9 @@
     "restaurant": {
       "name": "Holiday Inn",
       "address": "holiday inn, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71151,
-      "lon": 44.82214
+      "district": "vake",
+      "lat": 41.71933,
+      "lon": 44.77776
     }
   },
   {
@@ -4746,9 +4746,9 @@
     "restaurant": {
       "name": "August Chavchavadze",
       "address": "Chavchavadze Ave 16, თბილისი",
-      "district": "old_town",
-      "lat": 41.71719,
-      "lon": 44.82472
+      "district": "vake",
+      "lat": 41.70898,
+      "lon": 44.77537
     }
   },
   {
@@ -4765,8 +4765,8 @@
       "name": "Ding Sheng ",
       "address": "40 Shota Rustaveli Avenue, Tbilisi",
       "district": "old_town",
-      "lat": 41.71772,
-      "lon": 44.82486
+      "lat": 41.70172,
+      "lon": 44.79339
     }
   },
   {
@@ -4782,9 +4782,9 @@
     "restaurant": {
       "name": "Coffee Lab",
       "address": "27 Kazbegi ave, თბილისი",
-      "district": "old_town",
-      "lat": 41.71157,
-      "lon": 44.82115
+      "district": "saburtalo",
+      "lat": 41.72551,
+      "lon": 44.75435
     }
   },
   {
@@ -4801,8 +4801,8 @@
       "name": "Margaliti Collection",
       "address": "1 Vasil Petriashvili Str, თბილისი",
       "district": "old_town",
-      "lat": 41.71562,
-      "lon": 44.82868
+      "lat": 41.70856,
+      "lon": 44.78075
     }
   },
   {
@@ -4818,9 +4818,9 @@
     "restaurant": {
       "name": "Culinary #7",
       "address": "16 Rapiel Eristavi  Street, თბილისი",
-      "district": "old_town",
-      "lat": 41.71549,
-      "lon": 44.82317
+      "district": "vake",
+      "lat": 41.70867,
+      "lon": 44.77525
     }
   },
   {
@@ -4836,9 +4836,9 @@
     "restaurant": {
       "name": "Dunkin' Isani Mall",
       "address": "Navtlughi St 8a, თბილისი",
-      "district": "old_town",
-      "lat": 41.71596,
-      "lon": 44.83061
+      "district": "isani",
+      "lat": 41.68294,
+      "lon": 44.84154
     }
   },
   {
@@ -4854,9 +4854,9 @@
     "restaurant": {
       "name": "Breton Boulangerie Chavchavadze",
       "address": "49 E Ilia chavchavadze ave, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71405,
-      "lon": 44.82999
+      "district": "vake",
+      "lat": 41.71128,
+      "lon": 44.74436
     }
   },
   {
@@ -4872,9 +4872,9 @@
     "restaurant": {
       "name": "Daisy Brunch and Bakery",
       "address": "Irakli Abashidze St 39, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71408,
-      "lon": 44.82712
+      "district": "vake",
+      "lat": 41.70814,
+      "lon": 44.76289
     }
   },
   {
@@ -4890,9 +4890,9 @@
     "restaurant": {
       "name": "Perogico",
       "address": "Tengiz Abuladze St 34, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71389,
-      "lon": 44.82562
+      "district": "vake",
+      "lat": 41.71191,
+      "lon": 44.75991
     }
   },
   {
@@ -4909,8 +4909,8 @@
       "name": "August Aghmashenebeli",
       "address": "Aghmashenebeli Ave 119, თბილისი",
       "district": "old_town",
-      "lat": 41.71477,
-      "lon": 44.8315
+      "lat": 41.71127,
+      "lon": 44.79643
     }
   },
   {
@@ -4927,8 +4927,8 @@
       "name": "Puri Guliani",
       "address": "Saarbrücken Square, Tbilisi",
       "district": "old_town",
-      "lat": 41.71251,
-      "lon": 44.82665
+      "lat": 41.70281,
+      "lon": 44.80435
     }
   },
   {
@@ -4944,9 +4944,9 @@
     "restaurant": {
       "name": "Brunch by Gastronome Chavchavadze",
       "address": "Chavchavadze Ave. 49d, თბილისი",
-      "district": "old_town",
-      "lat": 41.71439,
-      "lon": 44.83032
+      "district": "vake",
+      "lat": 41.71137,
+      "lon": 44.7442
     }
   },
   {
@@ -4962,9 +4962,9 @@
     "restaurant": {
       "name": "Bonny Bistro",
       "address": "Paliashvili 82, თბილისი",
-      "district": "old_town",
-      "lat": 41.71352,
-      "lon": 44.82618
+      "district": "vake",
+      "lat": 41.70917,
+      "lon": 44.75908
     }
   },
   {
@@ -4980,9 +4980,9 @@
     "restaurant": {
       "name": "V Season",
       "address": "PPJJ+7GG Tbilisi, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71891,
-      "lon": 44.82148
+      "district": "tbilisi",
+      "lat": 41.73069,
+      "lon": 44.73133
     }
   },
   {
@@ -4998,9 +4998,9 @@
     "restaurant": {
       "name": "Wendy's City Mall",
       "address": "Kavtaradze St 1, თბილისი",
-      "district": "old_town",
-      "lat": 41.71468,
-      "lon": 44.82444
+      "district": "saburtalo",
+      "lat": 41.72454,
+      "lon": 44.73885
     }
   },
   {
@@ -5016,9 +5016,9 @@
     "restaurant": {
       "name": "Sablee",
       "address": "Kekelidze street 1 , Tbilisi",
-      "district": "old_town",
-      "lat": 41.71116,
-      "lon": 44.82477
+      "district": "vake",
+      "lat": 41.70855,
+      "lon": 44.77842
     }
   },
   {
@@ -5034,9 +5034,9 @@
     "restaurant": {
       "name": "Brunch by Gastronome Galleria",
       "address": "2/4 Shota Rustaveli Ave, თბილისი",
-      "district": "old_town",
-      "lat": 41.71443,
-      "lon": 44.82345
+      "district": "sololaki",
+      "lat": 41.69437,
+      "lon": 44.79984
     }
   },
   {
@@ -5052,9 +5052,9 @@
     "restaurant": {
       "name": "Bonny Bistro",
       "address": "Paliashvili 82, თბილისი",
-      "district": "old_town",
-      "lat": 41.71352,
-      "lon": 44.82618
+      "district": "vake",
+      "lat": 41.70917,
+      "lon": 44.75908
     }
   },
   {
@@ -5070,9 +5070,9 @@
     "restaurant": {
       "name": "ლარტ დუ გემო",
       "address": "PQM9+MW Tbilisi, თბილისი",
-      "district": "old_town",
-      "lat": 41.717,
-      "lon": 44.82802
+      "district": "tbilisi",
+      "lat": 41.73419,
+      "lon": 44.76981
     }
   },
   {
@@ -5088,9 +5088,9 @@
     "restaurant": {
       "name": "Coffee Lab Pop-Up",
       "address": "1 kavtaradze st., თბილისი",
-      "district": "old_town",
-      "lat": 41.71524,
-      "lon": 44.82901
+      "district": "saburtalo",
+      "lat": 41.72454,
+      "lon": 44.73885
     }
   },
   {
@@ -5106,9 +5106,9 @@
     "restaurant": {
       "name": "Campus",
       "address": "Vakhtang Chabukiani st. 2, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71612,
-      "lon": 44.83263
+      "district": "saburtalo",
+      "lat": 41.72348,
+      "lon": 44.77622
     }
   },
   {
@@ -5124,9 +5124,9 @@
     "restaurant": {
       "name": "Lavanda Café",
       "address": "MVM5+CM Tbilisi, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71901,
-      "lon": 44.82341
+      "district": "tbilisi",
+      "lat": 41.68356,
+      "lon": 44.85919
     }
   },
   {
@@ -5142,9 +5142,9 @@
     "restaurant": {
       "name": "Breadbar",
       "address": "2b Kipshidze street, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71747,
-      "lon": 44.83192
+      "district": "vake",
+      "lat": 41.71261,
+      "lon": 44.75616
     }
   },
   {
@@ -5160,9 +5160,9 @@
     "restaurant": {
       "name": "Brunch by Gastronome Lisi",
       "address": "Nekerchkhali St. 2, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71308,
-      "lon": 44.83126
+      "district": "saburtalo",
+      "lat": 41.74014,
+      "lon": 44.75305
     }
   },
   {
@@ -5178,9 +5178,9 @@
     "restaurant": {
       "name": "Moonlight Coffee",
       "address": "17B Guramishvili Avenue, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71439,
-      "lon": 44.82694
+      "district": "nadzaladevi",
+      "lat": 41.75864,
+      "lon": 44.7893
     }
   },
   {
@@ -5197,8 +5197,8 @@
       "name": "Puri Guliani",
       "address": "Saarbrücken Square, Tbilisi",
       "district": "old_town",
-      "lat": 41.71251,
-      "lon": 44.82665
+      "lat": 41.70281,
+      "lon": 44.80435
     }
   },
   {
@@ -5214,9 +5214,9 @@
     "restaurant": {
       "name": "მიკელ ქოფი",
       "address": "26 Ilia Chavchavadze Ave, თბილისი",
-      "district": "old_town",
-      "lat": 41.7137,
-      "lon": 44.82788
+      "district": "vake",
+      "lat": 41.70868,
+      "lon": 44.77259
     }
   },
   {
@@ -5232,9 +5232,9 @@
     "restaurant": {
       "name": "Dzin Chao",
       "address": "64 Merab Kostava Street, Tbilisi, თბილისი",
-      "district": "old_town",
-      "lat": 41.71204,
-      "lon": 44.8267
+      "district": "vake",
+      "lat": 41.71348,
+      "lon": 44.77947
     }
   },
   {
@@ -5250,9 +5250,9 @@
     "restaurant": {
       "name": "Bellini",
       "address": "Paliashvili 15, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71854,
-      "lon": 44.83094
+      "district": "vake",
+      "lat": 41.70825,
+      "lon": 44.77465
     }
   },
   {
@@ -5268,9 +5268,9 @@
     "restaurant": {
       "name": "GeGelato Saburtalo",
       "address": "25 Pekini Ave, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71471,
-      "lon": 44.83028
+      "district": "saburtalo",
+      "lat": 41.72454,
+      "lon": 44.77169
     }
   },
   {
@@ -5286,9 +5286,9 @@
     "restaurant": {
       "name": "ბულანჟერია ბრეტონი",
       "address": "49 E Ilia chavchavadze ave, თბილისი",
-      "district": "old_town",
-      "lat": 41.71411,
-      "lon": 44.82604
+      "district": "vake",
+      "lat": 41.71128,
+      "lon": 44.74436
     }
   },
   {
@@ -5305,8 +5305,8 @@
       "name": "Subway Leselidze",
       "address": "Kote Apkhazi 51, თბილისი",
       "district": "old_town",
-      "lat": 41.71628,
-      "lon": 44.82152
+      "lat": 41.69006,
+      "lon": 44.80796
     }
   },
   {
@@ -5322,9 +5322,9 @@
     "restaurant": {
       "name": "Breadbar",
       "address": "2b Kipshidze street, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71747,
-      "lon": 44.83192
+      "district": "vake",
+      "lat": 41.71261,
+      "lon": 44.75616
     }
   },
   {
@@ -5340,9 +5340,9 @@
     "restaurant": {
       "name": "Brunch by Gastronome Chavchavadze",
       "address": "Chavchavadze Ave. 49d, თბილისი",
-      "district": "old_town",
-      "lat": 41.71439,
-      "lon": 44.83032
+      "district": "vake",
+      "lat": 41.71137,
+      "lon": 44.7442
     }
   },
   {
@@ -5358,9 +5358,9 @@
     "restaurant": {
       "name": "Sablee",
       "address": "Kekelidze street 1 , Tbilisi",
-      "district": "old_town",
-      "lat": 41.71116,
-      "lon": 44.82477
+      "district": "vake",
+      "lat": 41.70855,
+      "lon": 44.77842
     }
   },
   {
@@ -5376,9 +5376,9 @@
     "restaurant": {
       "name": "PAUL Ramishvili",
       "address": "Ramishvili street 37, თბილისი",
-      "district": "old_town",
-      "lat": 41.71781,
-      "lon": 44.82694
+      "district": "vake",
+      "lat": 41.71175,
+      "lon": 44.77407
     }
   },
   {
@@ -5394,9 +5394,9 @@
     "restaurant": {
       "name": "Coffee Lab Lisi",
       "address": "Lisi Lake, თბილისი",
-      "district": "old_town",
-      "lat": 41.71737,
-      "lon": 44.82976
+      "district": "saburtalo",
+      "lat": 41.74309,
+      "lon": 44.73507
     }
   },
   {
@@ -5412,9 +5412,9 @@
     "restaurant": {
       "name": "Pizza Hut Saburtalo",
       "address": "Pavle Aslanidi 3, Tbilisi",
-      "district": "old_town",
-      "lat": 41.7149,
-      "lon": 44.82312
+      "district": "vake",
+      "lat": 41.71813,
+      "lon": 44.77935
     }
   },
   {
@@ -5430,9 +5430,9 @@
     "restaurant": {
       "name": "Pizza Prime",
       "address": "11 Mikheil Asatiani Street, თბილისი",
-      "district": "old_town",
-      "lat": 41.71643,
-      "lon": 44.82275
+      "district": "saburtalo",
+      "lat": 41.72897,
+      "lon": 44.75009
     }
   },
   {
@@ -5448,9 +5448,9 @@
     "restaurant": {
       "name": "Pizza Di Roma Kostava",
       "address": "76 merab kostava, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71367,
-      "lon": 44.82378
+      "district": "saburtalo",
+      "lat": 41.72265,
+      "lon": 44.77682
     }
   },
   {
@@ -5466,9 +5466,9 @@
     "restaurant": {
       "name": "Domino's Pizza Chavchavadze",
       "address": "Ilia chavchavadze avenue 9a, თბილისი",
-      "district": "old_town",
-      "lat": 41.71195,
-      "lon": 44.82849
+      "district": "vake",
+      "lat": 41.70926,
+      "lon": 44.77417
     }
   },
   {
@@ -5484,9 +5484,9 @@
     "restaurant": {
       "name": "Pizza Di Roma Kavtaradze City Mall",
       "address": "1 Petre Kavtaradze St, თბილისი",
-      "district": "old_town",
-      "lat": 41.71499,
-      "lon": 44.83263
+      "district": "saburtalo",
+      "lat": 41.72454,
+      "lon": 44.73885
     }
   },
   {
@@ -5502,9 +5502,9 @@
     "restaurant": {
       "name": "Bellini",
       "address": "Paliashvili 15, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71854,
-      "lon": 44.83094
+      "district": "vake",
+      "lat": 41.70825,
+      "lon": 44.77465
     }
   },
   {
@@ -5520,9 +5520,9 @@
     "restaurant": {
       "name": "La Nostra Casa",
       "address": "127 Shalva Nutsubidze St, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71264,
-      "lon": 44.82482
+      "district": "saburtalo",
+      "lat": 41.72784,
+      "lon": 44.73311
     }
   },
   {
@@ -5538,9 +5538,9 @@
     "restaurant": {
       "name": "Monti Pizza",
       "address": "82 Ketevan Dedofali Ave, Tbilisi,, თბილისი",
-      "district": "old_town",
-      "lat": 41.7186,
-      "lon": 44.82821
+      "district": "isani",
+      "lat": 41.68734,
+      "lon": 44.83278
     }
   },
   {
@@ -5556,9 +5556,9 @@
     "restaurant": {
       "name": "Ronny's Pizza Vake",
       "address": "7 Ilia Chavchavadze  Street, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71235,
-      "lon": 44.82204
+      "district": "outer",
+      "lat": 41.6869,
+      "lon": 44.77562
     }
   },
   {
@@ -5574,9 +5574,9 @@
     "restaurant": {
       "name": "Pasta Mania Aghmashenebeli",
       "address": "PQ5X+G3V Tbilisi, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71301,
-      "lon": 44.82759
+      "district": "tbilisi",
+      "lat": 41.70886,
+      "lon": 44.79767
     }
   },
   {
@@ -5592,9 +5592,9 @@
     "restaurant": {
       "name": "Wendy's Pizza Dolidze",
       "address": "2 Viktor Dolidze St, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71577,
-      "lon": 44.83009
+      "district": "vake",
+      "lat": 41.71634,
+      "lon": 44.76834
     }
   },
   {
@@ -5610,9 +5610,9 @@
     "restaurant": {
       "name": "Receptor Pekini",
       "address": "5 Pekini st, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71386,
-      "lon": 44.8315
+      "district": "saburtalo",
+      "lat": 41.72117,
+      "lon": 44.77561
     }
   },
   {
@@ -5628,9 +5628,9 @@
     "restaurant": {
       "name": "Wendy's Pizza Varketili",
       "address": "14A Javakheti St, თბილისი",
-      "district": "old_town",
-      "lat": 41.71577,
-      "lon": 44.82999
+      "district": "samgori",
+      "lat": 41.68491,
+      "lon": 44.87023
     }
   },
   {
@@ -5646,9 +5646,9 @@
     "restaurant": {
       "name": "Le Gato Pekini",
       "address": "25 Pekini str, თბილისი",
-      "district": "old_town",
-      "lat": 41.71741,
-      "lon": 44.82957
+      "district": "saburtalo",
+      "lat": 41.72454,
+      "lon": 44.77169
     }
   },
   {
@@ -5664,9 +5664,9 @@
     "restaurant": {
       "name": "Panuozzo By Pomodorissimo",
       "address": "7E tsotne dadiani str PR93+J2 Tbilisi, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71706,
-      "lon": 44.82482
+      "district": "chugureti",
+      "lat": 41.71911,
+      "lon": 44.80259
     }
   },
   {
@@ -5683,8 +5683,8 @@
       "name": "Elit Restaurant",
       "address": "Davit Agmashenebeli 112, Tbilisi",
       "district": "old_town",
-      "lat": 41.71518,
-      "lon": 44.82679
+      "lat": 41.71112,
+      "lon": 44.79586
     }
   },
   {
@@ -5700,9 +5700,9 @@
     "restaurant": {
       "name": "Ucha's Pizza",
       "address": "Vazha-Pshavela I Block, Tbilisi, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71615,
-      "lon": 44.82237
+      "district": "saburtalo",
+      "lat": 41.72633,
+      "lon": 44.74058
     }
   },
   {
@@ -5719,8 +5719,8 @@
       "name": "Margaliti Collection",
       "address": "1 Vasil Petriashvili Str, თბილისი",
       "district": "old_town",
-      "lat": 41.71562,
-      "lon": 44.82868
+      "lat": 41.70856,
+      "lon": 44.78075
     }
   },
   {
@@ -5736,9 +5736,9 @@
     "restaurant": {
       "name": "Indus Aroma Restaurant",
       "address": "6 Giorgi Mercheuli Str, Tbilisi",
-      "district": "old_town",
-      "lat": 41.7153,
-      "lon": 44.82232
+      "district": "avlabari",
+      "lat": 41.68566,
+      "lon": 44.81539
     }
   },
   {
@@ -5754,9 +5754,9 @@
     "restaurant": {
       "name": "Pizza Prime",
       "address": "11 Mikheil Asatiani Street, თბილისი",
-      "district": "old_town",
-      "lat": 41.71643,
-      "lon": 44.82275
+      "district": "saburtalo",
+      "lat": 41.72897,
+      "lon": 44.75009
     }
   },
   {
@@ -5772,9 +5772,9 @@
     "restaurant": {
       "name": "Wendy's Freedom Square",
       "address": "1-3 Aleksandr Pushkin Street, თბილისი",
-      "district": "old_town",
-      "lat": 41.7137,
-      "lon": 44.82976
+      "district": "sololaki",
+      "lat": 41.69327,
+      "lon": 44.80225
     }
   },
   {
@@ -5790,9 +5790,9 @@
     "restaurant": {
       "name": "Pizza Pomodoro",
       "address": "12 Bakhtrioni Street, თბილისი",
-      "district": "old_town",
-      "lat": 41.71298,
-      "lon": 44.82995
+      "district": "saburtalo",
+      "lat": 41.72096,
+      "lon": 44.77192
     }
   },
   {
@@ -5808,9 +5808,9 @@
     "restaurant": {
       "name": "Pizza Hut Saburtalo",
       "address": "Pavle Aslanidi 3, Tbilisi",
-      "district": "old_town",
-      "lat": 41.7149,
-      "lon": 44.82312
+      "district": "vake",
+      "lat": 41.71813,
+      "lon": 44.77935
     }
   },
   {
@@ -5826,9 +5826,9 @@
     "restaurant": {
       "name": "Restaurant Terrace",
       "address": "118 Akaki Tsereteli Avenue, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71449,
-      "lon": 44.82614
+      "district": "didube",
+      "lat": 41.74087,
+      "lon": 44.77834
     }
   },
   {
@@ -5844,9 +5844,9 @@
     "restaurant": {
       "name": "Pizza Di Roma Kostava",
       "address": "76 merab kostava, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71367,
-      "lon": 44.82378
+      "district": "saburtalo",
+      "lat": 41.72265,
+      "lon": 44.77682
     }
   },
   {
@@ -5863,8 +5863,8 @@
       "name": "Magistros",
       "address": "1 Pkhovi Street, თბილისი",
       "district": "old_town",
-      "lat": 41.71408,
-      "lon": 44.82303
+      "lat": 41.69816,
+      "lon": 44.80243
     }
   },
   {
@@ -5880,9 +5880,9 @@
     "restaurant": {
       "name": "Vendetta's Pizza",
       "address": "This is a virtual venue, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71151,
-      "lon": 44.83131
+      "district": "didi_digomi",
+      "lat": 41.6938,
+      "lon": 44.80152
     }
   },
   {
@@ -5898,9 +5898,9 @@
     "restaurant": {
       "name": "Localino Vake",
       "address": "Z. Paliashvili street 14, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71163,
-      "lon": 44.82251
+      "district": "vake",
+      "lat": 41.70794,
+      "lon": 44.77518
     }
   },
   {
@@ -5916,9 +5916,9 @@
     "restaurant": {
       "name": "Pizza Di Roma Kostava",
       "address": "76 merab kostava, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71367,
-      "lon": 44.82378
+      "district": "saburtalo",
+      "lat": 41.72265,
+      "lon": 44.77682
     }
   },
   {
@@ -5934,9 +5934,9 @@
     "restaurant": {
       "name": "Fragola",
       "address": "Kazbegi ave. 2, თბილისი",
-      "district": "old_town",
-      "lat": 41.71803,
-      "lon": 44.82599
+      "district": "saburtalo",
+      "lat": 41.72612,
+      "lon": 44.76733
     }
   },
   {
@@ -5953,8 +5953,8 @@
       "name": "Ribs & Puri",
       "address": "20 Anton Purtseladze street, Tbilisi",
       "district": "old_town",
-      "lat": 41.71333,
-      "lon": 44.82294
+      "lat": 41.69784,
+      "lon": 44.80274
     }
   },
   {
@@ -5970,9 +5970,9 @@
     "restaurant": {
       "name": "Egoist Saburtalo",
       "address": "2 Marshal Archil Gelovani, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71496,
-      "lon": 44.83192
+      "district": "saburtalo",
+      "lat": 41.75818,
+      "lon": 44.76828
     }
   },
   {
@@ -5989,8 +5989,8 @@
       "name": "Mozzo Mozzo",
       "address": "Tamar Chovelidze St 10, Tbilisi",
       "district": "old_town",
-      "lat": 41.7153,
-      "lon": 44.83112
+      "lat": 41.70479,
+      "lon": 44.78664
     }
   },
   {
@@ -6006,9 +6006,9 @@
     "restaurant": {
       "name": "Pasta Mania Aghmashenebeli",
       "address": "PQ5X+G3V Tbilisi, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71301,
-      "lon": 44.82759
+      "district": "tbilisi",
+      "lat": 41.70886,
+      "lon": 44.79767
     }
   },
   {
@@ -6025,8 +6025,8 @@
       "name": "Pizza Di Roma Aghmashenebeli ",
       "address": "147 Davit Aghmashenebeli Ave, თბილისი",
       "district": "old_town",
-      "lat": 41.71703,
-      "lon": 44.82576
+      "lat": 41.71685,
+      "lon": 44.79328
     }
   },
   {
@@ -6042,9 +6042,9 @@
     "restaurant": {
       "name": "Pizza Di Roma Guramishvili",
       "address": "30 David Guramishvili Ave , თბილისი",
-      "district": "old_town",
-      "lat": 41.71424,
-      "lon": 44.82797
+      "district": "nadzaladevi",
+      "lat": 41.76253,
+      "lon": 44.78785
     }
   },
   {
@@ -6060,9 +6060,9 @@
     "restaurant": {
       "name": "Sbarro",
       "address": "1 Petre Kavtaradze St, თბილისი",
-      "district": "old_town",
-      "lat": 41.7169,
-      "lon": 44.82661
+      "district": "saburtalo",
+      "lat": 41.72454,
+      "lon": 44.73885
     }
   },
   {
@@ -6078,9 +6078,9 @@
     "restaurant": {
       "name": "Super Pizza",
       "address": "12 Bakhtrioni Street, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71875,
-      "lon": 44.82679
+      "district": "saburtalo",
+      "lat": 41.72096,
+      "lon": 44.77192
     }
   },
   {
@@ -6096,9 +6096,9 @@
     "restaurant": {
       "name": "Pizza Prime",
       "address": "11 Mikheil Asatiani Street, თბილისი",
-      "district": "old_town",
-      "lat": 41.71643,
-      "lon": 44.82275
+      "district": "saburtalo",
+      "lat": 41.72897,
+      "lon": 44.75009
     }
   },
   {
@@ -6114,9 +6114,9 @@
     "restaurant": {
       "name": "Wendy's Varketili",
       "address": "14A Javakheti St, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71374,
-      "lon": 44.82524
+      "district": "samgori",
+      "lat": 41.68491,
+      "lon": 44.87023
     }
   },
   {
@@ -6133,8 +6133,8 @@
       "name": "Savora",
       "address": "17 გიორგი ათონელი, თბილისი",
       "district": "old_town",
-      "lat": 41.71408,
-      "lon": 44.82976
+      "lat": 41.69867,
+      "lon": 44.8034
     }
   },
   {
@@ -6150,9 +6150,9 @@
     "restaurant": {
       "name": "Wendy's Pizza Sierra",
       "address": "35 Marshal Gelovani Ave, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71427,
-      "lon": 44.82755
+      "district": "saburtalo",
+      "lat": 41.75436,
+      "lon": 44.76977
     }
   },
   {
@@ -6168,9 +6168,9 @@
     "restaurant": {
       "name": "PIZZA24.GE Isani",
       "address": "65 Ketevan Tsamebuli Ave, თბილისი",
-      "district": "old_town",
-      "lat": 41.718,
-      "lon": 44.83272
+      "district": "avlabari",
+      "lat": 41.69063,
+      "lon": 44.81746
     }
   },
   {
@@ -6187,8 +6187,8 @@
       "name": "Savora",
       "address": "17 გიორგი ათონელი, თბილისი",
       "district": "old_town",
-      "lat": 41.71408,
-      "lon": 44.82976
+      "lat": 41.69867,
+      "lon": 44.8034
     }
   },
   {
@@ -6204,9 +6204,9 @@
     "restaurant": {
       "name": "PIZZA24.GE Saburtalo",
       "address": "2 Marshal Archil Gelovani Ave, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71254,
-      "lon": 44.83122
+      "district": "saburtalo",
+      "lat": 41.75818,
+      "lon": 44.76828
     }
   },
   {
@@ -6223,8 +6223,8 @@
       "name": "Wendy's Pizza Martskhena Sanapiro",
       "address": "Left Bank 49a, თბილისი",
       "district": "old_town",
-      "lat": 41.71179,
-      "lon": 44.82618
+      "lat": 41.70536,
+      "lon": 44.79563
     }
   },
   {
@@ -6240,9 +6240,9 @@
     "restaurant": {
       "name": "Localino Vake",
       "address": "Z. Paliashvili street 14, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71163,
-      "lon": 44.82251
+      "district": "vake",
+      "lat": 41.70794,
+      "lon": 44.77518
     }
   },
   {
@@ -6258,9 +6258,9 @@
     "restaurant": {
       "name": "La Nostra Casa",
       "address": "127 Shalva Nutsubidze St, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71264,
-      "lon": 44.82482
+      "district": "saburtalo",
+      "lat": 41.72784,
+      "lon": 44.73311
     }
   },
   {
@@ -6276,9 +6276,9 @@
     "restaurant": {
       "name": "Qura Deli",
       "address": "14 Irakli Abashidze Str, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71653,
-      "lon": 44.82176
+      "district": "vake",
+      "lat": 41.70716,
+      "lon": 44.7713
     }
   },
   {
@@ -6294,9 +6294,9 @@
     "restaurant": {
       "name": "PIZZA24.GE Isani",
       "address": "65 Ketevan Tsamebuli Ave, თბილისი",
-      "district": "old_town",
-      "lat": 41.718,
-      "lon": 44.83272
+      "district": "avlabari",
+      "lat": 41.69063,
+      "lon": 44.81746
     }
   },
   {
@@ -6313,8 +6313,8 @@
       "name": "Indian Biriyani House",
       "address": "Gia Tetelashvili 3, თბილისი",
       "district": "old_town",
-      "lat": 41.71637,
-      "lon": 44.8331
+      "lat": 41.71079,
+      "lon": 44.79509
     }
   },
   {
@@ -6331,8 +6331,8 @@
       "name": "Coffeeshop Company Marjanishvili",
       "address": "Kote Marjanishvili, თბილისი",
       "district": "old_town",
-      "lat": 41.7169,
-      "lon": 44.83211
+      "lat": 41.71142,
+      "lon": 44.80166
     }
   },
   {
@@ -6349,8 +6349,8 @@
       "name": "Coffeeshop Company Marjanishvili",
       "address": "Kote Marjanishvili, თბილისი",
       "district": "old_town",
-      "lat": 41.7169,
-      "lon": 44.83211
+      "lat": 41.71142,
+      "lon": 44.80166
     }
   },
   {
@@ -6367,8 +6367,8 @@
       "name": "Chika",
       "address": "Merab Kostava St 9, Tbilisi",
       "district": "old_town",
-      "lat": 41.71725,
-      "lon": 44.83117
+      "lat": 41.70517,
+      "lon": 44.78955
     }
   },
   {
@@ -6385,8 +6385,8 @@
       "name": "Beirut Saj Restaurant",
       "address": "David Agmashenebeli Street 109, თბილისი",
       "district": "old_town",
-      "lat": 41.71377,
-      "lon": 44.82628
+      "lat": 41.70359,
+      "lon": 44.80273
     }
   },
   {
@@ -6403,8 +6403,8 @@
       "name": "Brut & Breakfast Bar",
       "address": "20 Atoneli St, Tbilisi",
       "district": "old_town",
-      "lat": 41.7111,
-      "lon": 44.82345
+      "lat": 41.69866,
+      "lon": 44.80294
     }
   },
   {
@@ -6420,9 +6420,9 @@
     "restaurant": {
       "name": "Kartli Joys",
       "address": "Napareuli st. 16, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71367,
-      "lon": 44.82336
+      "district": "vake",
+      "lat": 41.70752,
+      "lon": 44.77698
     }
   },
   {
@@ -6438,9 +6438,9 @@
     "restaurant": {
       "name": "Coffee Lab Pop-Up",
       "address": "1 kavtaradze st., თბილისი",
-      "district": "old_town",
-      "lat": 41.71524,
-      "lon": 44.82901
+      "district": "saburtalo",
+      "lat": 41.72454,
+      "lon": 44.73885
     }
   },
   {
@@ -6457,8 +6457,8 @@
       "name": "Minda Cafe",
       "address": "Pushkini st. 10, Tbilisi",
       "district": "old_town",
-      "lat": 41.71414,
-      "lon": 44.82948
+      "lat": 41.69625,
+      "lon": 44.80273
     }
   },
   {
@@ -6475,8 +6475,8 @@
       "name": "Beirut Saj Restaurant",
       "address": "David Agmashenebeli Street 109, თბილისი",
       "district": "old_town",
-      "lat": 41.71377,
-      "lon": 44.82628
+      "lat": 41.70359,
+      "lon": 44.80273
     }
   },
   {
@@ -6493,8 +6493,8 @@
       "name": "Kievuri Vera",
       "address": "18 Giorgi Akhvlediani St, თბილისი",
       "district": "old_town",
-      "lat": 41.71421,
-      "lon": 44.82755
+      "lat": 41.70651,
+      "lon": 44.78903
     }
   },
   {
@@ -6510,9 +6510,9 @@
     "restaurant": {
       "name": "ჩიტი ჭავჭავაძე",
       "address": "Chavchavadze 76, თბილისი",
-      "district": "old_town",
-      "lat": 41.71348,
-      "lon": 44.82454
+      "district": "vake",
+      "lat": 41.71055,
+      "lon": 44.75195
     }
   },
   {
@@ -6528,9 +6528,9 @@
     "restaurant": {
       "name": "SKA Salad Bar Chavchavadze",
       "address": "Ilia Chavchavadze Avenue 37, თბილისი",
-      "district": "old_town",
-      "lat": 41.71317,
-      "lon": 44.83009
+      "district": "vake",
+      "lat": 41.71183,
+      "lon": 44.75835
     }
   },
   {
@@ -6546,9 +6546,9 @@
     "restaurant": {
       "name": "Falafel Box",
       "address": "26 Shalva Dadiani St, თბილისი",
-      "district": "old_town",
-      "lat": 41.71706,
-      "lon": 44.82162
+      "district": "sololaki",
+      "lat": 41.6903,
+      "lon": 44.8024
     }
   },
   {
@@ -6564,9 +6564,9 @@
     "restaurant": {
       "name": "Jade Cafe",
       "address": "11 Ilia Chavchavadze Avenue, თბილისი",
-      "district": "old_town",
-      "lat": 41.71725,
-      "lon": 44.82806
+      "district": "vake",
+      "lat": 41.70913,
+      "lon": 44.77293
     }
   },
   {
@@ -6582,9 +6582,9 @@
     "restaurant": {
       "name": "August Dadiani",
       "address": "PR93+64 Tbilisi, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71458,
-      "lon": 44.82919
+      "district": "tbilisi",
+      "lat": 41.71806,
+      "lon": 44.80281
     }
   },
   {
@@ -6600,9 +6600,9 @@
     "restaurant": {
       "name": "SKA Salad Bar Mrgvali Baghi",
       "address": "13, Paliashvili Street, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71129,
-      "lon": 44.8331
+      "district": "vake",
+      "lat": 41.70837,
+      "lon": 44.77502
     }
   },
   {
@@ -6619,8 +6619,8 @@
       "name": "Hurma Cafe",
       "address": "9 melikishvili street, Tbilisi",
       "district": "old_town",
-      "lat": 41.71192,
-      "lon": 44.82397
+      "lat": 41.70797,
+      "lon": 44.78356
     }
   },
   {
@@ -6636,9 +6636,9 @@
     "restaurant": {
       "name": "August Dadiani",
       "address": "PR93+64 Tbilisi, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71458,
-      "lon": 44.82919
+      "district": "tbilisi",
+      "lat": 41.71806,
+      "lon": 44.80281
     }
   },
   {
@@ -6655,8 +6655,8 @@
       "name": "Food Good Bazari Orbeliani",
       "address": "bazar orbeliani, Tbilisi",
       "district": "old_town",
-      "lat": 41.71737,
-      "lon": 44.82317
+      "lat": 41.69781,
+      "lon": 44.80417
     }
   },
   {
@@ -6672,9 +6672,9 @@
     "restaurant": {
       "name": "PAUL Ramishvili",
       "address": "Ramishvili street 37, თბილისი",
-      "district": "old_town",
-      "lat": 41.71781,
-      "lon": 44.82694
+      "district": "vake",
+      "lat": 41.71175,
+      "lon": 44.77407
     }
   },
   {
@@ -6690,9 +6690,9 @@
     "restaurant": {
       "name": "DRO Pekini",
       "address": "This is a virtual venue, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71728,
-      "lon": 44.82684
+      "district": "didi_digomi",
+      "lat": 41.6938,
+      "lon": 44.80152
     }
   },
   {
@@ -6708,9 +6708,9 @@
     "restaurant": {
       "name": "August Dadiani",
       "address": "PR93+64 Tbilisi, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71458,
-      "lon": 44.82919
+      "district": "tbilisi",
+      "lat": 41.71806,
+      "lon": 44.80281
     }
   },
   {
@@ -6726,9 +6726,9 @@
     "restaurant": {
       "name": "Brunch by Gastronome Galleria",
       "address": "2/4 Shota Rustaveli Ave, თბილისი",
-      "district": "old_town",
-      "lat": 41.71443,
-      "lon": 44.82345
+      "district": "sololaki",
+      "lat": 41.69437,
+      "lon": 44.79984
     }
   },
   {
@@ -6745,8 +6745,8 @@
       "name": "Kartli Joys Chugureti",
       "address": "22 Davit Aghmashenebeli Avenue, Tbilisi",
       "district": "old_town",
-      "lat": 41.71317,
-      "lon": 44.82181
+      "lat": 41.70384,
+      "lon": 44.80259
     }
   },
   {
@@ -6762,9 +6762,9 @@
     "restaurant": {
       "name": "Coffee house Waffles",
       "address": "7 Ilia Chavchavadze ave., Tbilisi, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71229,
-      "lon": 44.82524
+      "district": "vake",
+      "lat": 41.70948,
+      "lon": 44.77503
     }
   },
   {
@@ -6780,9 +6780,9 @@
     "restaurant": {
       "name": "DRO Abashidze",
       "address": "42 Abashidze Street , Tbilisi",
-      "district": "old_town",
-      "lat": 41.71643,
-      "lon": 44.83061
+      "district": "vake",
+      "lat": 41.70772,
+      "lon": 44.76339
     }
   },
   {
@@ -6798,9 +6798,9 @@
     "restaurant": {
       "name": "Lui Coffee",
       "address": "23-23a Ilia Chavchavadze Avenue, Tbilisi",
-      "district": "old_town",
-      "lat": 41.7181,
-      "lon": 44.83254
+      "district": "vake",
+      "lat": 41.71001,
+      "lon": 44.76821
     }
   },
   {
@@ -6816,9 +6816,9 @@
     "restaurant": {
       "name": "August Nadzaladevi",
       "address": "ეკა ბეჟანიშვილის ქუჩა 4, Tbilisi",
-      "district": "old_town",
-      "lat": 41.7165,
-      "lon": 44.82152
+      "district": "nadzaladevi",
+      "lat": 41.74646,
+      "lon": 44.79015
     }
   },
   {
@@ -6834,9 +6834,9 @@
     "restaurant": {
       "name": "NUR Coffee Shop",
       "address": "Lado Kavsadze St 7, თბილისი",
-      "district": "old_town",
-      "lat": 41.71797,
-      "lon": 44.82439
+      "district": "vake",
+      "lat": 41.70871,
+      "lon": 44.76141
     }
   },
   {
@@ -6852,9 +6852,9 @@
     "restaurant": {
       "name": "Boncafe",
       "address": "2 Nekerchkhali St, თბილისი",
-      "district": "old_town",
-      "lat": 41.7154,
-      "lon": 44.82661
+      "district": "saburtalo",
+      "lat": 41.74014,
+      "lon": 44.75305
     }
   },
   {
@@ -6870,9 +6870,9 @@
     "restaurant": {
       "name": "PAUL Abashidze",
       "address": "26 Irakli Abashidze Street, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71421,
-      "lon": 44.82839
+      "district": "vake",
+      "lat": 41.70746,
+      "lon": 44.76751
     }
   },
   {
@@ -6888,9 +6888,9 @@
     "restaurant": {
       "name": "Coffee Lab Chavchavadze",
       "address": "chavchavadze 37 m, თბილისი",
-      "district": "old_town",
-      "lat": 41.7175,
-      "lon": 44.82303
+      "district": "vake",
+      "lat": 41.71157,
+      "lon": 44.75697
     }
   },
   {
@@ -6906,9 +6906,9 @@
     "restaurant": {
       "name": "Dunkin' Dedaenis Baghi",
       "address": "41.70084, 44.80427, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71559,
-      "lon": 44.82741
+      "district": "didi_digomi",
+      "lat": 41.6938,
+      "lon": 44.80152
     }
   },
   {
@@ -6924,9 +6924,9 @@
     "restaurant": {
       "name": "Coffee Lab Pop-Up",
       "address": "1 kavtaradze st., თბილისი",
-      "district": "old_town",
-      "lat": 41.71524,
-      "lon": 44.82901
+      "district": "saburtalo",
+      "lat": 41.72454,
+      "lon": 44.73885
     }
   },
   {
@@ -6942,9 +6942,9 @@
     "restaurant": {
       "name": "Food Good",
       "address": "43 Ilia Chavchavadze Avenue, Tbilisi, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71872,
-      "lon": 44.82449
+      "district": "vake",
+      "lat": 41.7121,
+      "lon": 44.75096
     }
   },
   {
@@ -6960,9 +6960,9 @@
     "restaurant": {
       "name": "Dunkin' Vashlijvari",
       "address": "QQ59+M72, Tbilisi, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71486,
-      "lon": 44.82228
+      "district": "tbilisi",
+      "lat": 41.75914,
+      "lon": 44.76814
     }
   },
   {
@@ -6979,8 +6979,8 @@
       "name": "Ribs & Puri",
       "address": "20 Anton Purtseladze street, Tbilisi",
       "district": "old_town",
-      "lat": 41.71333,
-      "lon": 44.82294
+      "lat": 41.69784,
+      "lon": 44.80274
     }
   },
   {
@@ -6996,9 +6996,9 @@
     "restaurant": {
       "name": "Lavanda Café",
       "address": "MVM5+CM Tbilisi, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71901,
-      "lon": 44.82341
+      "district": "tbilisi",
+      "lat": 41.68356,
+      "lon": 44.85919
     }
   },
   {
@@ -7014,9 +7014,9 @@
     "restaurant": {
       "name": "Receptor Pekini",
       "address": "5 Pekini st, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71386,
-      "lon": 44.8315
+      "district": "saburtalo",
+      "lat": 41.72117,
+      "lon": 44.77561
     }
   },
   {
@@ -7032,9 +7032,9 @@
     "restaurant": {
       "name": "Daisy Brunch and Bakery",
       "address": "Irakli Abashidze St 39, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71408,
-      "lon": 44.82712
+      "district": "vake",
+      "lat": 41.70814,
+      "lon": 44.76289
     }
   },
   {
@@ -7051,8 +7051,8 @@
       "name": "SOL",
       "address": "28 Vasil Petriashvili Street, Tbilisi",
       "district": "old_town",
-      "lat": 41.7133,
-      "lon": 44.82985
+      "lat": 41.70559,
+      "lon": 44.7797
     }
   },
   {
@@ -7068,9 +7068,9 @@
     "restaurant": {
       "name": "Dunkin' Vashlijvari",
       "address": "QQ59+M72, Tbilisi, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71486,
-      "lon": 44.82228
+      "district": "tbilisi",
+      "lat": 41.75914,
+      "lon": 44.76814
     }
   },
   {
@@ -7087,8 +7087,8 @@
       "name": "Brut & Breakfast Bar",
       "address": "20 Atoneli St, Tbilisi",
       "district": "old_town",
-      "lat": 41.7111,
-      "lon": 44.82345
+      "lat": 41.69866,
+      "lon": 44.80294
     }
   },
   {
@@ -7104,9 +7104,9 @@
     "restaurant": {
       "name": "B&B",
       "address": "Z. Paliashvili 55  , Tbilisi",
-      "district": "old_town",
-      "lat": 41.71546,
-      "lon": 44.82759
+      "district": "vake",
+      "lat": 41.70947,
+      "lon": 44.76084
     }
   },
   {
@@ -7122,9 +7122,9 @@
     "restaurant": {
       "name": "Daisy Brunch and Bakery",
       "address": "Irakli Abashidze St 39, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71408,
-      "lon": 44.82712
+      "district": "vake",
+      "lat": 41.70814,
+      "lon": 44.76289
     }
   },
   {
@@ -7140,9 +7140,9 @@
     "restaurant": {
       "name": "Dunkin' Chavchavadze",
       "address": "37 Ilia Chavchavadze Avenue, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71421,
-      "lon": 44.82548
+      "district": "vake",
+      "lat": 41.71183,
+      "lon": 44.75835
     }
   },
   {
@@ -7158,9 +7158,9 @@
     "restaurant": {
       "name": "ჩიტი ჭავჭავაძე",
       "address": "Chavchavadze 76, თბილისი",
-      "district": "old_town",
-      "lat": 41.71348,
-      "lon": 44.82454
+      "district": "vake",
+      "lat": 41.71055,
+      "lon": 44.75195
     }
   },
   {
@@ -7176,9 +7176,9 @@
     "restaurant": {
       "name": "Dunkin' Chavchavadze",
       "address": "37 Ilia Chavchavadze Avenue, Tbilisi",
-      "district": "old_town",
-      "lat": 41.71421,
-      "lon": 44.82548
+      "district": "vake",
+      "lat": 41.71183,
+      "lon": 44.75835
     }
   },
   {
@@ -7194,9 +7194,9 @@
     "restaurant": {
       "name": "Coffee Lab",
       "address": "27 Kazbegi ave, თბილისი",
-      "district": "old_town",
-      "lat": 41.71157,
-      "lon": 44.82115
+      "district": "saburtalo",
+      "lat": 41.72551,
+      "lon": 44.75435
     }
   }
 ]

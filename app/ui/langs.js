@@ -63,7 +63,10 @@ export const en = {
     didube: "Didube",
     gldani: "Gldani",
     samgori: "Samgori",
-    nadzaladevi: "Nadzaladevi"
+    nadzaladevi: "Nadzaladevi",
+    didi_digomi: "Didi Digomi",
+    tbilisi: "Tbilisi",
+    outer: "Outer Tbilisi"
   },
 
   // Cravings — UI tokens map to raw data Category values via lib/taxonomy.js
@@ -143,7 +146,10 @@ export const ka = {
     didube: "დიდუბე",
     gldani: "გლდანი",
     samgori: "სამგორი",
-    nadzaladevi: "ნაძალადევი"
+    nadzaladevi: "ნაძალადევი",
+    didi_digomi: "დიდი დიღომი",
+    tbilisi: "თბილისი",
+    outer: "გარე თბილისი"
   },
 
   tags: {
