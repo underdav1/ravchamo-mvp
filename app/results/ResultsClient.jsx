@@ -2,7 +2,6 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
-import data from "../../data/dishes.json";
 import DishCard from "../../components/DishCard";
 import { recommend } from "../../lib/recommend";
 import { useI18n } from "../ui/LangProvider";
@@ -11,6 +10,7 @@ export default function ResultsClient() {
   const t = useI18n();
   const params = useSearchParams();
   const [items, setItems] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   const user = useMemo(() => {
     const lat = parseFloat(params.get("lat") || "0");
@@ -28,24 +28,26 @@ export default function ResultsClient() {
   }, [params]);
 
   useEffect(() => {
-    let pool = [...data];
-    if (params.get("lucky") === "1") {
-      // Shuffle for variety, then let recommend() do its work
-      pool.sort(() => Math.random() - 0.5);
-    }
-    const recs = recommend(user, pool);
-    setItems(recs);
-  }, [user, params]);
+    let cancelled = false;
+    setLoading(true);
+    recommend(user).then((recs) => {
+      if (cancelled) return;
+      setItems(recs);
+      setLoading(false);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [user]);
 
   return (
     <main>
       <h1 className="text-xl font-bold mb-3">{t("resultsTop")}</h1>
-      {items.length === 0 && (
+      {loading && <div className="text-gray-600 dark:text-gray-400">…</div>}
+      {!loading && items.length === 0 && (
         <div className="text-gray-600 dark:text-gray-400">{t("noMatches")}</div>
       )}
-      {items.map((d) => (
-        <DishCard key={d.id} dish={d} />
-      ))}
+      {!loading && items.map((d) => <DishCard key={d.id} dish={d} />)}
     </main>
   );
 }

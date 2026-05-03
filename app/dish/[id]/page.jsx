@@ -1,8 +1,9 @@
 "use client";
 
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import { useLang } from "../../ui/LangProvider";
-import data from "../../../data/dishes.json";
+import { supabase } from "../../../lib/supabase";
 
 const CATEGORY_TO_TOKEN = {
   "georgian": "georgian",
@@ -19,7 +20,55 @@ export default function DishPage({ params }) {
   const { lang, t } = useLang();
   const id = params.id;
 
-  const dish = data.find((d) => d.id === id) || null;
+  const [dish, setDish] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    let cancelled = false;
+    const numId = Number(id);
+    if (!Number.isFinite(numId)) {
+      setLoading(false);
+      return;
+    }
+    supabase
+      .from("dishes")
+      .select(
+        "id, name, description, price, image_url, category, mood1, mood2, restaurant:restaurants(id, name, address, district, lat, lon, rating)"
+      )
+      .eq("id", numId)
+      .single()
+      .then(({ data, error }) => {
+        if (cancelled) return;
+        if (error || !data) {
+          setDish(null);
+        } else {
+          // Reshape to match the old object the page was built around
+          setDish({
+            id: data.id,
+            name: data.name,
+            description: data.description,
+            price: data.price,
+            image: data.image_url,
+            category: data.category,
+            mood1: data.mood1,
+            mood2: data.mood2,
+            restaurant: data.restaurant,
+          });
+        }
+        setLoading(false);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [id]);
+
+  if (loading) {
+    return (
+      <main className="max-w-md mx-auto px-4 py-8">
+        <div className="text-gray-500">…</div>
+      </main>
+    );
+  }
 
   if (!dish) {
     return (
@@ -40,9 +89,6 @@ export default function DishPage({ params }) {
 
   const imageUrl = dish.image || "";
 
-  // Build a Wolt search URL so the user can act on the recommendation.
-  // URL format: https://wolt.com/{lang}/geo/tbilisi/search?q={restaurant_name}
-  // Always returns the restaurant as the top result. Locale-aware via woltLangPath.
   const woltLang = t("woltLangPath") || lang || "en";
   const woltSearch = `https://wolt.com/${woltLang}/geo/tbilisi/search?q=${encodeURIComponent(
     dish.restaurant?.name || dish.name || ""
