@@ -6,16 +6,28 @@ import { useI18n } from "../app/ui/LangProvider";
 export default function DishCard({ dish }) {
   const t = useI18n();
 
-  const tagLabel = (token) => t(`tags.${token}`) ?? token;
+  // Map raw category back to UI token so we can translate via tags.{token}
+  const CATEGORY_TO_TOKEN = {
+    "georgian": "georgian",
+    "asian": "asian",
+    "pizza-pasta": "pizza_pasta",
+    "fast food": "fast_food",
+    "healthy": "healthy",
+    "vegetarian-vegan": "vegetarian_vegan",
+    "breakfast": "breakfast",
+    "dessert": "dessert",
+  };
+  const categoryToken = CATEGORY_TO_TOKEN[dish.category] || dish.category;
+  const categoryLabel = t(`tags.${categoryToken}`) ?? dish.category;
 
-  // Localize district if it's a known token (e.g., "vake", "vera", …)
+  // District: data stores tokens like "vake", "old_town"
   const districtToken = dish?.restaurant?.district;
   const districtLabel =
     typeof districtToken === "string"
       ? t(`districts.${districtToken}`) ?? districtToken
       : districtToken ?? "";
 
-  // Nicely format distance to one decimal if available
+  // Distance display
   const distText =
     typeof dish?.dist === "number"
       ? `${new Intl.NumberFormat(undefined, {
@@ -31,6 +43,7 @@ export default function DishCard({ dish }) {
           src={dish.image}
           alt={dish.name || "Dish photo"}
           className="w-24 h-24 object-cover rounded-xl border"
+          onError={(e) => (e.currentTarget.style.visibility = "hidden")}
         />
         <div className="flex-1">
           <div className="font-semibold">{dish.name}</div>
@@ -46,11 +59,7 @@ export default function DishCard({ dish }) {
           </div>
 
           <div className="mt-1 flex flex-wrap gap-2">
-            {(dish.tags || []).slice(0, 4).map((tk) => (
-              <span key={tk} className="tag">
-                {tagLabel(tk)}
-              </span>
-            ))}
+            {categoryLabel && <span className="tag">{categoryLabel}</span>}
           </div>
         </div>
       </div>

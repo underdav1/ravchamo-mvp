@@ -5,8 +5,10 @@ import { useSearchParams } from "next/navigation";
 import data from "../../data/dishes.json";
 import DishCard from "../../components/DishCard";
 import { recommend } from "../../lib/recommend";
+import { useI18n } from "../ui/LangProvider";
 
 export default function ResultsClient() {
+  const t = useI18n();
   const params = useSearchParams();
   const [items, setItems] = useState([]);
 
@@ -15,35 +17,31 @@ export default function ResultsClient() {
     const lon = parseFloat(params.get("lon") || "0");
     const price = params.get("price") || "med";
     const tags = (params.get("tags") || "").split(",").filter(Boolean);
-    const exclude = (params.get("exclude") || "").split(",").filter(Boolean);
+    const mood = params.get("mood") || "";
 
     return {
       loc: lat && lon ? { lat, lon } : null,
       price,
       tags,
-      exclude
+      mood,
     };
   }, [params]);
 
   useEffect(() => {
-    let d = [...data];
-    if (user.exclude?.length) {
-      d = d.filter((x) => !user.exclude.some((e) => x.tags.includes(e)));
-    }
+    let pool = [...data];
     if (params.get("lucky") === "1") {
-      d.sort((a, b) => a.price - b.price);
+      // Shuffle for variety, then let recommend() do its work
+      pool.sort(() => Math.random() - 0.5);
     }
-    const recs = recommend(user, d);
+    const recs = recommend(user, pool);
     setItems(recs);
   }, [user, params]);
 
   return (
     <main>
-      <h1 className="text-xl font-bold mb-3">Top picks</h1>
+      <h1 className="text-xl font-bold mb-3">{t("resultsTop")}</h1>
       {items.length === 0 && (
-        <div className="text-gray-600 dark:text-gray-400">
-          No matches yet. Try fewer filters.
-        </div>
+        <div className="text-gray-600 dark:text-gray-400">{t("noMatches")}</div>
       )}
       {items.map((d) => (
         <DishCard key={d.id} dish={d} />

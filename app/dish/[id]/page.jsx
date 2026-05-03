@@ -2,16 +2,24 @@
 
 import Link from "next/link";
 import { useI18n } from "../../ui/LangProvider";
-import data from "../../../data/dishes.json"; // adjust path if your data lives elsewhere
+import data from "../../../data/dishes.json";
+
+const CATEGORY_TO_TOKEN = {
+  "georgian": "georgian",
+  "asian": "asian",
+  "pizza-pasta": "pizza_pasta",
+  "fast food": "fast_food",
+  "healthy": "healthy",
+  "vegetarian-vegan": "vegetarian_vegan",
+  "breakfast": "breakfast",
+  "dessert": "dessert",
+};
 
 export default function DishPage({ params }) {
   const t = useI18n();
   const id = params.id;
 
-  // find by id or slug
-  const dish =
-    data.find((d) => d.id === id || d.slug === id) ||
-    null;
+  const dish = data.find((d) => d.id === id) || null;
 
   if (!dish) {
     return (
@@ -24,19 +32,21 @@ export default function DishPage({ params }) {
     );
   }
 
-  // helpers for translations
-  const tagLabel = (token) => t(`tags.${token}`) ?? token;
-  const districtKey = (dish.restaurant?.district || "")
-    .toLowerCase()
-    .replace(/\s+/g, "_"); // "Old Tbilisi" -> "old_tbilisi"
-  const districtLabel =
-    t(`districts.${districtKey}`) ?? dish.restaurant?.district ?? "";
+  const categoryToken = CATEGORY_TO_TOKEN[dish.category] || dish.category;
+  const categoryLabel = t(`tags.${categoryToken}`) ?? dish.category;
 
-  const imageUrl = dish.image_url || dish.image || "";
+  const districtToken = dish.restaurant?.district || "";
+  const districtLabel = t(`districts.${districtToken}`) ?? districtToken;
+
+  const imageUrl = dish.image || "";
+
+  // Build a Wolt search URL so the user can act on the recommendation
+  const woltSearch = `https://wolt.com/en/geo/tbilisi/restaurant/search?q=${encodeURIComponent(
+    dish.restaurant?.name || dish.name || ""
+  )}`;
 
   return (
     <main className="max-w-md mx-auto px-4 py-6">
-      {/* image (with graceful fallback) */}
       {imageUrl ? (
         <img
           src={imageUrl}
@@ -55,30 +65,30 @@ export default function DishPage({ params }) {
           {districtLabel && <> • {districtLabel}</>}
         </div>
 
-        <div className="text-lg font-semibold mb-3">
-          ₾{dish.price}
+        <div className="text-lg font-semibold mb-3">₾{dish.price}</div>
+
+        <div className="mt-1 mb-3 flex flex-wrap gap-2">
+          {categoryLabel && <span className="tag">{categoryLabel}</span>}
+          {dish.mood1 && <span className="tag">{dish.mood1}</span>}
+          {dish.mood2 && dish.mood2 !== dish.mood1 && (
+            <span className="tag">{dish.mood2}</span>
+          )}
         </div>
 
-        {/* tags */}
-        {Array.isArray(dish.tags) && dish.tags.length > 0 && (
-          <div className="mt-1 mb-3 flex flex-wrap gap-2">
-            {dish.tags.slice(0, 6).map((tk) => (
-              <span key={tk} className="tag">
-                {tagLabel(tk)}
-              </span>
-            ))}
-          </div>
-        )}
-
-        {/* description */}
-        {dish.description && (
-          <p className="mb-4">{dish.description}</p>
+        {dish.description && <p className="mb-2">{dish.description}</p>}
+        {dish.restaurant?.address && (
+          <p className="text-sm text-gray-500 mb-4">{dish.restaurant.address}</p>
         )}
 
         <div className="grid grid-cols-2 gap-3">
-          <Link href="/results" className="kahoot-gray text-center py-3 rounded-2xl">
-            {t("backToResults")}
-          </Link>
+          <a
+            href={woltSearch}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="kahoot-purple text-center py-3 rounded-2xl"
+          >
+            Open on Wolt ↗
+          </a>
           <Link href="/" className="kahoot-mint text-center py-3 rounded-2xl">
             {t("goHome")}
           </Link>

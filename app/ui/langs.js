@@ -14,8 +14,6 @@ export const en = {
   medium: "Medium",
   high: "High",
   cravings: "Pick cravings (optional)",
-  dietary: "Dietary preferences (exclude)",
-  exclude: "I don't want (exclude)",
   time: "Time",
   fast: "Fast",
   relaxed: "Relaxed",
@@ -35,21 +33,18 @@ export const en = {
   disclaimer:
     "Menu data may be inaccurate. Always check with the restaurant about allergens and availability.",
 
-  // Mood layer
+  // Mood layer (single-select)
   moodTitle: "What's your vibe?",
   moodHint: "Pick one – this helps tailor your picks.",
   moods: {
-    adventurous: "Adventurous",
-    comfort: "Comfort food",
-    protein: "Protein hit",
-    cheesy: "Cheesy",
-    spicy: "Spicy thrill",
-    healthy: "Clean & green",
-    quick: "Quick bite",
-    cozy: "Cozy & warm",
-    refreshing: "Light & fresh",
-    social: "Shareable",
-    sweet: "Sweet tooth"
+    hungry: "Very hungry 🍔",
+    protein: "High protein 💪",
+    diet: "On a diet 🥗",
+    sweet: "Sweet tooth 🍰",
+    spicy: "Spicy 🌶",
+    hangover: "Hangover cure 🍳",
+    surprise: "Surprise me 🎲",
+    strange: "Something strange 👽"
   },
 
   // Districts (top-level, not inside tags)
@@ -69,34 +64,18 @@ export const en = {
     nadzaladevi: "Nadzaladevi"
   },
 
-  // Tags (cravings + dietary)
+  // Cravings — UI tokens map to raw data Category values via lib/taxonomy.js
   tags: {
-    // cravings
     georgian: "Georgian",
-    grill: "Grill",
-    wrap: "Wrap",
-    sushi: "Sushi",
-    pizza: "Pizza",
-    salad: "Salad",
-    soup: "Soup",
-    vegan: "Vegan",
+    asian: "Asian",
+    pizza_pasta: "Pizza & Pasta",
+    fast_food: "Fast food",
     healthy: "Healthy",
-    cheesy: "Cheesy",
-    spicy: "Spicy",
-    light: "Light",
+    vegetarian_vegan: "Vegetarian / Vegan",
+    breakfast: "Breakfast",
+    dessert: "Dessert",
 
-    // optional section title if you use it somewhere
-    district: "Districts",
-
-    // dietary/exclude
-    pork: "Pork",
-    beef: "Beef",
-    chicken: "Chicken",
-    fish: "Fish",
-    gluten: "Gluten",
-    dairy: "Dairy",
-    halal: "Halal",
-    vegetarian: "Vegetarian"
+    district: "Districts"
   }
 };
 
@@ -115,8 +94,6 @@ export const ka = {
   medium: "40₾-მდე",
   high: "ძვირიანი",
   cravings: "რა გაგისწორდება (არასავალდებულო)",
-  dietary: "რა არ გაგისწორდება (ალერგია თუ გაქვს)",
-  exclude: "რა არ გაგისწორდება (გამორიცხვა)",
   time: "დრო",
   fast: "სწრაფად",
   relaxed: "მშვიდად",
@@ -136,24 +113,19 @@ export const ka = {
   disclaimer:
     "მენიუს მონაცემები შესაძლოა არ იყოს ზუსტი. ინფორმაცია ალერგენებსა და ხელმისაწვდომობაზე გადაამოწმეთ უშუალოდ რესტორანთან.",
 
-  // Mood layer
   moodTitle: "რის განწყობაზე ხარ?",
   moodHint: "აირჩიე ერთი — ასე უკეთ მოერგება შედეგები.",
   moods: {
-    adventurous: "საინტერესო/უცნაური",
-    comfort: "კომფორტული",
-    protein: "ცილაზე ვარ",
-    cheesy: "ყველიანი",
-    spicy: "ცხარე",
-    healthy: "ჯანსაღი",
-    quick: "სწრაფად",
-    cozy: "თბილი/სათუთი",
-    refreshing: "მსუბუქი/ცივი",
-    social: "სანაწილო/საზიარო",
-    sweet: "ტკბილზე ვარ"
+    hungry: "ძალიან მშია 🍔",
+    protein: "ცილაზე ვარ 💪",
+    diet: "დიეტაზე ვარ 🥗",
+    sweet: "ტკბილზე ვარ 🍰",
+    spicy: "ცხარე 🌶",
+    hangover: "მაყუთეს კურა 🍳",
+    surprise: "გამიკვირდი 🎲",
+    strange: "რაღაც უცნაური 👽"
   },
 
-  // Districts (top-level)
   districts: {
     vake: "ვაკე",
     vera: "ვერა",
@@ -171,31 +143,15 @@ export const ka = {
   },
 
   tags: {
-    // cravings
     georgian: "ქართული",
-    grill: "შემწვარ/მოხრაკული",
-    wrap: "ვრეპი",
-    sushi: "სუში",
-    pizza: "პიცა",
-    salad: "სალათი",
-    soup: "სუპი",
-    vegan: "ვეგანური",
+    asian: "აზიური",
+    pizza_pasta: "პიცა და პასტა",
+    fast_food: "სწრაფი კვება",
     healthy: "ჯანსაღი",
-    cheesy: "ყველიანი",
-    spicy: "ცხარე",
-    light: "მსუბუქი",
+    vegetarian_vegan: "ვეგეტარიანული / ვეგანური",
+    breakfast: "საუზმე",
+    dessert: "დესერტი",
 
-    // optional section title if you use it somewhere
-    district: "რაიონები",
-
-    // dietary/exclude
-    pork: "ღორი",
-    beef: "საქონელი",
-    chicken: "ქათამი",
-    fish: "თევზი",
-    gluten: "გლუტენი",
-    dairy: "რძის პროდუქტები",
-    halal: "ჰალალი",
-    vegetarian: "ვეგეტარიანული"
+    district: "რაიონები"
   }
 };

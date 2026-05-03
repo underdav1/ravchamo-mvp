@@ -1,10 +1,11 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import BigButton from "../components/BigButton";
 import TagToggle from "../components/TagToggle";
 import { useI18n } from "./ui/LangProvider";
+import { CATEGORY_TOKENS, MOOD_TOKENS } from "../lib/taxonomy";
 
 export default function Home() {
   const t = useI18n();
@@ -13,11 +14,8 @@ export default function Home() {
   const [loc, setLoc] = useState(null);
   const [locDenied, setLocDenied] = useState(false);
   const [price, setPrice] = useState("med");
-  const [tags, setTags] = useState([]);
-  const [exclude, setExclude] = useState([]);
-
-  // NEW: single-select mood
-  const [mood, setMood] = useState("");
+  const [tags, setTags] = useState([]); // multi-select cravings (UI tokens)
+  const [mood, setMood] = useState(""); // single-select vibe (UI token)
 
   // ask for location (with Vake fallback)
   useEffect(() => {
@@ -35,34 +33,7 @@ export default function Home() {
     }
   }, []);
 
-  // tokens (used for filters); we render translated labels for them
-  const cravingOptions = useMemo(
-    () => ["georgian", "grill", "wrap", "sushi", "pizza", "salad", "soup", "vegan", "healthy", "cheesy", "spicy"],
-    []
-  );
-  const excludeOptions = useMemo(
-    () => ["pork", "beef", "chicken", "fish", "gluten", "dairy", "halal", "vegan", "vegetarian"],
-    []
-  );
   const labelFor = (token) => t(`tags.${token}`) ?? token;
-
-  // NEW: mood options + labels
-  const moodOptions = useMemo(
-    () => [
-      "adventurous",
-      "comfort",
-      "protein",
-      "cheesy",
-      "spicy",
-      "healthy",
-      "quick",
-      "cozy",
-      "refreshing",
-      "social",
-      "sweet",
-    ],
-    []
-  );
   const moodLabel = (token) => t(`moods.${token}`) ?? token;
 
   function goResults(lucky = false) {
@@ -71,8 +42,6 @@ export default function Home() {
       lon: loc?.lon ?? "",
       price,
       tags: tags.join(","),
-      exclude: exclude.join(","),
-      // NEW: include mood in querystring
       mood: mood || "",
     });
     if (lucky) query.set("lucky", "1");
@@ -123,7 +92,7 @@ export default function Home() {
       <div className="card mb-4">
         <div className="font-semibold mb-2">{t("cravings")}</div>
         <div className="flex flex-wrap gap-2">
-          {cravingOptions.map((opt) => (
+          {CATEGORY_TOKENS.map((opt) => (
             <TagToggle
               key={opt}
               label={labelFor(opt)}
@@ -136,11 +105,10 @@ export default function Home() {
         </div>
       </div>
 
-      {/* NEW: Mood card */}
       <div className="card mb-4">
         <div className="font-semibold mb-2">{t("moodTitle")}</div>
         <div className="flex flex-wrap gap-2">
-          {moodOptions.map((opt) => (
+          {MOOD_TOKENS.map((opt) => (
             <TagToggle
               key={opt}
               label={moodLabel(opt)}
@@ -150,22 +118,6 @@ export default function Home() {
           ))}
         </div>
         <div className="text-xs text-gray-500 dark:text-gray-400 mt-2">{t("moodHint")}</div>
-      </div>
-
-      <div className="card mb-4">
-        <div className="font-semibold mb-2">{t("dietary")}</div>
-        <div className="flex flex-wrap gap-2">
-          {excludeOptions.map((opt) => (
-            <TagToggle
-              key={opt}
-              label={labelFor(opt)}
-              selected={exclude.includes(opt)}
-              onClick={() =>
-                setExclude((prev) => (prev.includes(opt) ? prev.filter((x) => x !== opt) : [...prev, opt]))
-              }
-            />
-          ))}
-        </div>
       </div>
 
       <div className="grid grid-cols-1 gap-3">
