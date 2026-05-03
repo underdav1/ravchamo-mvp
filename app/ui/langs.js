@@ -30,6 +30,8 @@ export const en = {
   back: "Back to results",
   backToResults: "Back to results",
   goHome: "Go Home",
+  openOnWolt: "Open on Wolt ↗",
+  woltLangPath: "en",
   disclaimer:
     "Menu data may be inaccurate. Always check with the restaurant about allergens and availability.",
 
@@ -43,8 +45,8 @@ export const en = {
     sweet: "Sweet tooth 🍰",
     spicy: "Spicy 🌶",
     hangover: "Hangover cure 🍳",
-    surprise: "Surprise me 🎲",
-    strange: "Something strange 👽"
+    strange: "Something strange 👽",
+    surprise: "Surprise me 🎁"
   },
 
   // Districts (top-level, not inside tags)
@@ -110,6 +112,8 @@ export const ka = {
   back: "უკან შედეგებზე",
   backToResults: "უკან შედეგებზე",
   goHome: "მთავარზე",
+  openOnWolt: "ვოლტზე გადასვლა ↗",
+  woltLangPath: "ka",
   disclaimer:
     "მენიუს მონაცემები შესაძლოა არ იყოს ზუსტი. ინფორმაცია ალერგენებსა და ხელმისაწვდომობაზე გადაამოწმეთ უშუალოდ რესტორანთან.",
 
@@ -119,11 +123,11 @@ export const ka = {
     hungry: "ძალიან მშია 🍔",
     protein: "ცილაზე ვარ 💪",
     diet: "დიეტაზე ვარ 🥗",
-    sweet: "ტკბილზე ვარ 🍰",
+    sweet: "ტკბილი მინდა 🍰",
     spicy: "ცხარე 🌶",
-    hangover: "მაყუთეს კურა 🍳",
-    surprise: "გამიკვირდი 🎲",
-    strange: "რაღაც უცნაური 👽"
+    hangover: "ნაბახუსევზე ვარ 🍳",
+    strange: "რამე უცნაური 👽",
+    surprise: "გამიკვირდი 🎁"
   },
 
   districts: {

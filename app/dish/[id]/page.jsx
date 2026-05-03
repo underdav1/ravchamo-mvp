@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useI18n } from "../../ui/LangProvider";
+import { useLang } from "../../ui/LangProvider";
 import data from "../../../data/dishes.json";
 
 const CATEGORY_TO_TOKEN = {
@@ -16,7 +16,7 @@ const CATEGORY_TO_TOKEN = {
 };
 
 export default function DishPage({ params }) {
-  const t = useI18n();
+  const { lang, t } = useLang();
   const id = params.id;
 
   const dish = data.find((d) => d.id === id) || null;
@@ -40,8 +40,11 @@ export default function DishPage({ params }) {
 
   const imageUrl = dish.image || "";
 
-  // Build a Wolt search URL so the user can act on the recommendation
-  const woltSearch = `https://wolt.com/en/geo/tbilisi/restaurant/search?q=${encodeURIComponent(
+  // Build a Wolt search URL so the user can act on the recommendation.
+  // URL format: https://wolt.com/{lang}/geo/tbilisi/search?q={restaurant_name}
+  // Always returns the restaurant as the top result. Locale-aware via woltLangPath.
+  const woltLang = t("woltLangPath") || lang || "en";
+  const woltSearch = `https://wolt.com/${woltLang}/geo/tbilisi/search?q=${encodeURIComponent(
     dish.restaurant?.name || dish.name || ""
   )}`;
 
@@ -87,7 +90,7 @@ export default function DishPage({ params }) {
             rel="noopener noreferrer"
             className="kahoot-purple text-center py-3 rounded-2xl"
           >
-            Open on Wolt ↗
+            {t("openOnWolt")}
           </a>
           <Link href="/" className="kahoot-mint text-center py-3 rounded-2xl">
             {t("goHome")}
