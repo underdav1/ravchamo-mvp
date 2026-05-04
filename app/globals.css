@@ -28,24 +28,23 @@ a { text-decoration: none; }
 
   /* Brand buttons */
   .kahoot-purple {
-    background: #1a73e8;
+    background: #1558c0;
     color: #fff;
-    box-shadow: 0 1px 6px rgba(26, 115, 232, 0.4);
+    box-shadow: 0 1px 6px rgba(21, 88, 192, 0.35);
   }
   .kahoot-purple:hover {
-    background: #1765cc;
-    box-shadow: 0 2px 10px rgba(26, 115, 232, 0.5);
+    background: #1249a8;
+    box-shadow: 0 2px 10px rgba(21, 88, 192, 0.45);
   }
-  /* dark mode — slightly brighter so it pops on dark backgrounds */
-  @media (prefers-color-scheme: dark) {
-    .kahoot-purple {
-      background: #4a9eff;
-      box-shadow: 0 1px 8px rgba(74, 158, 255, 0.45);
-    }
-    .kahoot-purple:hover {
-      background: #3d8fe8;
-      box-shadow: 0 2px 12px rgba(74, 158, 255, 0.55);
-    }
+  /* dark mode — class-based (.dark on <html>) */
+  .dark .kahoot-purple {
+    background: #3a7fd4;
+    color: #fff;
+    box-shadow: 0 1px 8px rgba(58, 127, 212, 0.4);
+  }
+  .dark .kahoot-purple:hover {
+    background: #2e6dbc;
+    box-shadow: 0 2px 12px rgba(58, 127, 212, 0.5);
   }
   .kahoot-mint   { background: var(--brand-2); color: #0b0b0b; }
   .kahoot-orange { background: var(--brand-3); color: #0b0b0b; }
