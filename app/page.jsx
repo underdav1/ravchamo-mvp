@@ -51,7 +51,17 @@ export default function Home() {
   return (
     <main>
       <div className="text-center mb-6">
-        <h1 className="text-3xl font-extrabold">🍽️ {t("appName")}</h1>
+        {/* Theme-aware logo: dark variant on light bg, white variant on dark bg */}
+        <img
+          src="/logo-dark.svg"
+          alt={t("appName")}
+          className="block dark:hidden h-32 mx-auto mb-2"
+        />
+        <img
+          src="/logo-light.svg"
+          alt={t("appName")}
+          className="hidden dark:block h-32 mx-auto mb-2"
+        />
         <p className="text-gray-600 dark:text-gray-400">{t("tagline")}</p>
       </div>
 
