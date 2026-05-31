@@ -33,6 +33,8 @@ export default function Home() {
     }
   }, []);
 
+  const canSearch = Boolean(price) && tags.length > 0 && Boolean(mood);
+
   const labelFor = (token) => t(`tags.${token}`) ?? token;
   const moodLabel = (token) => t(`moods.${token}`) ?? token;
 
@@ -131,7 +133,11 @@ export default function Home() {
       </div>
 
       <div className="grid grid-cols-1 gap-3">
-        <BigButton className="kahoot-purple" onClick={() => goResults(false)}>
+        <BigButton
+          className={`kahoot-purple ${!canSearch ? "opacity-40 cursor-not-allowed" : ""}`}
+          onClick={() => goResults(false)}
+          disabled={!canSearch}
+        >
           {t("seeResults")}
         </BigButton>
         <BigButton className="kahoot-mint" onClick={() => goResults(true)}>
