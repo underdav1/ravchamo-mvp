@@ -18,12 +18,16 @@ export default function ResultsClient() {
     const price = params.get("price") || "med";
     const tags = (params.get("tags") || "").split(",").filter(Boolean);
     const mood = params.get("mood") || "";
+    const lucky = params.get("lucky") === "1";
 
     return {
       loc: lat && lon ? { lat, lon } : null,
       price,
       tags,
       mood,
+      // "I'm feeling lucky" should feel meaningfully more chaotic than
+      // "Show results" — bump score jitter from the server default (0.35) to 0.6.
+      ...(lucky ? { randomness: 0.6 } : {}),
     };
   }, [params]);
 
