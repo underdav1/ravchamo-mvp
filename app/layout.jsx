@@ -38,6 +38,13 @@ export default function RootLayout({ children }) {
                 © {new Date().getFullYear()} Ravchamo — MVP.
                 <br />
                 <span>We use your location only in the browser to estimate distance.</span>
+                <br />
+                <Link
+                  href="/blog"
+                  className="mt-2 inline-block underline-offset-2 hover:underline"
+                >
+                  Reviews
+                </Link>
               </footer>
             </div>
           </LangProvider>
