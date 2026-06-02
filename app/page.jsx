@@ -33,7 +33,8 @@ export default function Home() {
     }
   }, []);
 
-  const canSearch = Boolean(price) && tags.length > 0 && Boolean(mood);
+  // Cravings are optional — the user can search with just budget + vibe.
+  const canSearch = Boolean(price) && Boolean(mood);
 
   const labelFor = (token) => t(`tags.${token}`) ?? token;
   const moodLabel = (token) => t(`moods.${token}`) ?? token;
