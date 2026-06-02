@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, useEffect, useMemo, useState } from "react";
+import { createContext, useContext, useMemo, useState } from "react";
 import { en, ka } from "./langs";
 
 const LangCtx = createContext({
@@ -19,20 +19,10 @@ export function useI18n() {
 }
 
 export default function LangProvider({ children }) {
+  // Always default to English on page load. We intentionally do NOT restore
+  // a previously saved language — the toggle still works within the session,
+  // but every fresh visit/reload starts in English.
   const [lang, setLang] = useState("en");
-
-  // load saved lang
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-    const saved = localStorage.getItem("lang");
-    if (saved === "ka" || saved === "en") setLang(saved);
-  }, []);
-
-  // persist lang
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-    localStorage.setItem("lang", lang);
-  }, [lang]);
 
   const dict = lang === "ka" ? ka : en;
 

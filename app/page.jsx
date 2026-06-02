@@ -53,11 +53,14 @@ export default function Home() {
   return (
     <main>
       <div className="text-center mb-6">
-        {/* Theme-aware logo: dark variant on light bg, white variant on dark bg */}
+        {/* Theme-aware logo: dark variant on light bg, white variant on dark bg.
+            The two SVGs share a viewBox but logo-dark.svg has more internal
+            padding around its content, so we render it taller (h-40 vs h-32)
+            to visually match the dark-mode logo. */}
         <img
           src="/logo-dark.svg"
           alt={t("appName")}
-          className="block dark:hidden h-32 mx-auto mb-2"
+          className="block dark:hidden h-40 mx-auto mb-2"
         />
         <img
           src="/logo-light.svg"
