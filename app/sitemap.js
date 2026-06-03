@@ -6,6 +6,7 @@ export default function sitemap() {
   const staticUrls = [
     { url: `${SITE}/`, changeFrequency: "weekly", priority: 1.0 },
     { url: `${SITE}/blog`, changeFrequency: "weekly", priority: 0.7 },
+    { url: `${SITE}/faq`, changeFrequency: "monthly", priority: 0.6 },
   ];
 
   const postUrls = getAllPosts().map((p) => ({

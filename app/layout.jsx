@@ -39,12 +39,20 @@ export default function RootLayout({ children }) {
                 <br />
                 <span>We use your location only in the browser to estimate distance.</span>
                 <br />
-                <Link
-                  href="/blog"
-                  className="mt-2 inline-block underline-offset-2 hover:underline"
-                >
-                  Reviews
-                </Link>
+                <div className="mt-2 flex gap-4">
+                  <Link
+                    href="/blog"
+                    className="inline-block underline-offset-2 hover:underline"
+                  >
+                    Reviews
+                  </Link>
+                  <Link
+                    href="/faq"
+                    className="inline-block underline-offset-2 hover:underline"
+                  >
+                    FAQ
+                  </Link>
+                </div>
               </footer>
             </div>
           </LangProvider>
