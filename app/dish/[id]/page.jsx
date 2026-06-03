@@ -33,7 +33,7 @@ export default function DishPage({ params }) {
     supabase
       .from("dishes")
       .select(
-        "id, name, description, price, image_url, category, mood1, mood2, restaurant:restaurants(id, name, address, district, lat, lon, rating)"
+        "id, name, name_en, description, description_en, price, image_url, category, mood1, mood2, restaurant:restaurants(id, name, address, district, lat, lon, rating)"
       )
       .eq("id", numId)
       .single()
@@ -46,7 +46,9 @@ export default function DishPage({ params }) {
           setDish({
             id: data.id,
             name: data.name,
+            name_en: data.name_en,
             description: data.description,
+            description_en: data.description_en,
             price: data.price,
             image: data.image_url,
             category: data.category,
@@ -81,6 +83,13 @@ export default function DishPage({ params }) {
     );
   }
 
+  // Prefer English versions when UI language is EN and a translation exists,
+  // otherwise fall back to the original (Georgian / source) text.
+  const displayName =
+    lang === "en" && dish.name_en ? dish.name_en : dish.name;
+  const displayDesc =
+    lang === "en" && dish.description_en ? dish.description_en : dish.description;
+
   const categoryToken = CATEGORY_TO_TOKEN[dish.category] || dish.category;
   const categoryLabel = t(`tags.${categoryToken}`) ?? dish.category;
 
@@ -91,7 +100,7 @@ export default function DishPage({ params }) {
 
   const woltLang = t("woltLangPath") || lang || "en";
   const woltSearch = `https://wolt.com/${woltLang}/geo/tbilisi/search?q=${encodeURIComponent(
-    dish.restaurant?.name || dish.name || ""
+    dish.restaurant?.name || displayName || ""
   )}`;
 
   return (
@@ -99,7 +108,7 @@ export default function DishPage({ params }) {
       {imageUrl ? (
         <img
           src={imageUrl}
-          alt={dish.name}
+          alt={displayName}
           className="w-full h-52 object-cover rounded-2xl border mb-4"
           onError={(e) => (e.currentTarget.style.display = "none")}
         />
@@ -108,7 +117,7 @@ export default function DishPage({ params }) {
       )}
 
       <div className="card">
-        <h1 className="text-3xl font-extrabold mb-1">{dish.name}</h1>
+        <h1 className="text-3xl font-extrabold mb-1">{displayName}</h1>
         <div className="text-gray-600 dark:text-gray-400 mb-3">
           {dish.restaurant?.name}
           {districtLabel && <> • {districtLabel}</>}
@@ -124,7 +133,7 @@ export default function DishPage({ params }) {
           )}
         </div>
 
-        {dish.description && <p className="mb-2">{dish.description}</p>}
+        {displayDesc && <p className="mb-2">{displayDesc}</p>}
         {dish.restaurant?.address && (
           <p className="text-sm text-gray-500 mb-4">{dish.restaurant.address}</p>
         )}

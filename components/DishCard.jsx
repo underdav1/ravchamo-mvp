@@ -1,10 +1,16 @@
 "use client";
 
 import Link from "next/link";
-import { useI18n } from "../app/ui/LangProvider";
+import { useI18n, useLang } from "../app/ui/LangProvider";
 
 export default function DishCard({ dish }) {
   const t = useI18n();
+  const { lang } = useLang();
+
+  // When the UI is in English, prefer the translated name if we have one.
+  // Falls back to the original Georgian/source name if translation is missing.
+  const displayName =
+    lang === "en" && dish.name_en ? dish.name_en : dish.name;
 
   // Map raw category back to UI token so we can translate via tags.{token}
   const CATEGORY_TO_TOKEN = {
@@ -41,12 +47,12 @@ export default function DishCard({ dish }) {
       <div className="flex gap-3">
         <img
           src={dish.image}
-          alt={dish.name || "Dish photo"}
+          alt={displayName || "Dish photo"}
           className="w-24 h-24 object-cover rounded-xl border"
           onError={(e) => (e.currentTarget.style.visibility = "hidden")}
         />
         <div className="flex-1">
-          <div className="font-semibold">{dish.name}</div>
+          <div className="font-semibold">{displayName}</div>
 
           <div className="text-sm text-gray-600 dark:text-gray-400">
             {dish.restaurant?.name}
