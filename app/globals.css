@@ -77,6 +77,15 @@ a { text-decoration: none; }
   footer {
     @apply text-xs text-gray-500 dark:text-gray-400;
   }
+
+  /* SearchingLoader fill — matches the "Show results" button color in
+     both themes, so the button → loader transition feels continuous. */
+  .loader-fill {
+    background: #1558c0;
+  }
+  .dark .loader-fill {
+    background: #3a7fd4;
+  }
 }
 
 /* Blog body — lightweight prose styles for rendered markdown */

@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import DishCard from "../../components/DishCard";
+import SearchingLoader from "../../components/SearchingLoader";
 import { recommend } from "../../lib/recommend";
 import { useI18n } from "../ui/LangProvider";
 
@@ -47,7 +48,7 @@ export default function ResultsClient() {
   return (
     <main>
       <h1 className="text-xl font-bold mb-3">{t("resultsTop")}</h1>
-      {loading && <div className="text-gray-600 dark:text-gray-400">…</div>}
+      {loading && <SearchingLoader />}
       {!loading && items.length === 0 && (
         <div className="text-gray-600 dark:text-gray-400">{t("noMatches")}</div>
       )}
