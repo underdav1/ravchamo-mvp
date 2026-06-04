@@ -6,6 +6,7 @@ export const metadata = {
 import "./globals.css";
 import Link from "next/link";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import ThemeProvider from "./ui/ThemeProvider";
 import LangProvider from "./ui/LangProvider";
 import LanguageToggle from "./ui/LanguageToggle";
@@ -58,6 +59,7 @@ export default function RootLayout({ children }) {
           </LangProvider>
         </ThemeProvider>
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
