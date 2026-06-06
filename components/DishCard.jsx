@@ -26,13 +26,6 @@ export default function DishCard({ dish }) {
   const categoryToken = CATEGORY_TO_TOKEN[dish.category] || dish.category;
   const categoryLabel = t(`tags.${categoryToken}`) ?? dish.category;
 
-  // District: data stores tokens like "vake", "old_town"
-  const districtToken = dish?.restaurant?.district;
-  const districtLabel =
-    typeof districtToken === "string"
-      ? t(`districts.${districtToken}`) ?? districtToken
-      : districtToken ?? "";
-
   // Distance display
   const distText =
     typeof dish?.dist === "number"
@@ -56,7 +49,6 @@ export default function DishCard({ dish }) {
 
           <div className="text-sm text-gray-600 dark:text-gray-400">
             {dish.restaurant?.name}
-            {districtLabel ? ` • ${districtLabel}` : ""}
           </div>
 
           <div className="text-sm mt-1">

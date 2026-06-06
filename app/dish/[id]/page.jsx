@@ -31,9 +31,9 @@ export default function DishPage({ params }) {
       return;
     }
     supabase
-      .from("dishes")
+      .from("menu_items")
       .select(
-        "id, name, name_en, description, description_en, price, image_url, category, mood1, mood2, restaurant:restaurants(id, name, address, district, lat, lon, rating)"
+        "id, item_name_en, description_en, price, image_url, category_label, vibe_label, mood_2, restaurant:restaurants(id, name, address, lat, lon)"
       )
       .eq("id", numId)
       .single()
@@ -42,18 +42,17 @@ export default function DishPage({ params }) {
         if (error || !data) {
           setDish(null);
         } else {
-          // Reshape to match the old object the page was built around
           setDish({
             id: data.id,
-            name: data.name,
-            name_en: data.name_en,
-            description: data.description,
+            name: data.item_name_en,
+            name_en: data.item_name_en,
+            description: data.description_en,
             description_en: data.description_en,
             price: data.price,
             image: data.image_url,
-            category: data.category,
-            mood1: data.mood1,
-            mood2: data.mood2,
+            category: data.category_label,
+            mood1: data.vibe_label,
+            mood2: data.mood_2,
             restaurant: data.restaurant,
           });
         }
@@ -83,8 +82,6 @@ export default function DishPage({ params }) {
     );
   }
 
-  // Prefer English versions when UI language is EN and a translation exists,
-  // otherwise fall back to the original (Georgian / source) text.
   const displayName =
     lang === "en" && dish.name_en ? dish.name_en : dish.name;
   const displayDesc =
@@ -93,15 +90,19 @@ export default function DishPage({ params }) {
   const categoryToken = CATEGORY_TO_TOKEN[dish.category] || dish.category;
   const categoryLabel = t(`tags.${categoryToken}`) ?? dish.category;
 
-  const districtToken = dish.restaurant?.district || "";
-  const districtLabel = t(`districts.${districtToken}`) ?? districtToken;
-
   const imageUrl = dish.image || "";
 
   const woltLang = t("woltLangPath") || lang || "en";
   const woltSearch = `https://wolt.com/${woltLang}/geo/tbilisi/search?q=${encodeURIComponent(
     dish.restaurant?.name || displayName || ""
   )}`;
+
+  const directionsUrl =
+    dish.restaurant?.lat && dish.restaurant?.lon
+      ? `https://www.google.com/maps/dir/?api=1&destination=${dish.restaurant.lat},${dish.restaurant.lon}`
+      : dish.restaurant?.address
+      ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(dish.restaurant.address)}`
+      : null;
 
   return (
     <main className="max-w-md mx-auto px-4 py-6">
@@ -120,7 +121,6 @@ export default function DishPage({ params }) {
         <h1 className="text-3xl font-extrabold mb-1">{displayName}</h1>
         <div className="text-gray-600 dark:text-gray-400 mb-3">
           {dish.restaurant?.name}
-          {districtLabel && <> • {districtLabel}</>}
         </div>
 
         <div className="text-lg font-semibold mb-3">₾{dish.price}</div>
@@ -138,18 +138,30 @@ export default function DishPage({ params }) {
           <p className="text-sm text-gray-500 mb-4">{dish.restaurant.address}</p>
         )}
 
-        <div className="grid grid-cols-2 gap-3">
-          <a
-            href={woltSearch}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="kahoot-purple text-center py-3 rounded-2xl"
-          >
-            {t("openOnWolt")}
-          </a>
-          <Link href="/" className="kahoot-mint text-center py-3 rounded-2xl">
-            {t("goHome")}
-          </Link>
+        <div className="flex flex-col gap-3">
+          {directionsUrl && (
+            <a
+              href={directionsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="kahoot-gray text-center py-3 rounded-2xl"
+            >
+              {t("directions")}
+            </a>
+          )}
+          <div className="grid grid-cols-2 gap-3">
+            <a
+              href={woltSearch}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="kahoot-purple text-center py-3 rounded-2xl"
+            >
+              {t("openOnWolt")}
+            </a>
+            <Link href="/" className="kahoot-mint text-center py-3 rounded-2xl">
+              {t("goHome")}
+            </Link>
+          </div>
         </div>
       </div>
     </main>

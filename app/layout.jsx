@@ -1,6 +1,6 @@
 export const metadata = {
   title: "Ravchamo – What should I eat?",
-  description: "Lightweight, mobile-first food recommender MVP for Tbilisi.",
+  description: "Tbilisi food recommender. Tell us your mood and budget — we'll find the right dish on Wolt.",
 };
 
 import "./globals.css";
@@ -11,13 +11,15 @@ import ThemeProvider from "./ui/ThemeProvider";
 import LangProvider from "./ui/LangProvider";
 import LanguageToggle from "./ui/LanguageToggle";
 import ThemeToggle from "./ui/ThemeToggle";
+import HtmlLang from "../components/HtmlLang";
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="ka">
+    <html lang="en">
       <body className="min-h-screen bg-white text-gray-900 dark:bg-gray-950 dark:text-gray-100">
         <ThemeProvider>
           <LangProvider>
+            <HtmlLang />
             <div className="max-w-md mx-auto px-4 py-6">
               <header className="flex items-center justify-between mb-4">
                 <Link
@@ -36,7 +38,7 @@ export default function RootLayout({ children }) {
               {children}
 
               <footer className="mt-8 text-sm text-gray-600 dark:text-gray-400">
-                © {new Date().getFullYear()} Ravchamo — MVP.
+                © {new Date().getFullYear()} Ravchamo.
                 <br />
                 <span>We use your location only in the browser to estimate distance.</span>
                 <br />

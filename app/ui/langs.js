@@ -1,8 +1,9 @@
 // app/ui/langs.js
 export const en = {
   appName: "Ravchamo",
-  tagline: "what should I eat?",
+  tagline: "If you don't know what to eat",
   location: "Location",
+  requestLocation: "Update location",
   loc: {
     ready: "Location ready",
     getting: "Getting location...",
@@ -10,10 +11,10 @@ export const en = {
   },
   setLocation: "Set my location...",
   budget: "Select a budget",
-  low: "Low",
-  medium: "Medium",
-  high: "High",
-  cravings: "Pick cravings (optional)",
+  low: "Under 20₾",
+  medium: "20 – 40₾",
+  high: "40₾ +",
+  cravings: "What are you craving?",
   time: "Time",
   fast: "Fast",
   relaxed: "Relaxed",
@@ -21,7 +22,7 @@ export const en = {
   findDishes: "Show options",
   seeResults: "Show results",
   lucky: "I'm feeling lucky",
-  feelingLucky: "I’m feeling lucky",
+  feelingLucky: "I'm feeling lucky",
   resultsTop: "Top picks",
   fetchingFood: "Fetching your food...",
   noMatches: "No matches yet. Try fewer filters.",
@@ -30,15 +31,15 @@ export const en = {
   gel: "GEL",
   back: "Back to results",
   backToResults: "Back to results",
-  goHome: "Go Home",
+  goHome: "Home",
+  directions: "Directions",
   openOnWolt: "Open on Wolt ↗",
   woltLangPath: "en",
   disclaimer:
     "Menu data may be inaccurate. Always check with the restaurant about allergens and availability.",
 
-  // Mood layer (single-select)
-  moodTitle: "What's your vibe?",
-  moodHint: "Pick one – this helps tailor your picks.",
+  // Mood layer (multi-select, max 2)
+  moodTitle: "Pick your vibe",
   moods: {
     hungry: "Very hungry 🍔",
     protein: "High protein 💪",
@@ -89,6 +90,7 @@ export const ka = {
   appName: "რა ვჭამო?",
   tagline: "თუ არ იცი რა ჭამო",
   location: "ადგილმდებარეობა",
+  requestLocation: "ლოკაციის განახლება",
   loc: {
     ready: "ლოკაცია მზად არის",
     getting: "ლოკაცია იტვირთება...",
@@ -97,9 +99,9 @@ export const ka = {
   setLocation: "ჩემი ლოკაცია...",
   budget: "აირჩიე ბიუჯეტი",
   low: "20₾-მდე",
-  medium: "40₾-მდე",
-  high: "ძვირიანი",
-  cravings: "რა გაგისწორდება (არასავალდებულო)",
+  medium: "20-40₾",
+  high: "40₾+",
+  cravings: "რა გაგისწორდება?",
   time: "დრო",
   fast: "სწრაფად",
   relaxed: "მშვიდად",
@@ -116,14 +118,14 @@ export const ka = {
   gel: "₾",
   back: "უკან შედეგებზე",
   backToResults: "უკან შედეგებზე",
-  goHome: "მთავარზე",
+  goHome: "მთავარი",
+  directions: "მიმართულება",
   openOnWolt: "ვოლტზე გადასვლა ↗",
   woltLangPath: "ka",
   disclaimer:
     "მენიუს მონაცემები შესაძლოა არ იყოს ზუსტი. ინფორმაცია ალერგენებსა და ხელმისაწვდომობაზე გადაამოწმეთ უშუალოდ რესტორანთან.",
 
-  moodTitle: "რის განწყობაზე ხარ?",
-  moodHint: "აირჩიე ერთი - ასე უკეთეს შედეგს მიიღებ",
+  moodTitle: "აირჩიე განწყობა",
   moods: {
     hungry: "ძალიან მშია 🍔",
     protein: "ცილაზე ვარ 💪",

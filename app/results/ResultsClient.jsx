@@ -12,34 +12,43 @@ export default function ResultsClient() {
   const params = useSearchParams();
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   const user = useMemo(() => {
     const lat = parseFloat(params.get("lat") || "0");
     const lon = parseFloat(params.get("lon") || "0");
     const price = params.get("price") || "med";
-    const tags = (params.get("tags") || "").split(",").filter(Boolean);
-    const mood = params.get("mood") || "";
+    const tag = params.get("tag") || "";
+    const moods = (params.get("moods") || "").split(",").filter(Boolean);
     const lucky = params.get("lucky") === "1";
 
     return {
       loc: lat && lon ? { lat, lon } : null,
       price,
-      tags,
-      mood,
-      // "I'm feeling lucky" should feel meaningfully more chaotic than
-      // "Show results" — bump score jitter from the server default (0.35) to 0.6.
-      ...(lucky ? { randomness: 0.6 } : {}),
+      tag,
+      moods,
+      // "I'm feeling lucky" uses higher jitter (0.9 vs default 0.625) so
+      // the result feels genuinely unpredictable rather than just varied.
+      ...(lucky ? { randomness: 0.9 } : {}),
     };
   }, [params]);
 
   useEffect(() => {
     let cancelled = false;
     setLoading(true);
-    recommend(user).then((recs) => {
-      if (cancelled) return;
-      setItems(recs);
-      setLoading(false);
-    });
+    setError(null);
+    recommend(user)
+      .then((recs) => {
+        if (cancelled) return;
+        setItems(recs);
+        setLoading(false);
+      })
+      .catch((err) => {
+        if (cancelled) return;
+        console.error("recommend failed:", err);
+        setError(err?.message || "Something went wrong");
+        setLoading(false);
+      });
     return () => {
       cancelled = true;
     };
@@ -49,7 +58,12 @@ export default function ResultsClient() {
     <main>
       <h1 className="text-xl font-bold mb-3">{t("resultsTop")}</h1>
       {loading && <SearchingLoader />}
-      {!loading && items.length === 0 && (
+      {!loading && error && (
+        <div className="text-red-600 dark:text-red-400">
+          {t("loadError") || "Could not load recommendations. Please try again."}
+        </div>
+      )}
+      {!loading && !error && items.length === 0 && (
         <div className="text-gray-600 dark:text-gray-400">{t("noMatches")}</div>
       )}
       {!loading && items.map((d) => <DishCard key={d.id} dish={d} />)}

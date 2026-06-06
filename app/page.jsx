@@ -7,6 +7,9 @@ import TagToggle from "../components/TagToggle";
 import { useI18n } from "./ui/LangProvider";
 import { CATEGORY_TOKENS, MOOD_TOKENS } from "../lib/taxonomy";
 
+const FX_KEY = "ravchamo:fx";
+const FX_TTL = 3600 * 1000;
+
 export default function Home() {
   const t = useI18n();
   const router = useRouter();
@@ -14,14 +17,17 @@ export default function Home() {
   const [loc, setLoc] = useState(null);
   const [locDenied, setLocDenied] = useState(false);
   const [price, setPrice] = useState("med");
-  const [tags, setTags] = useState([]); // multi-select cravings (UI tokens)
-  const [mood, setMood] = useState(""); // single-select vibe (UI token)
+  const [tag, setTag] = useState("");      // single-select craving (UI token)
+  const [moods, setMoods] = useState([]); // multi-select vibe (UI tokens, max 2)
+  const [fx, setFx] = useState(null);     // { usd, eur, ts }
 
-  // ask for location (with Vake fallback)
-  useEffect(() => {
+  function requestLoc() {
     if (typeof navigator !== "undefined" && navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
-        (pos) => setLoc({ lat: pos.coords.latitude, lon: pos.coords.longitude }),
+        (pos) => {
+          setLoc({ lat: pos.coords.latitude, lon: pos.coords.longitude });
+          setLocDenied(false);
+        },
         () => {
           setLocDenied(true);
           setLoc({ lat: 41.71, lon: 44.77 });
@@ -31,21 +37,52 @@ export default function Home() {
     } else {
       setLoc({ lat: 41.71, lon: 44.77 });
     }
+  }
+
+  useEffect(() => { requestLoc(); }, []);
+
+  // Fetch NBG exchange rates (USD/EUR → GEL), cache 1 hr in localStorage
+  useEffect(() => {
+    try {
+      const cached = JSON.parse(localStorage.getItem(FX_KEY) || "null");
+      if (cached && Date.now() - cached.ts < FX_TTL) { setFx(cached); return; }
+    } catch {}
+    fetch("https://nbg.gov.ge/gw/api/ct/monetarypolicy/currencies/en/json")
+      .then((r) => r.json())
+      .then((data) => {
+        const list = data?.[0]?.currencies || [];
+        const usd = list.find((c) => c.code === "USD")?.rate;
+        const eur = list.find((c) => c.code === "EUR")?.rate;
+        if (usd && eur) {
+          const entry = { usd, eur, ts: Date.now() };
+          setFx(entry);
+          try { localStorage.setItem(FX_KEY, JSON.stringify(entry)); } catch {}
+        }
+      })
+      .catch(() => {});
   }, []);
 
-  // Cravings are optional — the user can search with just budget + vibe.
-  const canSearch = Boolean(price) && Boolean(mood);
+  // Cravings are optional — budget + at least one vibe is enough to search.
+  const canSearch = Boolean(price) && moods.length > 0;
 
   const labelFor = (token) => t(`tags.${token}`) ?? token;
   const moodLabel = (token) => t(`moods.${token}`) ?? token;
+
+  function toggleMood(opt) {
+    setMoods((prev) => {
+      if (prev.includes(opt)) return prev.filter((x) => x !== opt);
+      if (prev.length >= 2) return prev; // cap at 2, ignore the tap
+      return [...prev, opt];
+    });
+  }
 
   function goResults(lucky = false) {
     const query = new URLSearchParams({
       lat: loc?.lat ?? "",
       lon: loc?.lon ?? "",
       price,
-      tags: tags.join(","),
-      mood: mood || "",
+      tag: tag || "",
+      moods: moods.join(","),
     });
     if (lucky) query.set("lucky", "1");
     router.push(`/results?${query.toString()}`);
@@ -55,9 +92,8 @@ export default function Home() {
     <main>
       <div className="text-center mb-6">
         {/* Theme-aware logo: dark variant on light bg, white variant on dark bg.
-            The two SVGs share a viewBox but logo-dark.svg has more internal
-            padding around its content, so we render it taller (h-40 vs h-32)
-            to visually match the dark-mode logo. */}
+            logo-dark.svg has more internal padding so it's rendered taller (h-40
+            vs h-32) to visually match the dark-mode logo. */}
         <img
           src="/logo-dark.svg"
           alt={t("appName")}
@@ -72,13 +108,28 @@ export default function Home() {
       </div>
 
       <div className="card mb-4">
-        <div className="text-sm text-gray-700 dark:text-gray-300 mb-2">{t("location") ?? "Location"}</div>
+        <div className="flex items-center justify-between mb-1">
+          <div className="text-sm text-gray-700 dark:text-gray-300">{t("location") ?? "Location"}</div>
+          <button
+            onClick={requestLoc}
+            className="text-lg leading-none"
+            aria-label={t("requestLocation")}
+            title={t("requestLocation")}
+          >
+            📍
+          </button>
+        </div>
         <div className="flex gap-2 items-center">
           <span className={`text-xs ${loc ? "text-green-700" : "text-gray-500"}`}>
             {loc ? t("loc.ready") : t("loc.getting")}
           </span>
           {locDenied && <span className="text-xs text-orange-600">{t("loc.deniedVake")}</span>}
         </div>
+        {fx && (
+          <div className="mt-1 text-xs text-gray-400">
+            1 USD = {fx.usd}₾ &nbsp;·&nbsp; 1 EUR = {fx.eur}₾
+          </div>
+        )}
       </div>
 
       <div className="card mb-4">
@@ -112,10 +163,8 @@ export default function Home() {
             <TagToggle
               key={opt}
               label={labelFor(opt)}
-              selected={tags.includes(opt)}
-              onClick={() =>
-                setTags((prev) => (prev.includes(opt) ? prev.filter((x) => x !== opt) : [...prev, opt]))
-              }
+              selected={tag === opt}
+              onClick={() => setTag((prev) => (prev === opt ? "" : opt))}
             />
           ))}
         </div>
@@ -128,12 +177,11 @@ export default function Home() {
             <TagToggle
               key={opt}
               label={moodLabel(opt)}
-              selected={mood === opt}
-              onClick={() => setMood((prev) => (prev === opt ? "" : opt))}
+              selected={moods.includes(opt)}
+              onClick={() => toggleMood(opt)}
             />
           ))}
         </div>
-        <div className="text-xs text-gray-500 dark:text-gray-400 mt-2">{t("moodHint")}</div>
       </div>
 
       <div className="grid grid-cols-1 gap-3">
