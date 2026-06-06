@@ -39,7 +39,8 @@ export const en = {
     "Menu data may be inaccurate. Always check with the restaurant about allergens and availability.",
 
   // Mood layer (multi-select, max 2)
-  moodTitle: "Pick your vibe",
+  moodTitle: "Pick your vibe (pick up to 2)",
+  moodHint: "At least one — this shapes your picks.",
   moods: {
     hungry: "Very hungry 🍔",
     protein: "High protein 💪",
@@ -125,7 +126,8 @@ export const ka = {
   disclaimer:
     "მენიუს მონაცემები შესაძლოა არ იყოს ზუსტი. ინფორმაცია ალერგენებსა და ხელმისაწვდომობაზე გადაამოწმეთ უშუალოდ რესტორანთან.",
 
-  moodTitle: "აირჩიე განწყობა",
+  moodTitle: "აირჩიე განწყობა (მაქს. 2)",
+  moodHint: "მინიმუმ ერთი — ეს განსაზღვრავს არჩევანს.",
   moods: {
     hungry: "ძალიან მშია 🍔",
     protein: "ცილაზე ვარ 💪",

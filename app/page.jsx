@@ -8,7 +8,9 @@ import { useI18n } from "./ui/LangProvider";
 import { CATEGORY_TOKENS, MOOD_TOKENS } from "../lib/taxonomy";
 
 const FX_KEY = "ravchamo:fx";
-const FX_TTL = 3600 * 1000;
+// NBG publishes rates once per business day, so a 24-hour cache is plenty
+// and saves us ~96% of unnecessary requests vs the old 1-hour TTL.
+const FX_TTL = 24 * 3600 * 1000;
 
 export default function Home() {
   const t = useI18n();
@@ -47,7 +49,8 @@ export default function Home() {
       const cached = JSON.parse(localStorage.getItem(FX_KEY) || "null");
       if (cached && Date.now() - cached.ts < FX_TTL) { setFx(cached); return; }
     } catch {}
-    fetch("https://nbg.gov.ge/gw/api/ct/monetarypolicy/currencies/en/json")
+    // ?currencies=USD,EUR cuts the payload from ~50 currencies to 2.
+    fetch("https://nbg.gov.ge/gw/api/ct/monetarypolicy/currencies/en/json?currencies=USD,EUR")
       .then((r) => r.json())
       .then((data) => {
         const list = data?.[0]?.currencies || [];
@@ -182,6 +185,7 @@ export default function Home() {
             />
           ))}
         </div>
+        <div className="text-xs text-gray-500 dark:text-gray-400 mt-2">{t("moodHint")}</div>
       </div>
 
       <div className="grid grid-cols-1 gap-3">

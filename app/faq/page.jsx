@@ -23,58 +23,79 @@ const FAQ = [
     id: "how-are-dishes-ranked",
     question: "How are dishes ranked?",
     answerText:
-      "The recommendation engine handles it in a few distinct layers under the hood. Layer 1 — The Radius Filter (Location): the app grabs the user's location coordinates to map out what's actually close by and filters out anything too far away to deliver. Layer 2 — Social Proof (App Reviews + Google reviews): once it has a pool of nearby spots, it pulls in review data from major food delivery apps and Google Maps altogether; restaurants with higher ratings get a natural boost. Layer 3 — The \"Secret Sauce\" Model (Price, Craving, Mood): this is where the proprietary algorithm kicks in — it scores each restaurant based on how well it matches the user's specific filters, balancing budget, exact cravings, and current vibe to calculate a personalized relevance score. Layer 4 — The \"Anti-Boredom\" Spice (Randomization): a bit of randomizing logic ensures that even with the exact same filters two days in a row, results stay shuffled and fresh. TL;DR: location finds it, reviews vet it, a custom scoring model matches it to your exact mood and wallet, and a dash of randomness keeps you from eating the same dish every day.",
+      "The recommendation engine works in six layers. Layer 1 — Quality cut: we drop low-rated restaurants entirely. Every restaurant gets a single quality score from 0 to 10 combining Google reviews and Wolt ratings (with a statistical correction so a place with only a handful of reviews doesn't get artificially boosted). Anything below 7.5 is excluded from the pool before scoring even starts. Layer 2 — Mood match: the heaviest signal. Picking one mood softly prefers dishes that match it; picking two requires at least one match and weights the first mood more than the second. Layer 3 — Restaurant rating: the quality score from Layer 1 also feeds into the final ranking. Better restaurants float to the top. Layer 4 — Distance: a soft preference, not a filter. Closer dishes get a small boost (a place 3 km away is preferred over one 6 km away, but neither is excluded). Layer 5 — Variety cap: we keep only the top two dishes per restaurant so one place doesn't dominate your results. Layer 6 — Randomness: a deliberate jitter is added so two searches with the exact same filters won't return identical results. \"I'm feeling lucky\" turns this up even higher for genuine surprise. TL;DR: bad restaurants are filtered out, mood is the biggest factor, rating and distance refine the order, and randomness keeps things fresh.",
     answerHtml: (
       <>
         <p className="mb-3">
-          Basically, the recommendation engine handles it in a few distinct
-          layers under the hood. Here is the breakdown of how a user actually
-          gets their food choices:
+          The recommendation engine handles every search in six layers. Here is
+          how a dish actually ends up at the top of your results:
         </p>
 
         <h3 className="font-semibold mt-4 mb-1">
-          Layer 1: The Radius Filter (Location)
+          Layer 1: Quality cut
         </h3>
         <p className="mb-3">
-          First up is pure proximity. The app grabs the user&apos;s location
-          coordinates to map out what&apos;s actually close by and filters out
-          anything too far away to deliver.
+          Before anything else, we drop low-rated restaurants entirely. Every
+          restaurant gets a single quality score from 0–10 combining Google
+          reviews and Wolt ratings — with a statistical correction so a place
+          with only a handful of reviews doesn&apos;t get artificially boosted
+          by one or two enthusiastic posts. Anything scoring below 7.5 is
+          excluded from the pool before scoring even starts.
         </p>
 
         <h3 className="font-semibold mt-4 mb-1">
-          Layer 2: Social Proof (App Reviews + Google reviews)
+          Layer 2: Mood match (the biggest signal)
         </h3>
         <p className="mb-3">
-          Once it has a pool of nearby spots, it pulls in review data from major
-          food delivery apps and Google Maps altogether. Restaurants with higher
-          ratings get a natural boost in the rankings.
+          This is the dominant factor. Pick one mood and the engine softly
+          prefers dishes that match it. Pick two and at least one must match —
+          with the first mood you tapped weighted more heavily than the second.
+          Mood matching counts for roughly 75% of the score.
         </p>
 
         <h3 className="font-semibold mt-4 mb-1">
-          Layer 3: The &quot;Secret Sauce&quot; Model (Price, Craving, Mood)
+          Layer 3: Restaurant rating
         </h3>
         <p className="mb-3">
-          This is where the proprietary algorithm kicks in. It scores each
-          restaurant based on how well it matches the user&apos;s specific
-          filters — we&apos;re balancing their budget, exact cravings, and
-          current vibe/mood to calculate a personalized relevance score (as well
-          as location).
+          The quality score from Layer 1 also feeds into the final ranking — not
+          just as a filter. Better-rated restaurants get a meaningful boost in
+          ordering. Counts for roughly 25% of the score.
         </p>
 
         <h3 className="font-semibold mt-4 mb-1">
-          Layer 4: The &quot;Anti-Boredom&quot; Spice (Randomization)
+          Layer 4: Distance (a soft preference)
         </h3>
         <p className="mb-3">
-          To stop the feed from feeling stale, we&apos;ve injected a bit of
-          randomizing logic. This ensures that even if someone inputs the exact
-          same filters two days in a row, they&apos;ll see a slightly shuffled,
-          fresh mix of results instead of the exact same loop.
+          Distance is a tilt, not a filter. A restaurant 3 km away is preferred
+          over one 6 km away, but neither gets excluded. The reasoning: you
+          probably don&apos;t want to walk across town for lunch, but a great
+          spot 4 km away is still worth knowing about. Counts for roughly 15%
+          of the score.
+        </p>
+
+        <h3 className="font-semibold mt-4 mb-1">
+          Layer 5: Restaurant variety cap
+        </h3>
+        <p className="mb-3">
+          We keep only the top two dishes per restaurant. Without this rule, a
+          place with 80 menu items would crowd out everyone else. The cap means
+          your results show ten dishes from at least five different restaurants.
+        </p>
+
+        <h3 className="font-semibold mt-4 mb-1">
+          Layer 6: A dash of randomness
+        </h3>
+        <p className="mb-3">
+          A deliberate jitter is added to the final score so two searches with
+          the exact same filters won&apos;t return identical results. Tapping
+          &quot;I&apos;m feeling lucky&quot; turns this up further for genuine
+          surprise.
         </p>
 
         <p className="mb-1 mt-4">
-          <strong>TL;DR:</strong> Location finds it, reviews vet it, a custom
-          scoring model matches it to your exact mood/wallet, and a dash of
-          randomness keeps you from eating the same dish every single day.
+          <strong>TL;DR:</strong> Bad restaurants are filtered out, mood is the
+          biggest factor, rating and distance refine the order, and randomness
+          keeps things fresh.
         </p>
       </>
     ),
