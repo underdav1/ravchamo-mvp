@@ -185,7 +185,6 @@ export default function Home() {
             />
           ))}
         </div>
-        <div className="text-xs text-gray-500 dark:text-gray-400 mt-2">{t("moodHint")}</div>
       </div>
 
       <div className="grid grid-cols-1 gap-3">

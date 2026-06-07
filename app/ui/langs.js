@@ -10,11 +10,11 @@ export const en = {
     deniedVake: "Permission denied — using Vake center."
   },
   setLocation: "Set my location...",
-  budget: "Select a budget",
+  budget: "Pick a budget",
   low: "Under 20₾",
   medium: "20 – 40₾",
   high: "40₾ +",
-  cravings: "What are you craving?",
+  cravings: "Pick a category",
   time: "Time",
   fast: "Fast",
   relaxed: "Relaxed",
@@ -39,8 +39,7 @@ export const en = {
     "Menu data may be inaccurate. Always check with the restaurant about allergens and availability.",
 
   // Mood layer (multi-select, max 2)
-  moodTitle: "Pick your vibe (pick up to 2)",
-  moodHint: "At least one — this shapes your picks.",
+  moodTitle: "Pick your vibe (up to 2)",
   moods: {
     hungry: "Very hungry 🍔",
     protein: "High protein 💪",
@@ -102,7 +101,7 @@ export const ka = {
   low: "20₾-მდე",
   medium: "20-40₾",
   high: "40₾+",
-  cravings: "რა გაგისწორდება?",
+  cravings: "აირჩიე კატეგორია",
   time: "დრო",
   fast: "სწრაფად",
   relaxed: "მშვიდად",
@@ -127,7 +126,6 @@ export const ka = {
     "მენიუს მონაცემები შესაძლოა არ იყოს ზუსტი. ინფორმაცია ალერგენებსა და ხელმისაწვდომობაზე გადაამოწმეთ უშუალოდ რესტორანთან.",
 
   moodTitle: "აირჩიე განწყობა (მაქს. 2)",
-  moodHint: "მინიმუმ ერთი — ეს განსაზღვრავს არჩევანს.",
   moods: {
     hungry: "ძალიან მშია 🍔",
     protein: "ცილაზე ვარ 💪",
