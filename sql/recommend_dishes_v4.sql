@@ -224,6 +224,9 @@ filtered AS (
          OR mi.id != ALL(exclude_dish_ids))
     AND mi.item_name_en IS NOT NULL
     AND mi.item_name_en <> ''
+    -- Never recommend dishes without a photo — they look broken in the card UI.
+    AND mi.image_url IS NOT NULL
+    AND mi.image_url <> ''
 ),
 
 -- ── 5. Deterministic score (no jitter) ───────────────────────────────────────
