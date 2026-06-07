@@ -58,9 +58,9 @@
 --
 -- ── Notes ────────────────────────────────────────────────────────────────────
 --
---   - menu_items columns: item_name_en (used as both dish_name + dish_name_en
---     until Georgian names are restored), description_en, category_label,
---     vibe_label, mood_2, price_bucket.
+--   - menu_items columns: item_name_en / item_name_ka, description_en /
+--     description_ka, category_label, vibe_label, mood_2, price_bucket.
+--     Georgian names + descriptions were loaded via scripts/load-ka-translations.mjs.
 --   - district is currently returned as NULL — the new restaurants table
 --     doesn't have a district column. Safe to drop from RETURNS in a follow-up.
 -- =============================================================================
@@ -151,10 +151,14 @@ qualified AS (
 filtered AS (
   SELECT
     mi.id              AS dish_id,
-    mi.item_name_en    AS dish_name,
-    mi.item_name_en    AS dish_name_en,
-    mi.description_en  AS dish_desc,
-    mi.description_en  AS dish_desc_en,
+    -- Bilingual: dish_name serves the Georgian original, dish_name_en the
+    -- English translation. Frontend picks via `lang === "en" && dish.name_en`.
+    -- NULLIF turns the ~20k empty-string ka rows into NULL so COALESCE actually
+    -- falls back to English; otherwise KA mode would show blanks.
+    COALESCE(NULLIF(mi.item_name_ka, ''),   mi.item_name_en)   AS dish_name,
+    mi.item_name_en                                            AS dish_name_en,
+    COALESCE(NULLIF(mi.description_ka, ''), mi.description_en) AS dish_desc,
+    mi.description_en                                          AS dish_desc_en,
     mi.price,
     mi.image_url,
     mi.category_label  AS category,
