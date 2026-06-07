@@ -33,7 +33,7 @@ export default function DishPage({ params }) {
     supabase
       .from("menu_items")
       .select(
-        "id, item_name_en, description_en, price, image_url, category_label, vibe_label, mood_2, restaurant:restaurants(id, name, address, lat, lon)"
+        "id, item_name_en, item_name_ka, description_en, description_ka, price, image_url, category_label, vibe_label, mood_2, restaurant:restaurants(id, name, address, lat, lon)"
       )
       .eq("id", numId)
       .single()
@@ -42,11 +42,18 @@ export default function DishPage({ params }) {
         if (error || !data) {
           setDish(null);
         } else {
+          // Bilingual mapping (matches the RPC contract on the results page):
+          // `name` carries the Georgian original, `name_en` the English. The
+          // language toggle in DishCard / displayName below picks between them.
+          // Empty-string KA fields get normalized to null so the lang === "en"
+          // && dish.name_en fallback works as expected.
+          const nameKa = data.item_name_ka || null;
+          const descKa = data.description_ka || null;
           setDish({
             id: data.id,
-            name: data.item_name_en,
+            name: nameKa || data.item_name_en,
             name_en: data.item_name_en,
-            description: data.description_en,
+            description: descKa || data.description_en,
             description_en: data.description_en,
             price: data.price,
             image: data.image_url,
