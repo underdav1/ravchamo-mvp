@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import BigButton from "../components/BigButton";
 import TagToggle from "../components/TagToggle";
-import { useI18n } from "./ui/LangProvider";
+import { useLang } from "./ui/LangProvider";
 import { CATEGORY_TOKENS, MOOD_TOKENS } from "../lib/taxonomy";
 
 const FX_KEY = "ravchamo:fx";
@@ -13,7 +13,7 @@ const FX_KEY = "ravchamo:fx";
 const FX_TTL = 24 * 3600 * 1000;
 
 export default function Home() {
-  const t = useI18n();
+  const { lang, t } = useLang();
   const router = useRouter();
 
   const [loc, setLoc] = useState(null);
@@ -113,9 +113,18 @@ export default function Home() {
       <div className="card mb-4">
         <div className="flex items-center justify-between mb-1">
           <div className="text-sm text-gray-700 dark:text-gray-300">{t("location") ?? "Location"}</div>
+          {/* The pin only becomes interactive when the user has denied location
+              or we couldn't get a fix — that's the moment a re-prompt actually
+              helps. When location is ready, the pin is decorative (and dimmed)
+              so it doesn't invite pointless taps. */}
           <button
             onClick={requestLoc}
-            className="text-lg leading-none"
+            disabled={Boolean(loc) && !locDenied}
+            className={`text-lg leading-none transition-opacity ${
+              Boolean(loc) && !locDenied
+                ? "opacity-40 cursor-not-allowed"
+                : "opacity-100 cursor-pointer"
+            }`}
             aria-label={t("requestLocation")}
             title={t("requestLocation")}
           >
@@ -128,7 +137,9 @@ export default function Home() {
           </span>
           {locDenied && <span className="text-xs text-orange-600">{t("loc.deniedVake")}</span>}
         </div>
-        {fx && (
+        {/* FX widget is EN-only — it targets foreign visitors who care about
+            GEL conversion. Georgian users already know the rate. */}
+        {fx && lang === "en" && (
           <div className="mt-1 text-xs text-gray-400">
             1 USD = {fx.usd}₾ &nbsp;·&nbsp; 1 EUR = {fx.eur}₾
           </div>
