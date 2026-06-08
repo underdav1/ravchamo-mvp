@@ -12,6 +12,7 @@ import LangProvider from "./ui/LangProvider";
 import LanguageToggle from "./ui/LanguageToggle";
 import ThemeToggle from "./ui/ThemeToggle";
 import HtmlLang from "../components/HtmlLang";
+import FooterNav from "../components/FooterNav";
 
 export default function RootLayout({ children }) {
   return (
@@ -42,20 +43,7 @@ export default function RootLayout({ children }) {
                 <br />
                 <span>We use your location only in the browser to estimate distance.</span>
                 <br />
-                <div className="mt-2 flex gap-4">
-                  <Link
-                    href="/blog"
-                    className="inline-block underline-offset-2 hover:underline"
-                  >
-                    Reviews
-                  </Link>
-                  <Link
-                    href="/faq"
-                    className="inline-block underline-offset-2 hover:underline"
-                  >
-                    FAQ
-                  </Link>
-                </div>
+                <FooterNav />
               </footer>
             </div>
           </LangProvider>

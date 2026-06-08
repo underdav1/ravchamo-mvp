@@ -38,6 +38,29 @@ export const en = {
   disclaimer:
     "Menu data may be inaccurate. Always check with the restaurant about allergens and availability.",
 
+  // Feedback page
+  feedback: {
+    nav: "Send feedback",
+    title: "Send feedback",
+    intro: "Suggest a restaurant, request a feature, report a bug, or just say hi.",
+    typeLabel: "What is this about?",
+    typeRestaurant: "Restaurant suggestion",
+    typeFeature: "Feature request",
+    typeBug: "Bug report",
+    typeOther: "Other",
+    messageLabel: "Your message",
+    messagePlaceholder: "Tell us what's on your mind...",
+    emailLabel: "Email (optional, so we can reply)",
+    emailPlaceholder: "you@example.com",
+    submit: "Send",
+    submitting: "Sending...",
+    successTitle: "Thanks!",
+    successBody: "We received your message and will read every word.",
+    errorBody: "Something went wrong. Please try again in a moment.",
+    sendAnother: "Send another",
+    backHome: "Back to Ravchamo"
+  },
+
   // Mood layer (multi-select, max 2)
   moodTitle: "Pick your vibe (up to 2)",
   moods: {
@@ -124,6 +147,29 @@ export const ka = {
   woltLangPath: "ka",
   disclaimer:
     "მენიუს მონაცემები შესაძლოა არ იყოს ზუსტი. ინფორმაცია ალერგენებსა და ხელმისაწვდომობაზე გადაამოწმეთ უშუალოდ რესტორანთან.",
+
+  // Feedback page
+  feedback: {
+    nav: "რჩევის გაზიარება",
+    title: "რჩევის გაზიარება",
+    intro: "შემოგვთავაზე რესტორანი, მოითხოვე ფუნქცია, შეგვატყობინე ხარვეზი ან უბრალოდ მოგვწერე.",
+    typeLabel: "რის შესახებაა?",
+    typeRestaurant: "რესტორნის შემოთავაზება",
+    typeFeature: "ფუნქციის მოთხოვნა",
+    typeBug: "ხარვეზის შეტყობინება",
+    typeOther: "სხვა",
+    messageLabel: "შენი შეტყობინება",
+    messagePlaceholder: "გვითხარი რას ფიქრობ...",
+    emailLabel: "ელფოსტა (არასავალდებულო — პასუხის გასაცემად)",
+    emailPlaceholder: "you@example.com",
+    submit: "გაგზავნა",
+    submitting: "იგზავნება...",
+    successTitle: "მადლობა!",
+    successBody: "შენი შეტყობინება მივიღეთ და აუცილებლად წავიკითხავთ.",
+    errorBody: "შეცდომა მოხდა. გთხოვთ, ცადეთ ხელახლა.",
+    sendAnother: "კიდევ ერთის გაგზავნა",
+    backHome: "მთავარზე დაბრუნება"
+  },
 
   moodTitle: "აირჩიე განწყობა (მაქს. 2)",
   moods: {
