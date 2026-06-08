@@ -2,8 +2,9 @@
 
 import Link from "next/link";
 import { useI18n, useLang } from "../app/ui/LangProvider";
+import { track } from "../lib/posthog";
 
-export default function DishCard({ dish }) {
+export default function DishCard({ dish, position }) {
   const t = useI18n();
   const { lang } = useLang();
 
@@ -35,8 +36,22 @@ export default function DishCard({ dish }) {
         }).format(dish.dist)} km`
       : null;
 
+  function handleClick() {
+    track("dish_clicked", {
+      dish_id: dish.id,
+      restaurant_id: dish.restaurant?.id,
+      restaurant_name: dish.restaurant?.name,
+      category: dish.category,
+      position,
+    });
+  }
+
   return (
-    <Link href={`/dish/${dish.id}`} className="block card mb-4">
+    <Link
+      href={`/dish/${dish.id}`}
+      onClick={handleClick}
+      className="block card mb-4"
+    >
       <div className="flex gap-3">
         <img
           src={dish.image}

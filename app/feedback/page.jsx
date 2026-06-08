@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { useLang } from "../ui/LangProvider";
 import { supabase } from "../../lib/supabase";
+import { track } from "../../lib/posthog";
 
 const TYPES = [
   { value: "restaurant", labelKey: "feedback.typeRestaurant" },
@@ -48,6 +49,14 @@ export default function FeedbackPage() {
       setStatus("error");
       return;
     }
+
+    // Track successful submission. We deliberately don't include the message
+    // content or email — PostHog is for behavior, not PII.
+    track("feedback_submitted", {
+      type,
+      lang,
+      has_email: Boolean(email.trim()),
+    });
 
     setStatus("success");
   }

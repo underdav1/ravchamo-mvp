@@ -6,6 +6,7 @@ import BigButton from "../components/BigButton";
 import TagToggle from "../components/TagToggle";
 import { useLang } from "./ui/LangProvider";
 import { CATEGORY_TOKENS, MOOD_TOKENS } from "../lib/taxonomy";
+import { track } from "../lib/posthog";
 
 const FX_KEY = "ravchamo:fx";
 // NBG publishes rates once per business day, so a 24-hour cache is plenty
@@ -80,6 +81,18 @@ export default function Home() {
   }
 
   function goResults(lucky = false) {
+    // Emit the search event before navigation. We track filter state, not
+    // user identity. Lucky gets its own event name as well so we can build
+    // separate funnels for the two CTAs.
+    track(lucky ? "recommend_lucky" : "recommend_search", {
+      price,
+      tag: tag || null,
+      moods,           // array of UI tokens, e.g. ["hungry","spicy"]
+      mood_count: moods.length,
+      has_location: Boolean(loc) && !locDenied,
+      lang,
+    });
+
     const query = new URLSearchParams({
       lat: loc?.lat ?? "",
       lon: loc?.lon ?? "",

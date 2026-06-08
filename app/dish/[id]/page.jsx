@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useLang } from "../../ui/LangProvider";
 import { supabase } from "../../../lib/supabase";
+import { track } from "../../../lib/posthog";
 
 const CATEGORY_TO_TOKEN = {
   "georgian": "georgian",
@@ -151,6 +152,12 @@ export default function DishPage({ params }) {
               href={directionsUrl}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() =>
+                track("directions_clicked", {
+                  dish_id: dish.id,
+                  restaurant_name: dish.restaurant?.name,
+                })
+              }
               className="kahoot-gray text-center py-3 rounded-2xl"
             >
               {t("directions")}
@@ -161,6 +168,13 @@ export default function DishPage({ params }) {
               href={woltSearch}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() =>
+                track("wolt_clicked", {
+                  dish_id: dish.id,
+                  restaurant_name: dish.restaurant?.name,
+                  category: dish.category,
+                })
+              }
               className="kahoot-purple text-center py-3 rounded-2xl"
             >
               {t("openOnWolt")}

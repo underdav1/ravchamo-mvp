@@ -7,6 +7,7 @@ import SearchingLoader from "../../components/SearchingLoader";
 import BigButton from "../../components/BigButton";
 import { recommend } from "../../lib/recommend";
 import { useI18n } from "../ui/LangProvider";
+import { track } from "../../lib/posthog";
 
 export default function ResultsClient() {
   const t = useI18n();
@@ -48,6 +49,17 @@ export default function ResultsClient() {
           if (signal?.aborted) return;
           setItems(recs);
           setLoading(false);
+          // Empty results = a filter combination that found nothing. This is
+          // gold for finding broken filter combos and category gaps in the
+          // data — surface them as a distinct event.
+          if (recs.length === 0) {
+            track("empty_results", {
+              price: user.price,
+              tag: user.tag || null,
+              moods: user.moods,
+              lucky: typeof user.randomness === "number",
+            });
+          }
         })
         .catch((err) => {
           if (signal?.aborted) return;
@@ -72,6 +84,11 @@ export default function ResultsClient() {
   // back to the top so the new top pick is the first thing the user sees.
   // smooth scroll feels more polished than a hard jump.
   function handleSeeOther() {
+    track("recommend_see_other", {
+      price: user.price,
+      tag: user.tag || null,
+      moods: user.moods,
+    });
     if (typeof window !== "undefined") {
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
@@ -90,7 +107,7 @@ export default function ResultsClient() {
       {!loading && !error && items.length === 0 && (
         <div className="text-gray-600 dark:text-gray-400">{t("noMatches")}</div>
       )}
-      {!loading && items.map((d) => <DishCard key={d.id} dish={d} />)}
+      {!loading && items.map((d, i) => <DishCard key={d.id} dish={d} position={i + 1} />)}
 
       {/* Only show the "see other" button when we actually have results to
           come back from. No point offering it on an empty state — the user

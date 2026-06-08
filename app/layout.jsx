@@ -13,11 +13,13 @@ import LanguageToggle from "./ui/LanguageToggle";
 import ThemeToggle from "./ui/ThemeToggle";
 import HtmlLang from "../components/HtmlLang";
 import FooterNav from "../components/FooterNav";
+import PostHogProvider from "../components/PostHogProvider";
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="min-h-screen bg-white text-gray-900 dark:bg-gray-950 dark:text-gray-100">
+        <PostHogProvider>
         <ThemeProvider>
           <LangProvider>
             <HtmlLang />
@@ -48,6 +50,7 @@ export default function RootLayout({ children }) {
             </div>
           </LangProvider>
         </ThemeProvider>
+        </PostHogProvider>
         <Analytics />
         <SpeedInsights />
       </body>
