@@ -9,6 +9,49 @@ import { recommend } from "../../lib/recommend";
 import { useI18n } from "../ui/LangProvider";
 import { track } from "../../lib/posthog";
 
+// sessionStorage cache for /results. Keyed by stringified filter set so two
+// different filter combinations don't collide. Cleared automatically when the
+// tab closes — so a fresh visit gets fresh recommendations, but in-session
+// back-navigation (dish detail → back) restores the exact same 10 dishes.
+const CACHE_PREFIX = "ravchamo:results:";
+
+function cacheKey(user) {
+  // Stable key derived from the filter state. We intentionally include `lucky`
+  // (via randomness) so "feeling lucky" results cache separately from regular
+  // search. We exclude lat/lon because tiny GPS drift between mount cycles
+  // would break the cache for the same logical query.
+  return (
+    CACHE_PREFIX +
+    JSON.stringify({
+      price: user.price,
+      tag: user.tag,
+      moods: user.moods,
+      lucky: typeof user.randomness === "number",
+    })
+  );
+}
+
+function readCache(key) {
+  if (typeof window === "undefined") return null;
+  try {
+    const raw = window.sessionStorage.getItem(key);
+    if (!raw) return null;
+    const parsed = JSON.parse(raw);
+    return Array.isArray(parsed) ? parsed : null;
+  } catch {
+    return null;
+  }
+}
+
+function writeCache(key, items) {
+  if (typeof window === "undefined") return;
+  try {
+    window.sessionStorage.setItem(key, JSON.stringify(items));
+  } catch {
+    // quota exceeded / private mode — silently ignore, the page still works
+  }
+}
+
 export default function ResultsClient() {
   const t = useI18n();
   const params = useSearchParams();
@@ -40,6 +83,9 @@ export default function ResultsClient() {
   // to a localStorage seen-list and forwards it as exclude_dish_ids on the
   // next call — so re-running with the same `user` reliably produces a
   // different batch without any extra state plumbing here.
+  //
+  // Every successful fetch writes the result to sessionStorage under the
+  // filter-derived cache key, so back-navigation can hydrate from cache.
   const fetchResults = useCallback(
     (signal) => {
       setLoading(true);
@@ -49,6 +95,7 @@ export default function ResultsClient() {
           if (signal?.aborted) return;
           setItems(recs);
           setLoading(false);
+          writeCache(cacheKey(user), recs);
           // Empty results = a filter combination that found nothing. This is
           // gold for finding broken filter combos and category gaps in the
           // data — surface them as a distinct event.
@@ -71,18 +118,27 @@ export default function ResultsClient() {
     [user]
   );
 
-  // Initial fetch on mount / filter change. AbortSignal pattern keeps us safe
-  // from "set state on unmounted component" warnings if the user navigates
-  // away mid-request.
+  // Initial mount / filter change. Check the session cache FIRST — if the
+  // user is returning to the same filter set within this tab, restore the
+  // exact dishes they saw last time instead of generating a fresh batch.
+  // Only call the recommender if no cache exists.
   useEffect(() => {
     const ctrl = new AbortController();
+    const cached = readCache(cacheKey(user));
+    if (cached) {
+      setItems(cached);
+      setLoading(false);
+      return () => ctrl.abort();
+    }
     fetchResults(ctrl.signal);
     return () => ctrl.abort();
-  }, [fetchResults]);
+  }, [fetchResults, user]);
 
-  // "See other results" handler — re-fetch with the same filters, then jump
-  // back to the top so the new top pick is the first thing the user sees.
-  // smooth scroll feels more polished than a hard jump.
+  // "See other results" handler — explicitly bypasses the cache by calling
+  // fetchResults directly. The new batch overwrites the cache, so subsequent
+  // back-navigation restores the new dishes (the most recent set the user
+  // actually saw), not the old ones. Smooth scroll to top first so the new
+  // top pick is the first thing they see.
   function handleSeeOther() {
     track("recommend_see_other", {
       price: user.price,
