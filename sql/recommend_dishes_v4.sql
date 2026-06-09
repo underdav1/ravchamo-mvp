@@ -207,12 +207,20 @@ filtered AS (
   FROM menu_items mi
   JOIN qualified q ON mi.restaurant_id = q.id
   WHERE
-    (price_band IS NULL OR mi.price_bucket = CASE price_band
-       WHEN 'low'  THEN 'Low'
-       WHEN 'med'  THEN 'Mid'
-       WHEN 'high' THEN 'Premium'
-       ELSE price_band
-     END)
+    -- Strict numeric price filter — matches the UI labels exactly:
+    -- "low" = under 20 GEL, "med" = 20 to under 40, "high" = 40 or more.
+    -- Rows without a parseable numeric price are excluded so the budget
+    -- filter is contractual ("20-40" really means 20-40, no 45-49 sneak-ins).
+    -- The legacy `price_bucket` text column ('Low'/'Mid'/'Premium') is
+    -- intentionally NOT used here — it allowed dishes up to 50 GEL into
+    -- the Mid bucket, which broke the UI contract.
+    mi.price_numeric IS NOT NULL
+    AND (
+      price_band IS NULL
+      OR (price_band = 'low'  AND mi.price_numeric < 20)
+      OR (price_band = 'med'  AND mi.price_numeric >= 20 AND mi.price_numeric < 40)
+      OR (price_band = 'high' AND mi.price_numeric >= 40)
+    )
     AND (COALESCE(cardinality(craving_categories), 0) = 0
          OR mi.category_label = ANY(craving_categories))
     AND (
