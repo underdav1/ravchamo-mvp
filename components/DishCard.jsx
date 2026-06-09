@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useI18n, useLang } from "../app/ui/LangProvider";
 import { track } from "../lib/posthog";
+import { formatPrice } from "../lib/price";
 
 export default function DishCard({ dish, position }) {
   const t = useI18n();
@@ -66,9 +67,17 @@ export default function DishCard({ dish, position }) {
             {dish.restaurant?.name}
           </div>
 
+          {/* Price + distance line. We prefer priceNumeric (clean number from
+              the RPC) and fall back to nothing if it's missing — better to show
+              "1.2 km away" without a price than to show "₾" with a blank. */}
           <div className="text-sm mt-1">
-            ₾{dish.price}
-            {distText ? ` • ${distText} away` : ""}
+            {(() => {
+              const priceText = formatPrice(dish.priceNumeric ?? dish.price);
+              if (priceText && distText) return `${priceText} • ${distText} away`;
+              if (priceText) return priceText;
+              if (distText) return `${distText} away`;
+              return null;
+            })()}
           </div>
 
           <div className="mt-1 flex flex-wrap gap-2">

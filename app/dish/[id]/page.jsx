@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { useLang } from "../../ui/LangProvider";
 import { supabase } from "../../../lib/supabase";
 import { track } from "../../../lib/posthog";
+import { formatPrice } from "../../../lib/price";
 
 const CATEGORY_TO_TOKEN = {
   "georgian": "georgian",
@@ -34,7 +35,7 @@ export default function DishPage({ params }) {
     supabase
       .from("menu_items")
       .select(
-        "id, item_name_en, item_name_ka, description_en, description_ka, price, image_url, category_label, vibe_label, mood_2, restaurant:restaurants(id, name, address, lat, lon)"
+        "id, item_name_en, item_name_ka, description_en, description_ka, price, price_numeric, image_url, category_label, vibe_label, mood_2, restaurant:restaurants(id, name, address, lat, lon)"
       )
       .eq("id", numId)
       .single()
@@ -57,6 +58,7 @@ export default function DishPage({ params }) {
             description: descKa || data.description_en,
             description_en: data.description_en,
             price: data.price,
+            priceNumeric: data.price_numeric,
             image: data.image_url,
             category: data.category_label,
             mood1: data.vibe_label,
@@ -131,7 +133,15 @@ export default function DishPage({ params }) {
           {dish.restaurant?.name}
         </div>
 
-        <div className="text-lg font-semibold mb-3">₾{dish.price}</div>
+        {/* Show price only when we have a parseable number. The recommender
+            already excludes price-less dishes, but a user could still land
+            here via a direct link (Wolt redirect, bookmark) — better to hide
+            the price line entirely than render "₾" with a blank. */}
+        {formatPrice(dish.priceNumeric) && (
+          <div className="text-lg font-semibold mb-3">
+            {formatPrice(dish.priceNumeric)}
+          </div>
+        )}
 
         <div className="mt-1 mb-3 flex flex-wrap gap-2">
           {categoryLabel && <span className="tag">{categoryLabel}</span>}
