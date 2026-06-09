@@ -237,6 +237,12 @@ filtered AS (
     -- Never recommend dishes without a photo — they look broken in the card UI.
     AND mi.image_url IS NOT NULL
     AND mi.image_url <> ''
+    -- Exclude dishes whose names contain Cyrillic (Russian) characters. The
+    -- app only displays Georgian + English; Russian leakage looks broken to
+    -- users. Affects ~110 dishes (most from Sushi Rolls Vazha Pshavela whose
+    -- entire menu was scraped in Russian).
+    AND mi.item_name_en !~ '[Ѐ-ӿ]'
+    AND (mi.item_name_ka IS NULL OR mi.item_name_ka !~ '[Ѐ-ӿ]')
 ),
 
 -- ── 5. Deterministic score (no jitter) ───────────────────────────────────────
