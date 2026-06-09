@@ -6,6 +6,7 @@ import { useLang } from "../../ui/LangProvider";
 import { supabase } from "../../../lib/supabase";
 import { track } from "../../../lib/posthog";
 import { formatPrice } from "../../../lib/price";
+import ImageLightbox from "../../../components/ImageLightbox";
 
 const CATEGORY_TO_TOKEN = {
   "georgian": "georgian",
@@ -24,6 +25,7 @@ export default function DishPage({ params }) {
 
   const [dish, setDish] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [lightboxOpen, setLightboxOpen] = useState(false);
 
   useEffect(() => {
     let cancelled = false;
@@ -114,13 +116,37 @@ export default function DishPage({ params }) {
       ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(dish.restaurant.address)}`
       : null;
 
+  // Open the lightbox and fire a PostHog event. Co-located so all entry
+  // points (click + keyboard) share the same side-effect path.
+  function openLightbox() {
+    track("dish_photo_opened", {
+      dish_id: dish.id,
+      restaurant_name: dish.restaurant?.name,
+      category: dish.category,
+    });
+    setLightboxOpen(true);
+  }
+
   return (
     <main className="max-w-md mx-auto px-4 py-6">
       {imageUrl ? (
+        // Tap to open lightbox. role+aria so the image is announced as a
+        // button by screen readers and is keyboard-focusable. The cursor
+        // hint makes the affordance obvious on desktop too.
         <img
           src={imageUrl}
           alt={displayName}
-          className="w-full h-52 object-cover rounded-2xl border mb-4"
+          role="button"
+          tabIndex={0}
+          onClick={openLightbox}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              openLightbox();
+            }
+          }}
+          className="w-full h-52 object-cover rounded-2xl border mb-4
+                     cursor-zoom-in transition-opacity hover:opacity-90"
           onError={(e) => (e.currentTarget.style.display = "none")}
         />
       ) : (
@@ -195,6 +221,12 @@ export default function DishPage({ params }) {
           </div>
         </div>
       </div>
+
+      <ImageLightbox
+        src={lightboxOpen ? imageUrl : null}
+        alt={displayName}
+        onClose={() => setLightboxOpen(false)}
+      />
     </main>
   );
 }
