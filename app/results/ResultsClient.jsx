@@ -9,17 +9,31 @@ import { recommend } from "../../lib/recommend";
 import { useI18n } from "../ui/LangProvider";
 import { track } from "../../lib/posthog";
 
-// sessionStorage cache for /results. Keyed by stringified filter set so two
-// different filter combinations don't collide. Cleared automatically when the
-// tab closes — so a fresh visit gets fresh recommendations, but in-session
-// back-navigation (dish detail → back) restores the exact same 10 dishes.
+// sessionStorage history for /results. Keyed by stringified filter set so
+// two different filter combinations don't collide.
+//
+// Data shape stored under each key:
+//   { history: [[dish, dish, ...], [dish, dish, ...], ...], cursor: 0 }
+//
+//   - `history` is an array of batches (each batch is an array of dish
+//     objects, normally 10). Index 0 is the first batch the user saw,
+//     index N is the latest.
+//   - `cursor` is the index of the batch currently rendered.
+//
+// Why sessionStorage and not localStorage: history clears when the tab
+// closes, so a fresh visit gets fresh recommendations. In-session, the
+// user can flip back and forth freely.
+//
+// Hard cap on history length so storage doesn't grow forever during long
+// sessions. 10 batches = 100 dishes; plenty for any realistic flow.
 const CACHE_PREFIX = "ravchamo:results:";
+const HISTORY_CAP = 10;
 
 function cacheKey(user) {
-  // Stable key derived from the filter state. We intentionally include `lucky`
-  // (via randomness) so "feeling lucky" results cache separately from regular
-  // search. We exclude lat/lon because tiny GPS drift between mount cycles
-  // would break the cache for the same logical query.
+  // Stable key derived from the filter state. We intentionally include
+  // `lucky` (via randomness) so "feeling lucky" results cache separately
+  // from regular search. We exclude lat/lon because tiny GPS drift between
+  // mount cycles would break the cache for the same logical query.
   return (
     CACHE_PREFIX +
     JSON.stringify({
@@ -31,31 +45,42 @@ function cacheKey(user) {
   );
 }
 
-function readCache(key) {
+function readState(key) {
   if (typeof window === "undefined") return null;
   try {
     const raw = window.sessionStorage.getItem(key);
     if (!raw) return null;
     const parsed = JSON.parse(raw);
-    return Array.isArray(parsed) ? parsed : null;
+    if (
+      !parsed ||
+      !Array.isArray(parsed.history) ||
+      typeof parsed.cursor !== "number"
+    ) {
+      return null;
+    }
+    return parsed;
   } catch {
     return null;
   }
 }
 
-function writeCache(key, items) {
+function writeState(key, state) {
   if (typeof window === "undefined") return;
   try {
-    window.sessionStorage.setItem(key, JSON.stringify(items));
+    window.sessionStorage.setItem(key, JSON.stringify(state));
   } catch {
-    // quota exceeded / private mode — silently ignore, the page still works
+    // quota exceeded / private mode — silently ignore
   }
 }
 
 export default function ResultsClient() {
   const t = useI18n();
   const params = useSearchParams();
-  const [items, setItems] = useState([]);
+
+  // Single state object so cursor and history move together — avoids
+  // out-of-sync renders where, say, the cursor advances before the history
+  // array is updated.
+  const [state, setState] = useState({ history: [], cursor: 0 });
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -78,27 +103,37 @@ export default function ResultsClient() {
     };
   }, [params]);
 
-  // Shared fetcher used by both the initial load and the "See other results"
-  // button. lib/recommend.js automatically appends the just-returned dish ids
-  // to a localStorage seen-list and forwards it as exclude_dish_ids on the
-  // next call — so re-running with the same `user` reliably produces a
-  // different batch without any extra state plumbing here.
-  //
-  // Every successful fetch writes the result to sessionStorage under the
-  // filter-derived cache key, so back-navigation can hydrate from cache.
-  const fetchResults = useCallback(
+  // Items currently rendered = the batch at the cursor position. Memoize
+  // so we don't recreate the array on every render.
+  const items = useMemo(() => {
+    return state.history[state.cursor] || [];
+  }, [state]);
+
+  // Fetch a new batch from the recommender and append it to history.
+  // lib/recommend.js automatically appends just-returned dish ids to a
+  // localStorage seen-list and forwards them as exclude_dish_ids on the
+  // next call — so each call returns a different batch without any extra
+  // plumbing here.
+  const fetchAndAppend = useCallback(
     (signal) => {
       setLoading(true);
       setError(null);
       return recommend(user)
         .then((recs) => {
           if (signal?.aborted) return;
-          setItems(recs);
+          setState((prev) => {
+            // Drop oldest batches if we'd exceed the cap. We slice from the
+            // front because the most recent batches are the ones the user
+            // is likely to flip back to; ancient ones are safe to forget.
+            const nextHistory = [...prev.history, recs].slice(-HISTORY_CAP);
+            const nextState = {
+              history: nextHistory,
+              cursor: nextHistory.length - 1,
+            };
+            writeState(cacheKey(user), nextState);
+            return nextState;
+          });
           setLoading(false);
-          writeCache(cacheKey(user), recs);
-          // Empty results = a filter combination that found nothing. This is
-          // gold for finding broken filter combos and category gaps in the
-          // data — surface them as a distinct event.
           if (recs.length === 0) {
             track("empty_results", {
               price: user.price,
@@ -118,38 +153,70 @@ export default function ResultsClient() {
     [user]
   );
 
-  // Initial mount / filter change. Check the session cache FIRST — if the
-  // user is returning to the same filter set within this tab, restore the
-  // exact dishes they saw last time instead of generating a fresh batch.
-  // Only call the recommender if no cache exists.
+  // Initial mount / filter change. Restore from sessionStorage if we have
+  // a history for this exact filter set; otherwise fetch the first batch.
   useEffect(() => {
     const ctrl = new AbortController();
-    const cached = readCache(cacheKey(user));
-    if (cached) {
-      setItems(cached);
+    const cached = readState(cacheKey(user));
+    if (cached && cached.history.length > 0) {
+      setState(cached);
       setLoading(false);
       return () => ctrl.abort();
     }
-    fetchResults(ctrl.signal);
+    fetchAndAppend(ctrl.signal);
     return () => ctrl.abort();
-  }, [fetchResults, user]);
+  }, [fetchAndAppend, user]);
 
-  // "See other results" handler — explicitly bypasses the cache by calling
-  // fetchResults directly. The new batch overwrites the cache, so subsequent
-  // back-navigation restores the new dishes (the most recent set the user
-  // actually saw), not the old ones. Smooth scroll to top first so the new
-  // top pick is the first thing they see.
-  function handleSeeOther() {
+  // "Next page" — if we already have a batch ahead in history, step into
+  // it instantly (no fetch). If we're at the end, fetch a fresh batch.
+  function handleNext() {
     track("recommend_see_other", {
       price: user.price,
       tag: user.tag || null,
       moods: user.moods,
+      direction: "next",
+      cursor: state.cursor,
+      history_len: state.history.length,
     });
     if (typeof window !== "undefined") {
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
-    fetchResults();
+    if (state.cursor < state.history.length - 1) {
+      // Replay a batch we already have. No fetch, no loader.
+      setState((prev) => {
+        const nextState = { ...prev, cursor: prev.cursor + 1 };
+        writeState(cacheKey(user), nextState);
+        return nextState;
+      });
+    } else {
+      fetchAndAppend();
+    }
   }
+
+  // "Previous page" — step backwards through history. Pure local state
+  // change, never fetches. Hidden when we're already at cursor 0.
+  function handlePrev() {
+    if (state.cursor === 0) return;
+    track("recommend_see_other", {
+      price: user.price,
+      tag: user.tag || null,
+      moods: user.moods,
+      direction: "prev",
+      cursor: state.cursor,
+      history_len: state.history.length,
+    });
+    if (typeof window !== "undefined") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+    setState((prev) => {
+      const nextState = { ...prev, cursor: prev.cursor - 1 };
+      writeState(cacheKey(user), nextState);
+      return nextState;
+    });
+  }
+
+  const canGoPrev = state.cursor > 0;
+  const showNav = !loading && !error && items.length > 0;
 
   return (
     <main>
@@ -163,15 +230,25 @@ export default function ResultsClient() {
       {!loading && !error && items.length === 0 && (
         <div className="text-gray-600 dark:text-gray-400">{t("noMatches")}</div>
       )}
-      {!loading && items.map((d, i) => <DishCard key={d.id} dish={d} position={i + 1} />)}
+      {!loading &&
+        items.map((d, i) => <DishCard key={d.id} dish={d} position={i + 1} />)}
 
-      {/* Only show the "see other" button when we actually have results to
-          come back from. No point offering it on an empty state — the user
-          should adjust filters instead. */}
-      {!loading && !error && items.length > 0 && (
-        <div className="mt-4 mb-2">
-          <BigButton className="kahoot-mint" onClick={handleSeeOther}>
-            🔄 {t("seeOtherResults")}
+      {/* Two-button nav. Previous only shows once we've moved past the first
+          batch, so the empty state and very first batch don't get visual
+          noise. Next is always shown when results exist. The buttons stay
+          equal-width via grid even when prev is hidden — we render a spacer
+          div on the left for layout stability. */}
+      {showNav && (
+        <div className="mt-4 mb-2 grid grid-cols-2 gap-3">
+          {canGoPrev ? (
+            <BigButton className="kahoot-gray" onClick={handlePrev}>
+              ← {t("prevPage")}
+            </BigButton>
+          ) : (
+            <div /> /* spacer keeps next button right-aligned */
+          )}
+          <BigButton className="kahoot-mint" onClick={handleNext}>
+            {t("nextPage")} →
           </BigButton>
         </div>
       )}
