@@ -225,6 +225,15 @@ filtered AS (
     )
     AND (COALESCE(cardinality(craving_categories), 0) = 0
          OR mi.category_label = ANY(craving_categories))
+    -- Allow-list of categories the UI actually exposes. Excludes 'drink'
+    -- (12k+ rows) and 'sauces' (3k+ rows) which were leaking into results
+    -- when the user didn't pick a category. Using an allow-list instead
+    -- of a deny-list is intentional: any future categories Bara adds via
+    -- a re-scrape stay invisible until we explicitly opt them in.
+    AND mi.category_label IN (
+      'georgian', 'asian', 'pizza-pasta', 'fast food', 'healthy',
+      'vegetarian-vegan', 'breakfast', 'dessert'
+    )
     AND (
       COALESCE(cardinality(vibe_moods), 0) < 2
       OR mi.vibe_label = ANY(vibe_moods)
