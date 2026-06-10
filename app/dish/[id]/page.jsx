@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useLang } from "../../ui/LangProvider";
 import { supabase } from "../../../lib/supabase";
-import { track } from "../../../lib/posthog";
+import { track, trackOutbound } from "../../../lib/posthog";
 import { formatPrice } from "../../../lib/price";
 import ImageLightbox from "../../../components/ImageLightbox";
 
@@ -189,7 +189,7 @@ export default function DishPage({ params }) {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() =>
-                track("directions_clicked", {
+                trackOutbound("directions_clicked", {
                   dish_id: dish.id,
                   restaurant_name: dish.restaurant?.name,
                 })
@@ -205,7 +205,7 @@ export default function DishPage({ params }) {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() =>
-                track("wolt_clicked", {
+                trackOutbound("wolt_clicked", {
                   dish_id: dish.id,
                   restaurant_name: dish.restaurant?.name,
                   category: dish.category,
