@@ -220,7 +220,14 @@ export default function ResultsClient() {
 
   return (
     <main>
-      <h1 className="text-xl font-bold mb-3">{t("resultsTop")}</h1>
+      <h1 className="text-xl font-bold mb-1">{t("resultsTop")}</h1>
+      {/* Subtitle exists primarily to teach users that the dish cards are
+          tappable. PostHog showed 75% of search-doers never clicked a card,
+          which we suspect is "didn't realize they could." Small font + muted
+          color so it informs without competing with the actual results. */}
+      <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
+        {t("resultsSubtitle")}
+      </p>
       {loading && <SearchingLoader />}
       {!loading && error && (
         <div className="text-red-600 dark:text-red-400">
